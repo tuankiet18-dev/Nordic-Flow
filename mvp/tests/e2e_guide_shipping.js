@@ -22,7 +22,7 @@ async function main() {
     await page.goto(base);
     await step('User guide').click();
     await page.getByRole('heading', { name: 'User guide', exact: true }).waitFor();
-    assert.equal(await page.locator('summary').filter({ hasText: /\.csv/ }).count(), 11);
+    assert.equal(await page.locator('summary').filter({ hasText: /\.csv/ }).count(), 12);
     await page.locator('summary').filter({ hasText: 'direct_rates.csv' }).click();
     await page.getByText('Full freight of the supplier → customer leg.', { exact: false }).waitFor();
     await shot('guide-input');

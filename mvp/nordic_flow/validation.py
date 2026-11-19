@@ -55,6 +55,26 @@ def validate(ds: Dataset, mode: str = "milp") -> list[Issue]:
             for p in skus:
                 if p not in ds.skus: err("warehouse_skus.csv", f"unknown SKU {p!r}")
 
+    if ds.actual:
+        f = "actual_plan.csv"
+        if ds.transfers or ds.direct:
+            err(f, "replay supports supplier -> warehouse -> zone plans only; remove transfer_rates.csv and direct_rates.csv")
+        delivered = {}
+        for (s, w, z, p), q in ds.actual.items():
+            if s not in ds.suppliers: err(f, f"unknown supplier {s!r}")
+            if w not in ds.warehouses: err(f, f"unknown warehouse {w!r}")
+            if z not in ds.zones: err(f, f"unknown zone {z!r}")
+            if p not in ds.skus: err(f, f"unknown SKU {p!r}")
+            if (s, w) not in ds.inbound: err(f, f"lane {s}->{w} has no inbound rate, so the actual plan cannot be priced")
+            if (w, z) not in ds.outbound: err(f, f"lane {w}->{z} has no outbound rate, so the actual plan cannot be priced")
+            if mode == "milp" and q != int(q): warn(f, f"fractional pallets {q:g} for ({s}, {w}, {z}, {p})")
+            delivered[z, p] = delivered.get((z, p), 0) + q
+        mismatched = [k for k in set(ds.demand) | set(delivered)
+                      if abs(delivered.get(k, 0) - ds.demand.get(k, 0)) > 1e-9]
+        if mismatched:
+            warn(f, f"the actual plan does not match demand for {len(mismatched)} zone-and-SKU pair(s); "
+                    "no saving will be reported against it")
+
     # feasibility pre-checks (cheap, explain the most common reasons for 'no solution')
     for p in ds.skus:
         need = sum(q for (z, k), q in ds.demand.items() if k == p)

@@ -91,7 +91,7 @@ export default function App() {
           ))}
         </nav>
         <div className="m-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-slate-600">
-          <div className="font-medium text-slate-800">{scenario ? ({ "sample:demo": "Synthetic demo", "sample:golden": "Worked example", "sample:transshipment": "Warehouse transfer chain", "sample:branching": "Multi-warehouse example" }[scenario.source] || scenario.name) : "No data loaded"}</div>
+          <div className="font-medium text-slate-800">{scenario ? ({ "sample:demo": "Synthetic demo", "sample:replay": "History replay", "sample:golden": "Worked example", "sample:transshipment": "Warehouse transfer chain", "sample:branching": "Multi-warehouse example" }[scenario.source] || scenario.name) : "No data loaded"}</div>
           <div className="mt-1">{run ? `Plan ${run.id} · ${stateText(run.state)}` : "Load data to begin"}</div>
         </div>
         <p className="px-5 pb-5 text-xs leading-relaxed text-slate-500">

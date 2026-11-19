@@ -31,7 +31,8 @@ export default function ResultsView() {
         <button type="button" className="btn btn-primary" onClick={() => go("review")}>Review & approve <ArrowRight size={16} aria-hidden="true" /></button>
       </PageHead>
       <RunBanner run={r} />
-      {!c.baseline_valid && <Note tone="warn">The baseline leaves demand unserved. Savings are unavailable for this comparison.</Note>}
+      {c.baseline_kind === "actual" && <Note tone="info">History replay: the baseline is the plan that was actually shipped, on the same orders. Nothing is sent to any system.</Note>}
+      {!c.baseline_valid && <Note tone="warn">{c.baseline_kind === "actual" ? "The actual plan does not match these orders or limits, so it cannot be compared." : "The baseline leaves demand unserved."} Savings are unavailable for this comparison.</Note>}
       {r.status === "FEASIBLE" && <Note tone="warn">Time limit reached. Review the best feasible allocation found so far.</Note>}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Kpi label={c.saving < 0 ? "Cost increase" : "Saving"} big tone={c.saving == null ? "default" : c.saving < 0 ? "bad" : "good"}
@@ -39,7 +40,7 @@ export default function ResultsView() {
           sub={c.saving_pct == null ? "Baseline comparison unavailable" : fmt(Math.abs(c.saving_pct), 1) + (c.saving < 0 ? "% above baseline" : "% below baseline")} />
         <Kpi label="Optimised plan" tone="brand" value={fmt(c.optimised.total)}
           sub={(r.pins.length || (r.route_pins || []).length) && r.status === "OPTIMAL" ? "optimal with your decisions fixed" : solverText(r.status).toLowerCase()} />
-        <Kpi label={(r.network?.direct_lanes?.length || 0) > 0 ? "Rule-based baseline" : "Preferred-warehouse baseline"} value={c.baseline_valid ? fmt(c.baseline.total) : "unusable"} sub={Object.keys(ent.raw.warehouses).length === 0 ? "Direct delivery when no warehouse route exists" : (r.network?.direct_lanes?.length || 0) > 0 ? "Preferred warehouse first, direct delivery as fallback" : "Each zone uses its preferred warehouse first"} />
+        <Kpi label={c.baseline_kind === "actual" ? "Actual plan (history)" : (r.network?.direct_lanes?.length || 0) > 0 ? "Rule-based baseline" : "Preferred-warehouse baseline"} value={c.baseline_valid ? fmt(c.baseline.total) : "unusable"} sub={c.baseline_kind === "actual" ? "What the planner really shipped that week" : Object.keys(ent.raw.warehouses).length === 0 ? "Direct delivery when no warehouse route exists" : (r.network?.direct_lanes?.length || 0) > 0 ? "Preferred warehouse first, direct delivery as fallback" : "Each zone uses its preferred warehouse first"} />
         <Kpi label="Plan checks" tone={failed ? "bad" : "default"} value={failed ? "Failed" : "Passed"} sub="demand, supply, capacity and lanes verified independently" />
       </div>
       <p className="mt-3 text-sm text-slate-500">{c.changes.length} zone-and-product allocations changed from baseline · Costs in cost units</p>

@@ -1,4 +1,4 @@
-"""Command line: python -m nordic_flow run <data_dir> | synth <out_dir>"""
+"""Command line: python -m nordic_flow run <data_dir> | synth <out_dir> | replay <history_dir> | history <out_dir>"""
 from __future__ import annotations
 import argparse
 import csv
@@ -10,6 +10,7 @@ from .diagnosis import diagnose
 from .evidence import demo_guard, robustness
 from .io import load_dataset
 from .optimiser import solve
+from .replay import generate_history, replay
 from .report import compare
 from .synth import generate
 from .validation import has_errors, validate
@@ -46,7 +47,22 @@ def main(argv=None) -> int:
     rob = sub.add_parser("robustness")
     rob.add_argument("--seeds", type=int, default=10)
     rob.add_argument("--out", required=True)
+    rp = sub.add_parser("replay", help="compare past actual plans with the optimiser (folders with actual_plan.csv)")
+    rp.add_argument("history"); rp.add_argument("--mode", choices=["lp", "milp"], default="milp")
+    rp.add_argument("--time-limit", type=float, default=30); rp.add_argument("--out")
+    hi = sub.add_parser("history", help="write synthetic past weeks with an actual plan, for replay demos")
+    hi.add_argument("out"); hi.add_argument("--weeks", type=int, default=4); hi.add_argument("--seed", type=int, default=7)
     a = ap.parse_args(argv)
+
+    if a.cmd == "replay":
+        rows = replay(a.history, a.mode, a.time_limit, a.out)
+        return 0 if any(r["saving_pct"] is not None for r in rows) else 5
+    if a.cmd == "history":
+        if a.weeks < 1:
+            hi.error("--weeks must be positive")
+        for week in generate_history(a.out, a.weeks, a.seed):
+            print("wrote", week)
+        return 0
 
     if a.cmd == "demo-guard":
         demo_guard()
@@ -76,7 +92,8 @@ def main(argv=None) -> int:
     c["baseline_valid"] = base.status == "BASELINE" and not verify_plan(ds, base)
     if not c["baseline_valid"]:
         c["saving"] = c["saving_pct"] = None
-        print(f"optimised {c['optimised']['total']:.2f} ({opt.status}). The preferred-warehouse baseline "
+        label = "actual plan" if ds.actual else "preferred-warehouse baseline"
+        print(f"optimised {c['optimised']['total']:.2f} ({opt.status}). The {label} "
               "could not serve all demand, so no saving is reported.")
     else:
         print(f"baseline {c['baseline']['total']:.2f} ({base.status}) -> optimised {c['optimised']['total']:.2f} "

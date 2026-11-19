@@ -1,5 +1,7 @@
 # Hiểu toàn bộ dự án Nordic Flow (NEW AURA)
 
+> **Lưu ý (18/11/2026):** nhánh `final-round2` đã gộp vào `main` và đã xóa; chỗ nào ghi `final-round2` thì hiểu là `main`. Round 3 thêm chế độ chạy lại lịch sử: xem `docs/REPLAY-MODE.md`.
+
 Tài liệu này viết cho **người trong đội cần hiểu hết dự án để tự tin trả lời giám khảo, viết AI Journal, làm tài liệu và test hệ thống**. Mọi con số trong tài liệu đã được kiểm tra bằng cách chạy thật trên nhánh `final-round2` (ngày 8/11/2026). Nếu code đổi, các con số cần kiểm tra lại.
 
 Cách đọc: phần 1 và 2 đủ để nói về dự án trong 2 phút. Phần 3 đến 6 giải thích cách hệ thống nghĩ. Phần 7 đến 10 giải thích hệ thống được xây ra sao. Phần 11 là kịch bản tự test. Phần 12 là câu hỏi giám khảo có thể hỏi.

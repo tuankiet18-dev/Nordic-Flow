@@ -89,6 +89,17 @@ python -m nordic_flow run data/branching --out out/branching
 
 The baseline first tries each zone's preferred final warehouse, then fallback serving warehouses by outbound rate, then declared direct routes by cost for remaining demand. With transfer links it chooses the cheapest available supplier path while accounting for residual supply, node capacities and link capacities. A pure direct case uses the direct-delivery rule. A greedy baseline can fail where the optimiser succeeds, so savings require a verified baseline serving all demand.
 
+### History replay (Round 3)
+
+Add optional `actual_plan.csv` (`supplier_id,warehouse_id,zone_id,sku_id,pallets`): the plan that was really shipped that week. It then replaces the preferred-warehouse rule as the baseline, is checked by the same verifier, and no saving is shown if it does not serve every order within the limits.
+
+```bash
+python -m nordic_flow replay data/history          # 4 synthetic past weeks, one table
+python -m nordic_flow history data/history --weeks 4
+```
+
+In the app: Data page → **History replay**, or upload `frontend/public/examples/history-week-N.zip`. Full guide: `docs/REPLAY-MODE.md`.
+
 The CLI output includes `baseline_transfers.csv`, `optimised_transfers.csv`, `baseline_direct.csv` and `optimised_direct.csv`, alongside inbound/outbound CSVs and the comparison JSON.
 
 ## API

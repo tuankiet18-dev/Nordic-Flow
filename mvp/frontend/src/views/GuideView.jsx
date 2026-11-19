@@ -54,6 +54,11 @@ const FILES = [
   { name: "warehouse_skus.csv", optional: true, purpose: "Products each warehouse may receive", columns: [
     ["warehouse_id", "Warehouse code", "Warehouse that may receive the product."], ["sku_id", "Product code", "Allowed product; one pair per row."],
   ], csv: "warehouse_id,sku_id\nW01,SKU-01\nW02,SKU-01", note: "Without the file, every product is allowed at every warehouse. With it, only the listed pairs are allowed, and a warehouse that is left out receives no product. The rule applies at every intermediate warehouse; direct delivery uses no warehouse." },
+  { name: "actual_plan.csv", optional: true, purpose: "History replay: the plan that was really shipped in this period", columns: [
+    ["supplier_id", "Supplier code", "Supplier the pallets came from."], ["warehouse_id", "Warehouse code", "Warehouse that received and shipped them."],
+    ["zone_id", "Zone code", "Customer zone that received them."], ["sku_id", "Product code", "Product shipped."],
+    ["pallets", "Number ≥ 0", "Pallets shipped on this path in the period; one row per supplier, warehouse, zone and product."],
+  ], csv: "supplier_id,warehouse_id,zone_id,sku_id,pallets\nSUP1,WA,Z1,SKU-01,8", note: "With this file the optimised plan is compared with what was actually shipped, not with the preferred-warehouse rule. The actual plan is checked like any plan: if it does not serve every order exactly, or breaks a supply, capacity or lane limit, no saving is reported. Replay covers supplier → warehouse → zone paths only, so it cannot be combined with transfer_rates.csv or direct_rates.csv." },
 ];
 
 const CASES = [

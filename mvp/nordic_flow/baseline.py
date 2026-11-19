@@ -13,7 +13,27 @@ import math
 from .schema import Dataset, Plan
 
 
+def actual_baseline(ds: Dataset) -> Plan:
+    """Replay: the historical plan, exactly as shipped. The independent verifier decides whether it is usable."""
+    plan = Plan(status="BASELINE", mode="actual")
+    delivered = {}
+    for (s, w, z, p), q in ds.actual.items():
+        if q <= 0:
+            continue
+        plan.inbound[s, w, p] = plan.inbound.get((s, w, p), 0) + q
+        plan.outbound[w, z, p] = plan.outbound.get((w, z, p), 0) + q
+        delivered[z, p] = delivered.get((z, p), 0) + q
+    for key, need in ds.demand.items():
+        if need - delivered.get(key, 0) > 1e-9:
+            plan.shortfall[key] = need - delivered.get(key, 0)
+    if plan.shortfall:
+        plan.status = "BASELINE_INFEASIBLE"
+    return plan
+
+
 def baseline(ds: Dataset) -> Plan:
+    if ds.actual:
+        return actual_baseline(ds)
     if ds.transfers or ds.direct:
         return _transfer_baseline(ds)
     supply_left = dict(ds.supply)

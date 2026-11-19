@@ -18,6 +18,8 @@ OPTIONAL = {
     "warehouse_skus.csv": ["warehouse_id", "sku_id"],
     "transfer_rates.csv": ["from_warehouse_id", "to_warehouse_id", "cost_per_pallet"],
     "direct_rates.csv": ["supplier_id", "zone_id", "cost_per_pallet"],
+    # Replay: the plan the planner actually executed in this period, used as the baseline instead of the rule.
+    "actual_plan.csv": ["supplier_id", "warehouse_id", "zone_id", "sku_id", "pallets"],
 }
 
 
@@ -130,6 +132,18 @@ def load_dataset(folder: str | Path) -> tuple[Dataset, list[Issue]]:
                 cap = _num(r["max_pallets"], direct.name, i, "max_pallets", issues)
                 if cap is not None:
                     ds.direct_capacity[key] = cap
+
+    actual = folder / "actual_plan.csv"
+    if actual.exists():
+        for i, r in _rows(actual, OPTIONAL[actual.name], issues) or []:
+            qty = _num(r["pallets"], actual.name, i, "pallets", issues)
+            key = (r["supplier_id"], r["warehouse_id"], r["zone_id"], r["sku_id"])
+            if qty is None or not all(key):
+                if qty is not None:
+                    issues.append(Issue("error", actual.name, i, "supplier_id, warehouse_id, zone_id and sku_id are required"))
+                continue
+            if not dup(key, ds.actual, actual.name, i):
+                ds.actual[key] = qty
 
     elig = folder / "warehouse_skus.csv"
     if elig.exists():

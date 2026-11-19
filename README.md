@@ -2,10 +2,15 @@
 
 Nordic Flow is the NEW AURA team's local MVP for IT Consultant Challenge 2026. It decides which supplier and which existing warehouse should serve each order at the lowest total cost, and a planner reviews and approves every plan. That is the Round 1 pilot: suppliers, existing warehouses and customer zones. Two optional extensions go beyond the pilot, transfers between existing warehouses and direct supplier-to-customer lanes. Pilot data uses neither. See `docs/round2/ROUND1-ALIGNMENT.md` for how the MVP maps to the Round 1 proposal.
 
-Round 1 material is in `docs/round1/`. The Round 2 deadline is 22:00 GMT+7 on 9 November 2026.
+Round 1 material is in `docs/round1/`. Round 2 was submitted on 9 November 2026 and passed. **Round 3** is a live pitch on Saturday 21 November 2026 (15 minutes + 10 minutes Q&A). The only working branch is `main`.
+
+**Round 3 change in the MVP:** history replay. Upload the plan that was actually shipped (`actual_plan.csv`) and the optimiser is compared with it instead of the synthetic rule. See `docs/REPLAY-MODE.md`. The team plan, decisions and analysis for Round 3 are in `docs/round3/` (Vietnamese).
 
 ## Start here
 
+- `docs/HANDOFF.md`: where the project stands and what to do next.
+- `docs/round3/README.md`: Round 3 decisions, plan, who does what.
+- `docs/REPLAY-MODE.md`: developer guide for the history replay feature.
 - `mvp/README.md` covers installation, samples, data files and the API.
 - `docs/MVP-SPEC-v0.1.md` is the current specification, updated for multi-warehouse transfers.
 - `docs/round2/01_CONTRACTS_AND_ARCHITECTURE.md` is the canonical input, optimisation and API contract.
@@ -23,12 +28,14 @@ mvp/
   api/             FastAPI, use cases, SQLite and audit
   frontend/        React and Vite source
   web/             Production frontend build served by FastAPI
-  data/            Golden, synthetic demo and multi-warehouse examples
+  data/            Golden, synthetic demo, multi-warehouse and history replay examples
   tests/           Python tests and browser walkthrough
 docs/
   reference/       Organiser case, brief and AI Journal template
   round1/          Submitted proposal and evidence
   round2/          Current contracts, implementation notes and test evidence
+  round3/          Round 3 analysis, decisions and team plan (Vietnamese)
+  REPLAY-MODE.md   History replay: contract, code map, how to extend
 deliverables/      Submission PDFs, video and editable sources
 ```
 

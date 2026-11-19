@@ -1,5 +1,7 @@
 # Hướng dẫn cho đồng đội: sau khi pull nhánh `final-round2`
 
+> **Lưu ý (18/11/2026):** tài liệu này là của Round 2. Nhánh `final-round2` đã được gộp vào `main` và **đã xóa**. Giờ chỉ dùng `main`. Hướng dẫn cho Round 3 nằm ở `docs/round3/README.md`.
+
 Dành cho Bách, Nhật Anh và Kiệt. Đọc từ trên xuống, mỗi phần có lệnh để chạy và kết quả cần thấy. Hạn nộp: **22:00 thứ Hai 9/11/2026**; mục tiêu gửi mail **trước 18:00**.
 
 ## 0. Việc đầu tiên: dùng đúng nhánh

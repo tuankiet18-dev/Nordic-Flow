@@ -25,7 +25,8 @@ SAMPLES = Path(__file__).resolve().parent.parent / "data"
 SAMPLE_NAMES = {"demo": "Synthetic demo (2 suppliers, 3 warehouses, 6 zones, 20 SKUs)",
                 "golden": "Worked example (baseline 700, optimum 500)",
                 "transshipment": "Warehouse transfer chain (3 warehouses, 2 transfer legs)",
-                "branching": "Multi-warehouse example (3 receiving choices, 3 delivery choices)"}
+                "branching": "Multi-warehouse example (3 receiving choices, 3 delivery choices)",
+                "replay": "History replay: one synthetic past week with the plan actually shipped"}
 ALLOWED_FILES = set(REQUIRED) | set(OPTIONAL)
 
 
@@ -186,7 +187,9 @@ def scenario_detail(db: Database, sid: int) -> dict:
         "summary": {"suppliers": len(ds.suppliers), "warehouses": len(ds.warehouses), "zones": len(ds.zones),
                     "skus": len(ds.skus), "demand_pallets": sum(ds.demand.values()),
                     "capacity_total": sum(w.capacity for w in ds.warehouses.values()),
-                    "transfer_lanes": len(ds.transfers), "direct_lanes": len(ds.direct)},
+                    "transfer_lanes": len(ds.transfers), "direct_lanes": len(ds.direct),
+                    "baseline_kind": ds.baseline_kind, "actual_plan_rows": len(ds.actual),
+                    "actual_plan_pallets": sum(ds.actual.values())},
         "entities": {
             "suppliers": {s.id: s.name for s in ds.suppliers.values()},
             "warehouses": {w.id: {"name": w.name, "capacity": w.capacity} for w in ds.warehouses.values()},
@@ -257,8 +260,11 @@ def _execute(db: Database, sid: int, ds: Dataset, mode: str, time_limit: float, 
     if vo:
         raise ApiError(500, "verification_failed", "The plan failed the independent constraint check.", vo)
     cmp = compare(ds, base, opt)
+    cmp["baseline_kind"] = ds.baseline_kind
     cmp["baseline_valid"] = base.status == "BASELINE" and not vb
-    cmp["baseline_issues"] = [] if cmp["baseline_valid"] else (vb or ["the baseline rule could not serve all demand"])
+    unusable = ("the actual plan does not serve all demand" if ds.actual
+                else "the baseline rule could not serve all demand")
+    cmp["baseline_issues"] = [] if cmp["baseline_valid"] else (vb or [unusable])
     if not cmp["baseline_valid"]:
         cmp["saving"] = cmp["saving_pct"] = None       # never report a saving against an unusable baseline
     total = cost_breakdown(ds, opt)["total"]
@@ -281,6 +287,7 @@ def run_detail(db: Database, rid: int) -> dict:
     for name in ("baseline", "optimised"):
         cmp[name].setdefault("transfer_freight", 0.0)
         cmp[name].setdefault("direct_freight", 0.0)
+    cmp.setdefault("baseline_kind", "rule")
     cmp.setdefault("transfer_changes", [])
     cmp.setdefault("direct_changes", [])
     out = {"id": rid, "scenario_id": r["scenario_id"], "kind": r["kind"], "parent_run_id": r["parent_run_id"],

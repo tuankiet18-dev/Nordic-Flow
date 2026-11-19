@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ArrowRight, FileUp, FlaskConical, Loader2, Network, Play, Sparkles } from "lucide-react";
+import { ArrowRight, FileUp, FlaskConical, History, Loader2, Network, Play, Sparkles } from "lucide-react";
 import { useApp } from "../store.jsx";
 import { Field, Kpi, Note, PageHead, Section, Tag } from "../components/ui.jsx";
 import { fmt } from "../utils";
@@ -114,6 +114,8 @@ export default function DataView() {
             <details className="mx-auto mt-4 max-w-2xl text-left text-xs text-slate-500">
               <summary className="cursor-pointer text-center">Required files</summary>
               <p className="mt-2 leading-relaxed">suppliers.csv, warehouses.csv, zones.csv, skus.csv, inbound_rates.csv, outbound_rates.csv, supply.csv, demand.csv</p>
+              <p className="mt-2 font-medium text-slate-700">History replay (optional)</p>
+              <p className="mt-1 leading-relaxed">Add actual_plan.csv with supplier_id, warehouse_id, zone_id, sku_id and pallets: the plan that was really shipped that week. The optimised plan is then compared with it instead of the preferred-warehouse rule.</p>
               <p className="mt-2 font-medium text-slate-700">Optional extensions beyond the Round 1 pilot: warehouse transfers and direct delivery</p>
               <p className="mt-1 leading-relaxed">transfer_rates.csv links warehouses using from_warehouse_id, to_warehouse_id and cost_per_pallet. The optional max_pallets column limits the route across all products. A blank limit allows any quantity within warehouse capacity. Zero closes that route.</p>
               <p className="mt-2 leading-relaxed">List every warehouse in warehouses.csv. Transfer routes must move forward through an acyclic network. warehouse_skus.csv can restrict which products each warehouse accepts.</p>
@@ -126,6 +128,7 @@ export default function DataView() {
             <div className="mt-3 grid gap-4 md:grid-cols-2">
               <Choice icon={FlaskConical} title="Synthetic demo" text="Pilot scale: 2 suppliers, 3 existing warehouses, 6 customer zones and 20 products." onClick={() => loadSample("demo")} />
               <Choice icon={Sparkles} title="Worked example" text="A small allocation with 2 warehouses and 1 product, easy to check by hand." onClick={() => loadSample("golden")} />
+              <Choice icon={History} title="History replay" text="A past week with the plan that was actually shipped. The optimiser is compared with it on the same orders." onClick={() => loadSample("replay")} />
             </div>
             <details className="mt-4 rounded-lg border border-slate-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-slate-800">
@@ -146,7 +149,7 @@ export default function DataView() {
 
       {s && (
         <>
-          <Section title={s.source === "sample:golden" ? "Worked example" : s.source === "sample:branching" ? "Multi-warehouse example" : s.source === "sample:transshipment" ? "Warehouse transfer chain" : s.name}>
+          <Section title={s.source === "sample:replay" ? "History replay (synthetic week)" : s.source === "sample:golden" ? "Worked example" : s.source === "sample:branching" ? "Multi-warehouse example" : s.source === "sample:transshipment" ? "Warehouse transfer chain" : s.name}>
             <div className="mb-4"><Tag tone={s.valid ? "good" : "bad"}>{s.valid ? "Valid" : "Has errors"}</Tag></div>
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
               <Kpi label="Suppliers" value={s.summary.suppliers} />
@@ -159,7 +162,9 @@ export default function DataView() {
               <span>Weekly handling capacity <b className="text-slate-900">{fmt(s.summary.capacity_total)} pallet-equivalents</b></span>
               {s.summary.transfer_lanes > 0 && <span>Transfer routes <b className="text-slate-900">{s.summary.transfer_lanes}</b></span>}
               {s.summary.direct_lanes > 0 && <span>Factory-to-customer routes <b className="text-slate-900">{s.summary.direct_lanes}</b></span>}
+              {s.summary.baseline_kind === "actual" && <span>Actual plan <b className="text-slate-900">{fmt(s.summary.actual_plan_pallets)} pallets on {s.summary.actual_plan_rows} routes</b></span>}
             </div>
+            {s.summary.baseline_kind === "actual" && <p className="hint mt-2">History replay: the plan that was really shipped is the baseline. The result shows what a verified plan would have cost on the same orders.</p>}
             {s.source === "sample:transshipment" && <p className="hint mt-2">Each visited warehouse uses handling capacity. Costs include every transfer and handling step.</p>}
             {s.source === "sample:branching" && <BranchingNetwork scenario={s} />}
           </Section>
@@ -185,7 +190,7 @@ export default function DataView() {
             <Section title="Calculate the plan">
               <div className="card card-pad">
                 <div className="flex flex-wrap items-center justify-between gap-4">
-                  <p className="text-sm text-slate-600">{mode === "milp" ? "Whole-pallet allocation" : "Fractional-pallet allocation"} · Compared with the preferred-warehouse baseline</p>
+                  <p className="text-sm text-slate-600">{mode === "milp" ? "Whole-pallet allocation" : "Fractional-pallet allocation"} · Compared with {s.summary.baseline_kind === "actual" ? "the actual plan from history" : "the preferred-warehouse baseline"}</p>
                   <button type="button" className="btn btn-primary" disabled={busy} onClick={() => runOpt(mode, tl)}>
                     {busy ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : <Play size={16} aria-hidden="true" />} Calculate plan
                   </button>

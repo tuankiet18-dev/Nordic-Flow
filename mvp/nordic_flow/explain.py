@@ -74,7 +74,8 @@ def build_facts(ds: Dataset, base: Plan, opt: Plan, cmp: dict, pins: list[dict] 
     facts = {
         "currency": "cost units",
         "how_to_read": "warehouse route figures are cheapest-supplier estimates where present; transfer movements are individual legs; direct movements go supplier-to-customer without warehouse handling",
-        "baseline_rule": "prefer each zone's assigned final warehouse, then others by outbound rate, using available supplier paths; use declared direct supplier-to-zone routes for remaining demand, within all supply and capacity limits",
+        "baseline_kind": ds.baseline_kind,
+        "baseline_rule": "the plan the planner actually executed in this period, taken from actual_plan.csv" if ds.actual else "prefer each zone's assigned final warehouse, then others by outbound rate, using available supplier paths; use declared direct supplier-to-zone routes for remaining demand, within all supply and capacity limits",
         "total_demand_pallets": round(sum(ds.demand.values()), 6),
         "total_weekly_capacity": round(sum(w.capacity for w in ds.warehouses.values()), 6),
         "mode": opt.mode, "solver_status": opt.status,
@@ -119,14 +120,19 @@ def build_facts(ds: Dataset, base: Plan, opt: Plan, cmp: dict, pins: list[dict] 
 
 
 def template_text(f: dict) -> str:
-    baseline_label = "direct-delivery baseline" if f["network"]["warehouses"] == 0 and f.get("direct_pallets", 0) else "preferred-warehouse baseline"
+    if f.get("baseline_kind") == "actual":
+        baseline_label = "actual plan from history"
+    elif f["network"]["warehouses"] == 0 and f.get("direct_pallets", 0):
+        baseline_label = "direct-delivery baseline"
+    else:
+        baseline_label = "preferred-warehouse baseline"
     if f.get("baseline_valid", True):
         difference = (f"an additional cost of {_fmt(abs(f['saving']))}" if f["saving"] < 0
                       else f"a saving of {_fmt(f['saving'])}")
         parts = [f"The optimised plan costs {_fmt(f['optimised_total'])} {f['currency']} against {_fmt(f['baseline_total'])} for the "
                  f"{baseline_label}, {difference} ({_fmt(abs(f['saving_percent']))}%). Solver status is {f['solver_status']}."]
     else:
-        parts = [f"The optimised plan costs {_fmt(f['optimised_total'])} {f['currency']}. The preferred-warehouse baseline could not serve all "
+        parts = [f"The optimised plan costs {_fmt(f['optimised_total'])} {f['currency']}. The {baseline_label} could not serve all "
                  f"demand, so no saving is reported. Solver status is {f['solver_status']}."]
     drivers = sorted(f["cost_change_by_type"].items(), key=lambda kv: kv[1])
     cuts = [(k, v) for k, v in drivers if v < 0] if f.get("baseline_valid", True) else []
@@ -213,7 +219,7 @@ SYSTEM = (
     "You are explaining a warehouse allocation result to a logistics planner who must decide whether to approve it. "
     "Write in plain English, in three short paragraphs separated by a blank line, 160 to 230 words in total, no headings, "
     "no bullet points.\n"
-    "Paragraph 1 - the result: the optimised cost against the preferred-warehouse baseline, the saving and its percentage, "
+    "Paragraph 1 - the result: the optimised cost against the baseline (baseline_rule says which one: the preferred-warehouse rule or the actual plan from history), the saving and its percentage, "
     "and a brief description of the baseline_rule.\n"
     "Paragraph 2 - why: which cost types went down or up (cost_change_by_type) and what moved. Use largest_changes: say which "
     "warehouse served the zone and SKU before and after, and explain the move with the route cost per pallet figures and "

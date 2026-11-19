@@ -51,6 +51,12 @@ class Dataset:
     transfer_capacity: dict[tuple[str, str], float] = field(default_factory=dict)  # optional max pallets per period
     direct: dict[tuple[str, str], float] = field(default_factory=dict)      # (supplier, zone) -> direct freight per pallet
     direct_capacity: dict[tuple[str, str], float] = field(default_factory=dict)  # optional route limit across SKUs
+    actual: dict[tuple[str, str, str, str], float] = field(default_factory=dict)  # replay: (supplier, warehouse, zone, sku) -> pallets the planner really shipped
+
+    @property
+    def baseline_kind(self) -> str:
+        """'actual' when a historical plan was supplied (replay), otherwise the preferred-warehouse 'rule'."""
+        return "actual" if self.actual else "rule"
 
     def sku_allowed(self, warehouse: str, sku: str) -> bool:
         return self.eligible is None or sku in self.eligible.get(warehouse, set())
