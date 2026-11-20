@@ -34,18 +34,18 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 | Dynamics 365 is an on-premises version out of support | CRM 2016 support ended 13 Jan 2026: a real security reason for "decommissioned" |
 | Salesforce licences are an operating cost, outside the project budget | 100 users at list price is about $210k a year, more than the whole project |
 | Like-for-like migration, history older than 24 months archived | The only way to fit 8 weeks |
-| Blended delivery: Nordic lead, Vietnam delivery team | Western Europe rates alone would use the whole budget |
-**Say:** "The brief leaves gaps, so we state our assumptions. The most important one is licences: if Salesforce licences had to come from the project budget, no plan could work. We treat them as an operating cost that replaces the old CRM, and we ask you to confirm that."
+| Blended delivery: Nordic lead, Vietnam delivery team | Makes the budget work: at Western European rates (~€1,200/day) the CRM alone costs ~€200k, the whole budget |
+**Say:** "The brief leaves gaps, so we state our assumptions. The most important one is licences: if Salesforce licences had to come from the project budget, no plan could work. We treat them as an operating cost that replaces the old CRM, and we ask you to confirm that. The second one is the team: at Western European rates the CRM migration alone would cost about 200 thousand euro, the whole budget. A Nordic lead with a delivery team in Vietnam is what makes both tracks fit."
 
 ## 4. Options (2:30–3:30) · Kiệt
-**Title:** Three options; only one keeps both goals inside the budget
+**Title:** Three options; only one delivers both goals on time
 **On slide:**
-| | A. Do everything | B. CRM only | **C. Two tracks** |
+| | A. Do everything | B. CRM first, Nordic Flow later | **C. Two tracks in parallel** |
 |---|---|---|---|
 | Fits budget | ✗ | ✓ | ✓ |
-| Keeps original goal | ✓ | ✗ | ✓ |
+| Original goal by week 8 | ✓ | ✗ (delayed, no evidence) | ✓ (proven by replay) |
 | Business continuity | risky | ✓ | ✓ |
-**Say:** "Doing everything breaks the budget. Doing only the CRM abandons the reason this project started. We recommend two tracks under one programme."
+**Say:** "Doing everything breaks the budget. Doing the CRM first and Nordic Flow later fits the budget, but the original goal waits at least eight weeks with no evidence, and a project with no evidence is the first one cut in the next budget round. The replay costs about 40 thousand euro and does not take people from the CRM, so we recommend two tracks in parallel under one programme."
 
 ## 5. Recommendation (3:30–5:00) · Kiệt
 **Title:** CRM first for continuity; Nordic Flow proven cheaply by replay

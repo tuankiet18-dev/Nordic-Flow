@@ -71,12 +71,15 @@ Quy ước: **[đề]** là thông tin trong đề, **[R1]** là proposal Round 
 
 ## 4. Ba option và vì sao chọn option C
 
-| | A. Làm đủ cả hai | B. Chỉ CRM | **C. Hai track, CRM trước, Nordic Flow thu gọn** |
+| | A. Làm đủ cả hai | B. CRM trước, Nordic Flow sau (tuần tự) | **C. Hai track song song, CRM ưu tiên, Nordic Flow thu gọn** |
 |---|---|---|---|
 | Đúng ngân sách | Không | Có | Có |
-| Đáp ứng mục tiêu gốc | Có | **Không** | Có, ở mức chứng minh |
+| Mục tiêu gốc ở tuần 8 | Có | **Chưa**: trễ ít nhất 8 tuần, chưa có bằng chứng | Có, ở mức chứng minh (replay) |
 | Rủi ro gián đoạn kinh doanh | Cao (đội quá tải) | Thấp | Thấp (CRM được ưu tiên khi tranh chấp nguồn lực) |
-| Điều ban giám khảo thấy | Không biết ưu tiên | Bỏ cuộc mục tiêu gốc | Biết ưu tiên, biết thích nghi |
+| Rủi ro cho mục tiêu gốc | Thấp | Cao: không có số liệu, dễ bị cắt ở lần cắt ngân sách sau | Thấp |
+| Điều ban giám khảo thấy | Không biết ưu tiên | An toàn nhưng bị động | Biết ưu tiên, biết thích nghi |
+
+Option "bỏ hẳn Nordic Flow" không đưa vào vì đề yêu cầu vẫn phải đạt mục tiêu gốc (giảm tổng chi phí logistics, theo proposal Round 1). Nếu bị hỏi, xem câu 1b trong `QA.md`.
 
 **Lý do chọn C:**
 1. **Business continuity trước, tối ưu sau.** CRM có hạn chót cứng và rủi ro bảo mật. Nordic Flow là cơ hội tiết kiệm, chậm vài tuần không làm hỏng gì.

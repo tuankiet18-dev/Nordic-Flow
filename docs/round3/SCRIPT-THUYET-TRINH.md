@@ -62,7 +62,7 @@ Hai: Dynamics đang chạy là bản On-Premises đã end of support. Bản Dyna
 
 [Chỉ vào dòng 3, nói chậm.] Ba, và đây là assumption quan trọng nhất: **license Salesforce nằm ngoài ngân sách dự án.** Theo giá niêm yết, một trăm user tốn khoảng 210 nghìn đô mỗi năm, nhiều hơn cả ngân sách dự án. Nếu khoản này phải lấy từ ngân sách dự án thì không phương án nào khả thi. Chúng em coi đây là operating cost (OPEX) thay cho CRM cũ, và sẽ đề nghị Company A xác nhận ở cuối bài.
 
-Bốn: like-for-like migration, lịch sử cũ hơn 24 tháng thì archive. Năm: blended team, trưởng nhóm ở Bắc Âu và đội thực hiện ở Việt Nam."
+Bốn: like-for-like migration, lịch sử cũ hơn 24 tháng thì archive. Năm, và đây là assumption quan trọng thứ hai: **blended team**, trưởng nhóm ở Bắc Âu và delivery team ở Việt Nam. Assumption này quyết định ngân sách: nếu cả đội làm với rate Tây Âu, khoảng 1.200 euro một ngày, riêng CRM migration đã khoảng 200 nghìn euro, tức hết toàn bộ ngân sách. Có blended team thì cả hai track mới vừa."
 
 [Chuyển slide.]
 
@@ -72,9 +72,9 @@ Bốn: like-for-like migration, lịch sử cũ hơn 24 tháng thì archive. Nă
 
 [Chỉ cột A.] Option A, làm tất cả như kế hoạch cũ và thêm CRM: vượt ngân sách.
 
-[Chỉ cột B.] Option B, chỉ làm CRM và bỏ Nordic Flow: vừa ngân sách, nhưng bỏ mất lý do dự án này được bắt đầu, và đề bài cũng yêu cầu vẫn phải đạt mục tiêu ban đầu.
+[Chỉ cột B.] Option B, làm CRM trước, để Nordic Flow sau: vừa ngân sách và ít rủi ro. Nhưng mục tiêu ban đầu, là giảm tổng chi phí logistics, phải chờ ít nhất tám tuần mà không có bằng chứng nào. Và một dự án chưa có bằng chứng thường là thứ bị cắt đầu tiên ở lần cắt ngân sách tiếp theo.
 
-[Chỉ cột C.] Option C, hai track trong một chương trình: **đây là option duy nhất vừa ngân sách mà vẫn giữ được cả hai mục tiêu.** Chúng em chọn option C."
+[Chỉ cột C.] Option C, hai track song song trong một chương trình. History replay chỉ tốn khoảng 40 nghìn euro và không lấy người của CRM. **Đây là option duy nhất mà đến tuần tám có cả CRM mới lẫn một con số tiết kiệm thật.** Chúng em chọn option C."
 
 [Chuyển slide.]
 

@@ -13,8 +13,11 @@ Nguyên tắc:
 
 ## A. Chiến lược và ưu tiên (Kiệt)
 
-**1. Sao không bỏ Nordic Flow, chỉ làm CRM cho chắc?**
-"Đề bài yêu cầu vẫn phải đạt mục tiêu kinh doanh ban đầu, không chỉ làm CRM. Track Nordic Flow chỉ tốn khoảng 40 nghìn euro và sau 8 tuần cho ra một con số tiết kiệm đo trên dữ liệu thật. Bỏ nó đi thì tiết kiệm được rất ít tiền, mà bài toán chi phí logistics vẫn nằm nguyên đó."
+**1. Sao không làm CRM trước cho chắc, xong rồi mới làm Nordic Flow?**
+"Đề bài yêu cầu giải quyết cả mục tiêu ban đầu lẫn CRM trong cùng ngân sách và thời gian. Nếu làm tuần tự, đến tuần 8 Company A chưa có bằng chứng nào về khoản tiết kiệm, và một dự án chưa có bằng chứng thường bị cắt đầu tiên ở lần cắt ngân sách tiếp theo. History replay chỉ tốn khoảng 40 nghìn euro, không đụng vận hành và không lấy người của CRM, nên chạy song song gần như không thêm rủi ro cho CRM."
+
+**1b. Vậy sao không bỏ hẳn Nordic Flow?**
+"Vì mục tiêu gốc của dự án là giảm tổng chi phí logistics, và đề yêu cầu vẫn phải đạt mục tiêu đó. Bỏ đi thì chỉ tiết kiệm được khoảng 40 nghìn euro, mà bài toán chi phí logistics vẫn nằm nguyên."
 
 **2. Vì sao CRM được ưu tiên trước?**
 "Vì CRM có hạn chót cứng: hệ thống cũ sắp ngừng, và chạy tiếp một hệ thống end of support là rủi ro bảo mật. Mất dữ liệu khách hàng hay gián đoạn bán hàng thiệt hại hơn nhiều so với việc khoản tiết kiệm logistics đến chậm vài tuần."
