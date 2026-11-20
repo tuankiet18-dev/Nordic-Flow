@@ -95,8 +95,9 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 
 ## 10. Replay result (11:00–11:45) · Bách
 **Title:** Four synthetic weeks: 2.2% to 4.2%, 3.16% overall
-**On slide:** the week table from the Round 3 User Journey, with "synthetic data, not a forecast" in large text.
-**Say:** "On four synthetic weeks the verified plan is 2.2 to 4.2 percent cheaper. That number proves the measurement works. It is not a forecast for Company A; the real number comes from real weeks in discovery."
+**On slide:** the week table from the Round 3 User Journey; a card "Pilot evidence page: GO, 3.16% over 4 comparable weeks, above the 2% gate. The app adds the weeks up; Company A decides."; "synthetic data, not a forecast" in large text.
+**Say:** "On four synthetic weeks the verified plan is 2.2 to 4.2 percent cheaper. That number proves the measurement works. It is not a forecast for Company A; the real number comes from real weeks in discovery. The new Pilot evidence page adds the weeks up and applies the gate: here it says GO. It also checks the Dynamics to Salesforce code map for the zone codes. The app only adds up; Company A makes the decision."
+**Optional live:** if the demo runs well, open Pilot evidence → Use the 4 sample weeks instead of the slide.
 
 ## 11. Journey and diagrams (11:45–12:30) · Nhật Anh
 **Title:** What changed in the user journey and the system context

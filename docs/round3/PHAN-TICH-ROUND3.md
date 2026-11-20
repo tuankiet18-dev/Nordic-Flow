@@ -187,6 +187,7 @@ Chỉ tiêu bị ảnh hưởng: "giảm 30% thời gian planner" và "không l�
 **MVP**
 - Bắt buộc: không xây thêm nhiều. Nói rõ phần nào đóng băng.
 - Nên có, nếu Bách kịp (cần đánh giá trong ngày): **chế độ history replay**, nạp thêm file "actual plan đã chạy" làm baseline thay cho quy tắc synthetic, rồi so sánh. Việc này vá đúng điểm yếu lớn nhất (baseline synthetic) và cho thấy khả năng thích nghi.
+- **Đã làm thêm (21/11):** trang **Pilot evidence**: replay nhiều tuần một lúc, kết luận GO/NO-GO theo ngưỡng 2% trên ít nhất 4 tuần, business case (break-even, tiết kiệm mỗi năm), và kiểm tra code map Dynamics → Salesforce cho mã delivery zone. Vẫn chỉ là file vào, file ra; không nối Salesforce.
 - Không nên: dựng Salesforce giả hay nối API thật. Không đủ thời gian và dễ bị hỏi vặn.
 
 **User Journey**

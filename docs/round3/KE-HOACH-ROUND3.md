@@ -19,7 +19,7 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 | D8 | **Ngân sách (ước tính):** CRM €90–100k, Nordic Flow €35–40k, quản lý €20k, contingency €30–40k (ưu tiên CRM). Tổng €175–200k | Còn dư so với €210k |
 | D9 | **Quy tắc ưu tiên:** khi tranh nguồn lực, **CRM thắng**. Fallback: CRM core ở tuần 8, integration phụ ở tuần 9–12 | Business continuity trước |
 | D10 | **AI:** giữ giải thích (tùy chọn) và mapping mã có người duyệt; đề xuất dùng cùng cách đó cho field mapping và gợi ý duplicate trong CRM migration. **Không xây phần CRM trong MVP** | Đúng vai trò AI từ Round 1, chi phí gần 0 |
-| D11 | **MVP:** thêm **chế độ history replay** (file `actual_plan.csv` làm baseline) và lệnh tổng hợp nhiều tuần. Đóng băng chuyển kho giữa kho và tuyến thẳng | Vá điểm yếu "baseline synthetic", cho thấy thích nghi |
+| D11 | **MVP:** thêm **chế độ history replay** (file `actual_plan.csv` làm baseline) và lệnh tổng hợp nhiều tuần; trang **Pilot evidence** (nhiều tuần → GO/NO-GO theo ngưỡng 2%, business case, kiểm tra code map Dynamics → Salesforce, báo cáo CSV). Đóng băng chuyển kho giữa kho và tuyến thẳng | Vá điểm yếu "baseline synthetic", cho thấy thích nghi |
 | D12 | **Tài liệu:** sửa System Context (thêm Dynamics 365, Salesforce, archive, file actual plan), User Journey (thêm journey history replay). Không làm lại từ đầu | Đề hỏi rõ "MVP, user journey và diagram đã điều chỉnh thế nào" |
 | D13 | **Demo trực tiếp tối đa 2 phút**, có backup video quay sẵn; chạy không cần mạng (tắt Groq) | Tránh rủi ro mạng và thời gian |
 
@@ -29,6 +29,7 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 
 ### Claude (làm ngay hôm nay)
 - [x] Chế độ history replay trong MVP: đọc `actual_plan.csv`, dùng làm baseline, kiểm chứng độc lập, nhãn trên giao diện, giải thích theo đúng loại baseline.
+- [x] Trang Pilot evidence trong app: replay nhiều tuần, kết luận GO/NO-GO theo ngưỡng 2% trên ít nhất 4 tuần, business case, kiểm tra code map Dynamics → Salesforce, tải báo cáo CSV (thêm ngày 21/11; 302 unit test và 8 test trình duyệt đều pass).
 - [x] Bộ dữ liệu mẫu 4 tuần lịch sử (synthetic, ghi rõ) và lệnh `python -m nordic_flow replay <thư mục>` tổng hợp kết quả từng tuần.
 - [x] Test tự động cho phần mới; chạy lại toàn bộ test.
 - [x] Sửa System Context Diagram và User Journey (bản PDF mới): `deliverables/round3/`.

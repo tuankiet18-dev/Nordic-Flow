@@ -7,3 +7,6 @@ venv/
 mvp/out/
 var/
 mvp/var_backup_*/
+
+# Organiser material is confidential: never commit it
+docs/reference/IT Consultant Challenge 2026 - Round *.pdf

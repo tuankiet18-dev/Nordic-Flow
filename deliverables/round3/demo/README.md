@@ -1,13 +1,14 @@
 # Backup video for the Round 3 demo
 
-`replay-demo.mp4`: 1 min 21 s, 1600×900, no sound, English captions burned in. Play it if the live demo on slide 9 fails (no network, laptop problem, app error).
+`replay-demo.mp4`: 1 min 50 s, 1600×900, no sound, English captions burned in. Play it if the live demo on slide 9 fails (no network, laptop problem, app error).
 
 What it shows, in order:
 1. Data page → **History replay** sample: 606 pallets of demand, actual plan of 606 pallets on 87 routes.
 2. **Calculate plan**: Actual plan (history) 32,698, optimised 31,316, saving 1,382 (4.2%), Plan checks Passed, and the note that nothing is sent to any system.
 3. **Review & approve → Generate explanation**: "…against 32,698 for the actual plan from history…".
 4. A second week uploaded as a ZIP (`history-week-2.zip`): 33,812 actual, 33,066 verified, 746 lower (2.2%).
-5. Closing caption: four synthetic weeks 2.2% to 4.2%, 3.16% overall; the gate is at least 2% on real weeks.
+5. **Pilot evidence** page → Use the 4 sample weeks: GO, 3.16% over 4 weeks (2.2% to 4.2%), above the 2% gate; the business case (break-even below 1%, about €158–316k a year at 3.16% on €5–10M, estimates); the CRM code map check (all 6 zone codes mapped).
+6. Closing caption: synthetic data, not a forecast; the real gate is decided on Company A's own past weeks.
 
 All data is synthetic. During the pitch, say the captions in your own words rather than reading them.
 

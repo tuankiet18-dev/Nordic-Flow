@@ -160,7 +160,9 @@ Và không có gì được gửi vào hệ thống nào của Company A. Đây 
 
 "Chúng em chạy cùng cách đó cho bốn tuần synthetic data. **Verified plan rẻ hơn từ 2,2 đến 4,2%, tổng cộng 3,16%.**
 
-Một lần nữa, đây không phải dự báo. Nó cho thấy cách đo hoạt động từ đầu đến cuối và lặp lại được. Con số thật sẽ đến từ các tuần dữ liệu thật của Company A trong giai đoạn discovery."
+Một lần nữa, đây không phải dự báo. Nó cho thấy cách đo hoạt động từ đầu đến cuối và lặp lại được. Con số thật sẽ đến từ các tuần dữ liệu thật của Company A trong giai đoạn discovery.
+
+[Chỉ vào thẻ màu xanh.] Trong MVP, trang **Pilot evidence** cộng các tuần lại và áp ngưỡng 2%: ở đây kết quả là **GO**. Trang này cũng kiểm tra code map từ Dynamics sang Salesforce cho mã delivery zone. Hệ thống chỉ cộng số; người quyết định vẫn là Company A."
 
 [Chuyển slide.]
 

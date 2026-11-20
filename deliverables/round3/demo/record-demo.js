@@ -123,7 +123,32 @@ async function click(page, locator) {
   await page.waitForTimeout(1200);
   await point(page, page.getByText('Saving', { exact: true }), 600);
   await caption(page, 'Week 2: 33,812 actual, 33,066 verified, 746 lower (2.2%).', 4500);
-  await caption(page, 'Four synthetic weeks together: 2.2% to 4.2%, 3.16% overall. Gate for a live pilot: at least 2% on real weeks.', 6000);
+
+  // 5. Several weeks together: the go / no-go gate
+  await caption(page, 'One week does not decide. The Pilot evidence page replays several weeks at once.', 0);
+  await click(page, page.getByRole('button', { name: 'Pilot evidence', exact: true }).first());
+  await page.waitForTimeout(800);
+  await click(page, page.getByRole('button', { name: 'Use the 4 sample weeks' }));
+  await page.getByText('Go: a live pilot is worth testing').waitFor({ timeout: 90000 });
+  await page.waitForTimeout(800);
+  await point(page, page.getByText('Go: a live pilot is worth testing'), 600);
+  await caption(page, 'Four synthetic weeks: 2.2% to 4.2%, 3.16% overall. At least 2% over at least 4 weeks: GO.', 5500);
+  await point(page, page.getByRole('table', { name: 'Replayed weeks' }), 600);
+  await caption(page, 'A week whose actual plan cannot be verified is left out, never counted. A person makes the decision.', 5000);
+  const bc = page.getByRole('table', { name: 'Business case' });
+  await bc.scrollIntoViewIfNeeded();
+  await point(page, bc, 600);
+  await caption(page, 'Business case (estimates): break-even below 1%; 3.16% on €5–10M is about €158–316k a year.', 5500);
+  await click(page, page.getByRole('button', { name: 'Use sample code map' }));
+  await page.getByText('Code map complete').waitFor();
+  await page.getByText('Code map complete').evaluate(el => el.scrollIntoView({ block: 'center' }));
+  await page.waitForTimeout(500);
+  await point(page, page.getByText('Code map complete'), 600);
+  await page.evaluate(() => { const b = document.getElementById('nf-caption'); b.style.bottom = 'auto'; b.style.top = '90px'; });
+  await caption(page, 'CRM migration link: every zone code has exactly one Salesforce code, so weeks stay comparable.', 5500);
+  await page.evaluate(() => { const b = document.getElementById('nf-caption'); b.style.top = 'auto'; b.style.bottom = '28px'; });
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await caption(page, 'Synthetic data, not a forecast. The real gate is decided on Company A’s own past weeks.', 4500);
   await caption(page, '', 800);
   await cdp.send('Page.stopScreencast');
   const end = Date.now() / 1000;

@@ -97,7 +97,7 @@ export default function App() {
           <div className="mt-1">{run ? `Plan ${run.id} · ${stateText(run.state)}` : "Load data to begin"}</div>
         </div>
         <p className="px-5 pb-5 text-xs leading-relaxed text-slate-500">
-          NEW AURA · IT Consultant Challenge 2026, Round 2 MVP. Data is synthetic and costs are in cost units, not a forecast for Company A.
+          NEW AURA · IT Consultant Challenge 2026, Round 3 MVP. Data is synthetic and costs are in cost units, not a forecast for Company A.
         </p>
       </aside>
 
