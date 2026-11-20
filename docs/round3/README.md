@@ -10,7 +10,9 @@ Trình bày **thứ Bảy 21/11/2026, 13:30**, Opal Tower. 15 phút + 10 phút h
 4. **`QA.md`**: 23 câu hỏi giám khảo có thể hỏi, câu trả lời tiếng Anh, ai trả lời.
 5. **`../REPLAY-MODE.md`** (cho người làm code): tính năng mới của MVP, file `actual_plan.csv`, sơ đồ code, cách mở rộng.
 
-Tài liệu hình cho Round 3 (đưa vào slide):
+**Bộ slide đã dựng (14 slide, có lời nói trong phần ghi chú):** https://claude.ai/artifact/VtB9k6AYhTiTJxWHsVm5GT (Kiệt chia sẻ link cho cả nhóm; xuất PowerPoint hoặc PDF để trình bày không cần mạng).
+
+Tài liệu hình cho Round 3 (đã dùng trong slide):
 - `deliverables/round3/System Context Diagram (Round 3).pdf`: trang 1 Nordic Flow sau Round 3, trang 2 hai luồng CRM và Nordic Flow.
 - `deliverables/round3/User Journey (Round 3).pdf`: hành trình mới, chạy lại lịch sử trước pilot.
 - Nguồn để sửa: `deliverables/src/context-r3.html`, `journey-r3.html`; build lại bằng `build_pdfs.js` (xem `deliverables/README.md`).
