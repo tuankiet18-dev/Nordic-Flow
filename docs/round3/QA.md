@@ -48,8 +48,9 @@ Nguyên tắc:
 **11. Nếu ngân sách bị cắt thêm lần nữa?**
 "Cắt tiền dự phòng trước, sau đó thu nhỏ phạm vi Nordic Flow, ví dụ chạy lại ít tuần hơn. Phần lõi của CRM được bảo vệ."
 
-**12. Vì sao nói cắt ngân sách lại làm Nordic Flow an toàn hơn?**
-"Ở Round 1, chi phí khoảng 0,3 triệu euro nên cần tiết kiệm 3 đến 6% chi phí logistics mới hòa vốn. Bây giờ luồng Nordic Flow chỉ khoảng 40 nghìn euro, nên chỉ cần dưới 1% là hòa vốn. Rủi ro tài chính nhỏ đi rất nhiều."
+**12. 40 nghìn euro thì Nordic Flow lấy đâu ra tiết kiệm mà nói hòa vốn dưới 1%?**
+"40 nghìn euro không phải giá của cả giải pháp, mà là giá để biết chắc giải pháp có đáng làm không. Chỉ cần chênh lệch dưới 1% chi phí logistics liên quan là đã bù được khoản này. Nếu đạt ngưỡng 2%, Company A tiết kiệm khoảng 100 đến 200 nghìn euro mỗi năm, đủ để trả cho bước pilot chạy thật. Còn nếu không đạt, họ dừng lại sau 40 nghìn euro thay vì 0,3 triệu euro như kế hoạch Round 1."
+*Cách tính (nếu bị hỏi):* chi phí logistics liên quan giả định €5–10 triệu/năm (từ Round 1). €40k ÷ €10M = 0,4%; €40k ÷ €5M = 0,8%. 2% × €5–10M = €100–200k/năm. Tất cả là ước tính.
 
 ## C. Nordic Flow và chạy lại lịch sử (Bách)
 
@@ -66,7 +67,7 @@ Nguyên tắc:
 "Có, chạy lại lịch sử hơi lạc quan, vì planner lúc đó có ít thông tin hơn. Đó chính là lý do ngưỡng go/no-go đặt ở 2%, cao gấp vài lần mức hòa vốn, và lý do vẫn cần pilot chạy thật sau khi có quyết định go để đo khoảng chênh thật."
 
 **17. Vì sao ngưỡng là 2% mà không phải 5%?**
-"Chi phí giảm nên mức hòa vốn xuống dưới 1%. 2% chừa biên an toàn và đo được trong 8 tuần. 5% vẫn là kỳ vọng của nhóm, không phải điều kiện."
+"Bước chạy lại lịch sử chỉ tốn khoảng 40 nghìn euro, nên chênh dưới 1% đã bù được. 2% chừa biên an toàn và đo được trong 8 tuần. 5% vẫn là kỳ vọng của nhóm, không phải điều kiện."
 
 **18. Chạy lại lịch sử không đo được gì?**
 "Thời gian làm việc của planner và tỷ lệ giao hàng đúng hạn. Hai thứ đó cần pilot chạy thật, sau khi có quyết định go."

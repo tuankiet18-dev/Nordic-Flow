@@ -71,7 +71,9 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 | Programme management | €20k |
 | Contingency, CRM first | €30–40k |
 | **Total** | **€175–200k** |
-**Say:** "These are estimates from person-days and a blended rate of about 60 euro an hour. The interesting part is Nordic Flow: at about 40 thousand euro, break-even needs a saving below one percent of logistics cost, not the three to six percent we needed in Round 1. The budget cut actually makes Nordic Flow safer."
+**Say:** "These are estimates from person-days and a blended rate of about 60 euro an hour. For Nordic Flow, 40 thousand euro does not buy the whole solution; it buys a decision based on real data. A cost gap below one percent of relevant logistics cost already pays that back. If the gap reaches our 2% gate, that is about 100 to 200 thousand euro a year, every year, which funds the live pilot. If it does not, Company A stops after 40 thousand euro instead of 0.3 million."
+**Card next to the table:** "Nordic Flow: the price of a decision. < 1% of relevant logistics cost pays back the €40k replay. At the 2% gate: about €100–200k a year, which funds the next step."
+*Lưu ý:* €40k không phải giá của cả giải pháp, chỉ là giá của bước kiểm chứng. Không so thẳng "dưới 1%" với "3–6% ở Round 1" như hai thứ giống nhau. €100–200k/năm = 2% × €5–10M chi phí logistics liên quan (giả định từ Round 1).
 
 ## 8. The go/no-go gate (7:30–8:30) · Kiệt
 **Title:** A cheaper gate we can measure in eight weeks

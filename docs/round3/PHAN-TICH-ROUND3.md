@@ -127,6 +127,7 @@ Thêm công cụ và lưu trữ lịch sử chỉ đọc khoảng €10–20k (D
 ### Hòa vốn mới cho Nordic Flow
 - Round 1: chi phí €0,3M → cần tiết kiệm 3–6% (với €5–10M chi phí logistics liên quan).
 - Bây giờ: khoảng €40k → cần khoảng **0,4–0,8%**.
+- **Lưu ý khi nói:** hai con số không cùng loại. €0,3M ở Round 1 là cả giải pháp; €40k chỉ là bước chạy lại lịch sử, chưa tạo ra tiết kiệm. Cách nói đúng: €40k là giá của một quyết định có căn cứ; nếu đạt 2% thì khoảng €100–200k/năm (2% × €5–10M) trả cho bước tiếp theo; nếu không đạt thì dừng ở €40k.
 - **[đề xuất]** Cổng go/no-go mới: chênh lệch đo được ≥ 2% trên baseline thật đã kiểm chứng, tức gấp vài lần ngưỡng hòa vốn. Mục tiêu 5% giữ làm kỳ vọng, không làm điều kiện.
 
 ---
