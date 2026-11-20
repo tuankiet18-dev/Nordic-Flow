@@ -49,8 +49,8 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 
 ## 5. Recommendation (3:30–5:00) · Kiệt
 **Title:** CRM first for continuity; Nordic Flow proven cheaply by replay
-**On slide:** page 2 of the Round 3 System Context Diagram (two tracks), plus the rule "CRM wins any conflict".
-**Say:** "Track one migrates the CRM like-for-like: accounts, contacts, open opportunities and recent activity; old history stays read-only. Track two keeps Nordic Flow but changes the pilot: instead of a live trial with integrations, we replay four to eight past weeks. Same orders, same prices, and we compare the optimised plan with what was really shipped. If the two tracks compete for people or money, the CRM wins, because it has a hard deadline."
+**On slide:** page 2 of the Round 3 System Context Diagram (two tracks); cards for track 1 and track 2; a card "Link between the tracks: customer data moves to Salesforce; Nordic Flow reads files, so only the export changes"; the rule "CRM wins any conflict".
+**Say:** "Track one migrates the CRM like-for-like: accounts, contacts, open opportunities and recent activity; old history stays read-only. Track two keeps Nordic Flow but changes the pilot: instead of a live trial with integrations, we replay four to eight past weeks. Same orders, same prices, and we compare the optimised plan with what was really shipped. If the two tracks compete for people or money, the CRM wins, because it has a hard deadline. The tracks are also linked by data: customer and delivery-zone data now lives in Dynamics and will live in Salesforce. Nordic Flow reads files, so the migration changes where the export comes from, not the optimiser. We check that mapping in week two."
 
 ## 6. Keep, change, postpone (5:00–6:00) · Kiệt
 **Title:** What stays in the MVP, and what waits
@@ -98,8 +98,8 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 
 ## 11. Journey and diagrams (11:45–12:30) · Nhật Anh
 **Title:** What changed in the user journey and the system context
-**On slide:** small images of the Round 3 User Journey and page 1 of the System Context.
-**Say:** "The daily planning journey is unchanged. We added a new journey before the pilot: export past weeks, upload, compare with what was shipped, decide. In the system context the boundary is the same; one new input file, and the CRM appears as a Company A system that Nordic Flow does not connect to."
+**On slide:** small images of the Round 3 User Journey and page 1 of the System Context; caption "One new input file; customer files later come from Salesforce."
+**Say:** "The daily planning journey is unchanged. We added a new journey before the pilot: export past weeks, upload, compare with what was shipped, decide. In the system context the boundary is the same; one new input file, and the CRM appears as a Company A system that Nordic Flow does not connect to. After the migration, the customer and zone files are exported from Salesforce instead of Dynamics; Nordic Flow itself does not change."
 
 ## 12. Eight-week roadmap (12:30–13:45) · Bách
 **Title:** Eight weeks, two tracks, one decision point
@@ -107,7 +107,7 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 | Week | CRM | Nordic Flow |
 |---|---|---|
 | 1 | Inventory data, integrations, users; confirm decommission date | Discovery of Swedish data |
-| 2 | Field mapping, multi-country org design | Load real files, map products |
+| 2 | Field mapping, multi-country org design | Load real files, map products and customer codes |
 | 3–4 | Configure, cleanse, trial load 1 | Replay past weeks, validate the actual plan |
 | 5–6 | Trial load 2, integrations, user tests | Analyse with planners |
 | 7 | Cut-over rehearsal, training | Economics review |
@@ -125,6 +125,7 @@ Fallback: secondary integrations in weeks 9–12, paid from contingency.
 | Decommission date earlier than planned | Confirm in week 1; contingency goes to CRM |
 | Users reject Salesforce | Like-for-like screens, training before cut-over |
 | Another system silo | Salesforce designed multi-country from day one |
+| Migration changes customer or zone codes | Nordic Flow reads files; map old and new codes in week 2 |
 | Personal data (GDPR) | EU hosting, data processing agreement, archive instead of copying old data |
 **Say:** "The biggest trade-off is time to value for Nordic Flow. We accept it, because protecting customer relationships comes first."
 

@@ -67,6 +67,10 @@ Nguyên tắc: không biết thì nói thẳng "That is an assumption we would c
 **17. Does Nordic Flow connect to Salesforce?**
 "No. Nordic Flow uses files in and files out. Shared customer and delivery-zone data is a future option we would only consider after the pilot."
 
+**17b. Does the CRM migration affect Nordic Flow? Is the migration really your job, or the country's?**
+"The brief puts the migration inside this project and this budget, so we plan and fund it as track one; an experienced delivery team does the work. It also touches Nordic Flow through data: customer and delivery-zone data lives in Dynamics today and in Salesforce after cut-over. Nordic Flow reads files, so only the export changes. In week two we map old and new customer and zone codes, so past weeks exported from Dynamics and later weeks from Salesforce stay comparable."
+*Ý chính: đề đặt migration trong dự án và ngân sách, nên nhóm lập kế hoạch và chia tiền cho nó; ảnh hưởng tới Nordic Flow chỉ ở bước xuất file, kiểm tra mapping ở tuần 2.*
+
 ## D. AI và dữ liệu (Bách hoặc Nhật Anh)
 
 **18. Where is AI in the revised plan?**
