@@ -1,94 +1,100 @@
 # Round 3: câu hỏi đáp (10 phút)
 
-Câu trả lời viết bằng tiếng Anh để nói, kèm một dòng ý chính tiếng Việt. Trả lời ngắn (2–4 câu), rồi dừng. Ai phụ trách phần nào thì trả lời câu thuộc phần đó; người còn lại chỉ bổ sung khi cần.
+Giám khảo có thể hỏi bằng tiếng Việt hoặc tiếng Anh; nhóm trả lời bằng tiếng Việt. Câu trả lời dưới đây viết theo văn nói, đọc lên khoảng 20–30 giây. Không học thuộc từng chữ: nhớ ý, nói bằng lời của mình, nói xong thì dừng.
 
-Nguyên tắc: không biết thì nói thẳng "That is an assumption we would confirm in week 1", rồi nêu cách kiểm chứng. Không bịa số.
+Ai phụ trách phần nào thì trả lời câu thuộc phần đó; người còn lại chỉ bổ sung khi cần.
+
+Nguyên tắc:
+- Không biết thì nói thẳng: "Đó là giả định, nhóm sẽ xác nhận ở tuần 1", rồi nói cách kiểm chứng. Không bịa số.
+- Mọi chi phí là **ước tính**. Mọi kết quả từ dữ liệu mẫu là **giả lập**.
+- Không nói Nordic Flow nối với Salesforce hay ERP; không nói "chống sửa tuyệt đối" (chỉ nói "phát hiện được nếu bị sửa").
 
 ---
 
 ## A. Chiến lược và ưu tiên (Kiệt)
 
-**1. Why not drop Nordic Flow and do only the CRM?**
-"The brief asks us to meet the original business objective as well. The replay pilot costs about 40 thousand euro and gives a real saving figure in eight weeks. Dropping it would save little and leave the original problem unsolved."
-*Ý chính: đề yêu cầu cả hai; replay rẻ mà có số thật.*
+**1. Sao không bỏ Nordic Flow, chỉ làm CRM cho chắc?**
+"Đề bài yêu cầu vẫn phải đạt mục tiêu kinh doanh ban đầu, không chỉ làm CRM. Luồng Nordic Flow chỉ tốn khoảng 40 nghìn euro và sau 8 tuần cho ra một con số tiết kiệm đo trên dữ liệu thật. Bỏ nó đi thì tiết kiệm được rất ít tiền, mà bài toán chi phí logistics vẫn nằm nguyên đó."
 
-**2. Why does the CRM come first?**
-"It has a hard deadline and an unsupported system is a security risk. Losing customer data or sales continuity costs more than a few weeks' delay in logistics savings."
-*Ý chính: hạn chót cứng, rủi ro bảo mật.*
+**2. Vì sao CRM được ưu tiên trước?**
+"Vì CRM có hạn chót cứng: hệ thống cũ sắp ngừng, và chạy tiếp một hệ thống hết hỗ trợ là rủi ro bảo mật. Mất dữ liệu khách hàng hay gián đoạn bán hàng thiệt hại hơn nhiều so với việc khoản tiết kiệm logistics đến chậm vài tuần."
 
-**3. Why Salesforce and not Dynamics 365 in the cloud?**
-"That is the executive board's decision in the brief, and we respect it. We do point out that Salesforce licences cost more per user, so the licence budget needs an owner."
-*Ý chính: quyết định của ban điều hành; nhắc chi phí bản quyền.*
+**3. CRM migration là việc của nhóm hay của nước đó tự làm? Nó ảnh hưởng gì tới Nordic Flow?**
+"Đề ghi rõ migration là một phần của dự án hiện tại và nằm trong ngân sách đã cắt, nên nhóm lập kế hoạch và chia ngân sách cho nó thành luồng thứ nhất; phần thực hiện do đội triển khai có kinh nghiệm làm. Với Nordic Flow, ảnh hưởng nằm ở dữ liệu: thông tin khách hàng và vùng giao hôm nay ở Dynamics, sau khi chuyển sẽ ở Salesforce. Nordic Flow đọc file, nên chỉ nguồn xuất file thay đổi, bộ tối ưu giữ nguyên. Tuần 2 nhóm ghép mã cũ với mã mới để các tuần trước và sau khi chuyển vẫn so sánh được."
 
-**4. Is this not making systems more fragmented, which was Company A's original problem?**
-"It could, which is why we design the Salesforce org for several countries from day one. It costs almost nothing now and lets Denmark and Norway join later."
-*Ý chính: thiết kế sẵn đa quốc gia.*
+**4. Sao không chuyển Dynamics 365 lên cloud cho rẻ, mà phải sang Salesforce?**
+"Đó là quyết định của ban điều hành trong đề bài, và nhóm tôn trọng quyết định đó. Điều nhóm lưu ý là bản quyền Salesforce đắt hơn mỗi người dùng, nên khoản này cần có người chịu trách nhiệm ngân sách rõ ràng."
 
-**5. What if the CRM country is not Sweden?**
-"Then the two tracks run fully apart and only share governance. The plan, budget and timeline still hold; we just lose the shared discovery week."
+**5. Thêm một hệ thống mới thì Company A càng phân mảnh, đúng vấn đề ban đầu của họ?**
+"Đúng là có rủi ro đó. Vì vậy nhóm thiết kế Salesforce sẵn cho nhiều nước ngay từ đầu. Việc này gần như không tốn thêm bây giờ, và sau này Đan Mạch, Na Uy có thể tham gia mà không phải dựng lại."
+
+**6. Nếu nước chuyển CRM không phải Thụy Điển thì sao?**
+"Thì hai luồng chạy hoàn toàn tách nhau, chỉ dùng chung ban quản lý. Kế hoạch, ngân sách và thời gian vẫn giữ nguyên; nhóm chỉ mất lợi thế dùng chung tuần khảo sát đầu tiên."
 
 ## B. Ngân sách và thời gian (Kiệt)
 
-**6. Where do your cost figures come from?**
-"Person-days per task times a blended rate of about 60 euro an hour, based on published rate ranges for Western Europe and Vietnam. They are estimates, not quotes; we show ranges for that reason."
+**7. Các con số chi phí lấy từ đâu?**
+"Nhóm tính số ngày công cho từng việc, nhân với đơn giá bình quân khoảng 60 euro một giờ, dựa trên mức giá công khai ở Tây Âu và Việt Nam. Đây là ước tính, không phải báo giá; vì vậy nhóm luôn đưa ra khoảng, không đưa một con số."
 
-**7. Who pays the Salesforce licences?**
-"We assume the business, as an operating cost replacing the old CRM. At list price, 100 users would cost more than the whole project budget, so this has to be confirmed. It is one of the three decisions we ask for."
+**8. Ai trả tiền bản quyền Salesforce?**
+"Nhóm giả định là doanh nghiệp trả, như chi phí vận hành thay cho CRM cũ. Theo giá niêm yết, 100 người dùng mỗi năm đã tốn hơn cả ngân sách dự án, nên điểm này bắt buộc phải xác nhận. Đây là một trong ba quyết định nhóm đề nghị Company A đưa ra."
 
-**8. Is eight weeks realistic for a CRM migration?**
-"Only for a like-for-like migration with few customisations and at most two integrations, and without moving all history. If it is bigger, core data goes live in week 8 and the rest in weeks 9 to 12 from contingency."
+**9. Tám tuần cho một lần chuyển CRM có thực tế không?**
+"Chỉ thực tế khi chuyển nguyên trạng: ít tùy biến, tối đa hai tích hợp, không chuyển toàn bộ lịch sử. Nếu khối lượng lớn hơn, phần dữ liệu lõi vẫn lên ở tuần 8, phần tích hợp phụ làm ở tuần 9 đến 12 bằng tiền dự phòng."
 
-**9. Why a blended team with Vietnam?**
-"At Western European rates the CRM track alone would use the whole budget. A Nordic lead keeps the business close; the delivery team in Vietnam does configuration, data migration and testing."
+**10. Vì sao dùng đội kết hợp với Việt Nam?**
+"Nếu làm toàn bộ với đơn giá Tây Âu thì riêng luồng CRM đã hết ngân sách. Trưởng nhóm ở Bắc Âu giữ liên lạc với doanh nghiệp và đào tạo người dùng; đội ở Việt Nam làm cấu hình, chuyển dữ liệu và kiểm thử."
 
-**10. What if the budget is cut again?**
-"Contingency goes first, then Nordic Flow scope: fewer replayed weeks. The CRM core is protected."
+**11. Nếu ngân sách bị cắt thêm lần nữa?**
+"Cắt tiền dự phòng trước, sau đó thu nhỏ phạm vi Nordic Flow, ví dụ chạy lại ít tuần hơn. Phần lõi của CRM được bảo vệ."
 
-## C. Nordic Flow và replay (Bách)
+**12. Vì sao nói cắt ngân sách lại làm Nordic Flow an toàn hơn?**
+"Ở Round 1, chi phí khoảng 0,3 triệu euro nên cần tiết kiệm 3 đến 6% chi phí logistics mới hòa vốn. Bây giờ luồng Nordic Flow chỉ khoảng 40 nghìn euro, nên chỉ cần dưới 1% là hòa vốn. Rủi ro tài chính nhỏ đi rất nhiều."
 
-**11. What exactly is replay?**
-"We take past weeks, with the plan that was really shipped, and calculate what a verified lowest-cost plan would have cost on the same orders and prices. Nothing in operations changes. It gives a real cost gap before anyone spends money on a live pilot."
+## C. Nordic Flow và chạy lại lịch sử (Bách)
 
-**12. Your 3.16% is synthetic. Why should we believe it?**
-"You should not treat it as a forecast, and we do not. It shows the measurement works end to end. The real number comes from Company A's weeks in discovery."
+**13. Chạy lại lịch sử chính xác là gì?**
+"Nhóm lấy các tuần đã qua, kèm kế hoạch đã thực sự chạy trong tuần đó, rồi tính xem một phương án chi phí thấp nhất, đã được kiểm tra, sẽ tốn bao nhiêu với cùng đơn hàng và cùng giá. Không thay đổi gì trong vận hành. Kết quả là một khoảng chênh chi phí thật, có trước khi ai phải bỏ tiền cho pilot chạy thật."
 
-**13. What if the actual plan in the data is wrong or incomplete?**
-"It goes through the same independent verifier as every plan. If it does not serve every order within supply, capacity and lane limits, the system shows no saving. We never compare against a plan we cannot verify."
+**14. Con số 3,16% là giả lập, vậy tin được không?**
+"Không nên coi nó là dự báo, và nhóm cũng không coi như vậy. Con số đó chỉ chứng minh cách đo hoạt động từ đầu đến cuối. Con số thật sẽ đến từ các tuần dữ liệu của Company A trong giai đoạn khảo sát."
 
-**14. Why is the gate 2% and not 5%?**
-"Our costs fell, so break-even fell below 1%. Two percent leaves a margin and is measurable in eight weeks. Five percent stays our ambition."
+**15. Nếu kế hoạch thực tế trong dữ liệu bị sai hoặc thiếu thì sao?**
+"Nó đi qua cùng bộ kiểm tra độc lập như mọi phương án khác. Nếu nó không đáp ứng đủ đơn hàng trong giới hạn hàng, sức chứa và tuyến, hệ thống không hiện con số tiết kiệm. Nhóm không bao giờ so với một mốc không kiểm chứng được."
 
-**15. What can replay not measure?**
-"Planner time and on-time delivery. Those need a live pilot, which comes after a go decision."
+**16. Chạy lại lịch sử biết trước cả tuần đơn hàng, còn planner lúc đó thì không. So vậy có thiên vị không?**
+"Có, chạy lại lịch sử hơi lạc quan, vì planner lúc đó có ít thông tin hơn. Đó chính là lý do ngưỡng go/no-go đặt ở 2%, cao gấp vài lần mức hòa vốn, và lý do vẫn cần pilot chạy thật sau khi có quyết định go để đo khoảng chênh thật."
 
-**16. How long did the replay feature take, and is it tested?**
-"It reuses the existing engine; the new parts are the file, its checks and the comparison. It has 15 automated tests, and the whole suite of 290 tests passes."
+**17. Vì sao ngưỡng là 2% mà không phải 5%?**
+"Chi phí giảm nên mức hòa vốn xuống dưới 1%. 2% chừa biên an toàn và đo được trong 8 tuần. 5% vẫn là kỳ vọng của nhóm, không phải điều kiện."
 
-**17. Does Nordic Flow connect to Salesforce?**
-"No. Nordic Flow uses files in and files out. Shared customer and delivery-zone data is a future option we would only consider after the pilot."
+**18. Chạy lại lịch sử không đo được gì?**
+"Thời gian làm việc của planner và tỷ lệ giao hàng đúng hạn. Hai thứ đó cần pilot chạy thật, sau khi có quyết định go."
 
-**17b. Does the CRM migration affect Nordic Flow? Is the migration really your job, or the country's?**
-"The brief puts the migration inside this project and this budget, so we plan and fund it as track one; an experienced delivery team does the work. It also touches Nordic Flow through data: customer and delivery-zone data lives in Dynamics today and in Salesforce after cut-over. Nordic Flow reads files, so only the export changes. In week two we map old and new customer and zone codes, so past weeks exported from Dynamics and later weeks from Salesforce stay comparable."
-*Ý chính: đề đặt migration trong dự án và ngân sách, nên nhóm lập kế hoạch và chia tiền cho nó; ảnh hưởng tới Nordic Flow chỉ ở bước xuất file, kiểm tra mapping ở tuần 2.*
+**19. Tính năng này làm bao lâu, có được kiểm thử không?**
+"Tính năng dùng lại toàn bộ bộ tối ưu và bộ kiểm tra sẵn có; phần mới chỉ là file kế hoạch thực tế, các bước kiểm tra file và phần so sánh. Có 15 bài kiểm thử tự động cho phần mới, và toàn bộ 290 bài kiểm thử đều chạy đạt."
+
+**20. Nordic Flow có kết nối với Salesforce không?**
+"Không. Nordic Flow nhận file vào và trả file ra. Dùng chung dữ liệu khách hàng và vùng giao là hướng tương lai, chỉ cân nhắc sau pilot."
 
 ## D. AI và dữ liệu (Bách hoặc Nhật Anh)
 
-**18. Where is AI in the revised plan?**
-"Two places, both with a person deciding. Explaining a plan in plain words, which stays a draft until a planner approves. And suggesting matches: product codes for Nordic Flow, and field mapping or duplicate records for the CRM migration."
+**21. AI nằm ở đâu trong kế hoạch mới?**
+"Ở hai chỗ, và đều có người quyết định. Một là giải thích phương án bằng lời dễ hiểu, chỉ là bản nháp cho tới khi planner duyệt. Hai là gợi ý ghép dữ liệu: ghép mã sản phẩm cho Nordic Flow, và ghép trường hoặc gợi ý bản ghi trùng khi chuyển CRM."
 
-**19. How do you handle GDPR in the CRM migration?**
-"EU data residency, a data processing agreement with the vendor, and we archive old records instead of copying everything. Consent history moves with the customer record. The legal decision stays with Company A's legal team."
+**22. Xử lý dữ liệu cá nhân (GDPR) khi chuyển CRM thế nào?**
+"Lưu dữ liệu trong EU, ký thỏa thuận xử lý dữ liệu với nhà cung cấp, và lưu trữ dữ liệu cũ thay vì chép hết sang. Lịch sử đồng ý của khách hàng đi kèm bản ghi khách hàng. Quyết định pháp lý cuối cùng thuộc bộ phận pháp chế của Company A."
 
-**20. What is the biggest risk overall?**
-"CRM data quality and user adoption. That is why we cleanse before loading, keep screens like-for-like and train users before cut-over."
+**23. Rủi ro lớn nhất của cả kế hoạch là gì?**
+"Chất lượng dữ liệu CRM và việc người dùng có chịu dùng hệ thống mới hay không. Vì vậy nhóm làm sạch dữ liệu trước khi nạp, giữ màn hình gần giống hệ thống cũ, và đào tạo người dùng trước ngày chuyển."
 
 ## E. Câu hỏi khó
 
-**21. What would you do differently if you started again?**
-"Ask for real past plans earlier. Measuring against a rule we invented was our weakest point; replay fixes that."
+**24. Nếu làm lại từ đầu, nhóm sẽ làm khác điều gì?**
+"Xin kế hoạch thực tế của các tuần cũ sớm hơn. So với một quy tắc do nhóm tự đặt là điểm yếu nhất của nhóm ở vòng trước; chạy lại lịch sử sửa đúng điểm đó."
 
-**22. Your team is three students. Can you deliver this?**
-"We are proposing a plan and an MVP, not staffing the project ourselves. The estimates assume an experienced delivery team, which is why we show the person-days."
+**25. Nhóm chỉ có ba sinh viên, làm nổi dự án này không?**
+"Nhóm đề xuất kế hoạch và MVP, không tự mình làm toàn bộ dự án. Các ước tính giả định một đội triển khai có kinh nghiệm; vì vậy nhóm trình bày rõ số ngày công."
 
-**23. What did you remove that you are sorry about?**
-"Denmark and Norway in this phase. But they come back as soon as the saving is proven and can fund them."
+**26. Nhóm tiếc nhất điều gì đã phải bỏ?**
+"Đan Mạch và Na Uy trong giai đoạn này. Nhưng hai nước đó sẽ quay lại ngay khi khoản tiết kiệm được chứng minh và đủ để trả chi phí."
