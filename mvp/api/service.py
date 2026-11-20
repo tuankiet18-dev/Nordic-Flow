@@ -540,3 +540,59 @@ def export_zip(db: Database, rid: int, actor: str = "planner") -> bytes:
         z.writestr("audit_log.json", json.dumps(audit.events(db, run_id=rid), indent=2))
     audit.record(db, "EXPORT_DOWNLOADED", actor, d["scenario_id"], rid, {"state": d["state"]})
     return buf.getvalue()
+
+
+# ---------- pilot evidence (several replayed weeks -> go / no-go) ----------
+MAX_EVIDENCE_WEEKS = 12
+
+
+def _evidence(db: Database, weeks: list[tuple[str, dict[str, str]]], source: str, actor: str = "planner") -> dict:
+    from nordic_flow.pilot_gate import replay_weeks
+    if not weeks:
+        raise ApiError(422, "no_weeks", "Upload at least one past week (one ZIP per week).")
+    if len(weeks) > MAX_EVIDENCE_WEEKS:
+        raise ApiError(422, "too_many_weeks", f"At most {MAX_EVIDENCE_WEEKS} weeks at a time.")
+    labels = [label for label, _ in weeks]
+    if len(set(labels)) != len(labels):
+        raise ApiError(422, "duplicate_week", "Two uploaded weeks have the same name.")
+    with tempfile.TemporaryDirectory() as d:
+        folders = []
+        for i, (label, files) in enumerate(weeks):
+            folder = Path(d) / f"w{i}"
+            folder.mkdir()
+            for name, text in files.items():
+                if name in ALLOWED_FILES:
+                    (folder / name).write_text(text, encoding="utf-8")
+            folders.append((label, folder))
+        out = replay_weeks(folders)
+    s = out["summary"]
+    audit.record(db, "EVIDENCE_COMPUTED", actor, None, None,
+                 {"source": source, "weeks": s["weeks"], "comparable": s["comparable"], "total_pct": s["total_pct"],
+                  "gate_pct": s["gate_pct"], "decision": s["decision"]})
+    out["source"] = source
+    return out
+
+
+def evidence_sample(db: Database) -> dict:
+    folder = SAMPLES / "history"
+    weeks = [(p.name, {f.name: f.read_text(encoding="utf-8") for f in p.glob("*.csv")})
+             for p in sorted(folder.iterdir()) if p.is_dir()]
+    return _evidence(db, weeks, "sample:history")
+
+
+def evidence_upload(db: Database, uploads: list[tuple[str, bytes]]) -> dict:
+    weeks = []
+    for filename, raw in uploads:
+        if not filename.lower().endswith(".zip"):
+            raise ApiError(422, "not_zip", f"{filename}: upload one ZIP per week.")
+        weeks.append((Path(filename).stem, read_zip(raw)))
+    return _evidence(db, weeks, "upload")
+
+
+def code_map_check(db: Database, text: str, zones: list[str], actor: str = "planner") -> dict:
+    from nordic_flow.pilot_gate import check_code_map
+    out = check_code_map(text, zones)
+    audit.record(db, "CODE_MAP_CHECKED", actor, None, None,
+                 {"ok": out["ok"], "rows": out["rows"], "unmapped": len(out.get("unmapped") or []),
+                  "conflicts": len(out.get("conflicts") or {})})
+    return out

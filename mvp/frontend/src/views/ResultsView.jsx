@@ -31,7 +31,7 @@ export default function ResultsView() {
         <button type="button" className="btn btn-primary" onClick={() => go("review")}>Review & approve <ArrowRight size={16} aria-hidden="true" /></button>
       </PageHead>
       <RunBanner run={r} />
-      {c.baseline_kind === "actual" && <Note tone="info">History replay: the baseline is the plan that was actually shipped, on the same orders. Nothing is sent to any system.</Note>}
+      {c.baseline_kind === "actual" && <Note tone="info">History replay: the baseline is the plan that was actually shipped, on the same orders. Nothing is sent to any system.{c.saving_pct != null && <> This week alone: {fmt(c.saving_pct, 1)}% lower. The go/no-go gate (at least 2% over 4–8 weeks) is decided on the <button type="button" className="font-medium underline" onClick={() => go("evidence")}>Pilot evidence</button> page.</>}</Note>}
       {!c.baseline_valid && <Note tone="warn">{c.baseline_kind === "actual" ? "The actual plan does not match these orders or limits, so it cannot be compared." : "The baseline leaves demand unserved."} Savings are unavailable for this comparison.</Note>}
       {r.status === "FEASIBLE" && <Note tone="warn">Time limit reached. Review the best feasible allocation found so far.</Note>}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

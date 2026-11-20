@@ -6,8 +6,9 @@ Branch: **`main` only.** All other branches were merged and deleted. New teammat
 
 | Area | State |
 |---|---|
-| MVP (FastAPI, SQLite, OR-Tools, React + Tailwind) | Done. **290** Python tests pass. Browser walk-throughs: 6 of 7 pass; `e2e_focused_workflow.js` has a known failure that predates Round 3 |
+| MVP (FastAPI, SQLite, OR-Tools, React + Tailwind) | Done. **302** Python tests pass. Browser walk-throughs: 8 of 8 pass on a fresh database |
 | History replay (new in Round 3) | Done: `actual_plan.csv` as baseline, `replay` / `history` commands, in-app sample. Guide: `docs/REPLAY-MODE.md` |
+| Pilot evidence page (Round 3) | Done: several weeks → GO / NO-GO against the 2% gate, business case, Dynamics → Salesforce code map check, CSV report. Guide: `docs/REPLAY-MODE.md` section 7 |
 | Round 3 decisions and plan | `docs/round3/KE-HOACH-ROUND3.md` (13 decisions, owners, 3-day schedule, 15-minute outline) |
 | Round 3 analysis and sources | `docs/round3/PHAN-TICH-ROUND3.md` (budget, CRM risks, options, Q&A) |
 | Updated System Context and User Journey | Done: `deliverables/round3/` (sources `deliverables/src/*-r3.html`) |
@@ -24,7 +25,7 @@ The client cut the budget by 30% (our €0.3M becomes about €0.21M) and made a
 cd mvp
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m pytest -q                                   # 290 passed
+.\.venv\Scripts\python.exe -m pytest -q                                   # 302 passed
 .\.venv\Scripts\python.exe -m uvicorn api.main:app --port 8000            # http://localhost:8000
 .\.venv\Scripts\python.exe -m nordic_flow replay data\history             # replay table, 4 synthetic weeks
 ```

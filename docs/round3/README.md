@@ -57,7 +57,7 @@ git checkout main
 git pull
 cd mvp
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m pytest -q                 # phải ra 290 passed
+.\.venv\Scripts\python.exe -m pytest -q                 # phải ra 302 passed
 .\.venv\Scripts\python.exe -m uvicorn api.main:app --port 8000
 ```
 

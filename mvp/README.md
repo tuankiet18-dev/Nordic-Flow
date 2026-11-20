@@ -98,7 +98,7 @@ python -m nordic_flow replay data/history          # 4 synthetic past weeks, one
 python -m nordic_flow history data/history --weeks 4
 ```
 
-In the app: Data page → **History replay**, or upload `frontend/public/examples/history-week-N.zip`. Full guide: `docs/REPLAY-MODE.md`.
+In the app: Data page → **History replay**, or upload `frontend/public/examples/history-week-N.zip`. **Pilot evidence** (left menu) replays several weeks at once and gives the go / no-go against the 2% gate, a business case and a Dynamics → Salesforce code map check. Full guide: `docs/REPLAY-MODE.md`.
 
 The CLI output includes `baseline_transfers.csv`, `optimised_transfers.csv`, `baseline_direct.csv` and `optimised_direct.csv`, alongside inbound/outbound CSVs and the comparison JSON.
 
@@ -125,6 +125,8 @@ All routes use `/api`. Errors contain `code`, `message` and `details`.
 | `POST /scenarios/{id}/whatif` | Change copied data and recalculate |
 | `GET /audit`, `GET /audit/verify` | Events and chain verification |
 | `POST /mapping/suggest`, `POST /mapping/confirm` | Suggest and confirm SKU matches |
+| `POST /evidence/sample`, `POST /evidence` | Replay the 4 sample weeks, or uploaded `files` (one ZIP per week); returns rows, zone codes and the go / no-go summary |
+| `POST /evidence/code-map` | Check a `dynamics_id,salesforce_id` CSV (`file`) against `zones` (JSON list) |
 
 Plans contain `inbound`, `transfers`, `outbound` and `direct` arrays. Transfer rows have `from_warehouse,to_warehouse,sku,pallets`; direct rows use `supplier,zone,sku,pallets`. Old saved plans default missing arrays to empty and missing freight categories to zero. `network.direct_lanes` describes declared direct routes and their local availability. A manual direct path uses `warehouses:[]` and the editor's **Factory to customer** route type. Ranking includes such paths with zero handling.
 

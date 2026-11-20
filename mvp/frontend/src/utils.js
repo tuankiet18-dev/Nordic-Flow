@@ -45,6 +45,8 @@ const EVENTS = {
   PLAN_REJECTED: "Plan rejected",
   EXPORT_DOWNLOADED: "Approved plan exported",
   MAPPING_CONFIRMED: "SKU match confirmed",
+  EVIDENCE_COMPUTED: "Pilot evidence calculated",
+  CODE_MAP_CHECKED: "CRM code map checked",
 };
 export const eventText = (t) => EVENTS[t] || t.replaceAll("_", " ").toLowerCase().replace(/^./, (c) => c.toUpperCase());
 export const when = (ts) => {

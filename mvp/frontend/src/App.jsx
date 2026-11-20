@@ -1,4 +1,4 @@
-import { BarChart3, BookOpen, Boxes, ClipboardCheck, Database, FlaskConical, Loader2, ShieldCheck } from "lucide-react";
+import { BarChart3, BookOpen, Boxes, ClipboardCheck, Database, FlaskConical, Gauge, Loader2, ShieldCheck } from "lucide-react";
 import { useApp } from "./store.jsx";
 import { Tag } from "./components/ui.jsx";
 import { stateText } from "./utils";
@@ -9,6 +9,7 @@ import WhatIfView from "./views/WhatIfView.jsx";
 import AuditView from "./views/AuditView.jsx";
 import { ManualRouteView, DeliveryWarehouseView } from "./views/AdjustmentView.jsx";
 import GuideView from "./views/GuideView.jsx";
+import EvidenceView from "./views/EvidenceView.jsx";
 
 const STEPS = [
   { id: "data", label: "Data", icon: Database, view: DataView },
@@ -16,6 +17,7 @@ const STEPS = [
   { id: "review", label: "Review & approve", icon: ClipboardCheck, view: ReviewView },
   { id: "audit", label: "Audit trail", icon: ShieldCheck, view: AuditView },
   { id: "whatif", label: "What-if", icon: FlaskConical, view: WhatIfView },
+  { id: "evidence", label: "Pilot evidence", icon: Gauge, view: EvidenceView },
   { id: "guide", label: "User guide", icon: BookOpen, view: GuideView },
 ];
 const EDITORS = {
@@ -87,7 +89,7 @@ export default function App() {
           ))}
           <p className="px-3 pb-2 pt-6 text-xs font-medium uppercase tracking-wide text-slate-400">Explore & track</p>
           {STEPS.slice(3).map((s, i) => (
-            <NavItem key={s.id} step={s} index={i + 3} active={activeTab === s.id} disabled={s.id !== "guide" && !run} onClick={() => go(s.id)} />
+            <NavItem key={s.id} step={s} index={i + 3} active={activeTab === s.id} disabled={!["guide", "evidence"].includes(s.id) && !run} onClick={() => go(s.id)} />
           ))}
         </nav>
         <div className="m-3 rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-slate-600">
@@ -116,7 +118,7 @@ export default function App() {
           </div>
           <nav aria-label="Workflow" className="flex gap-1 overflow-x-auto border-t border-slate-100 px-3 py-2 lg:hidden">
             {STEPS.map((s, i) => (
-              <NavItem key={s.id} compact step={s} index={i} active={activeTab === s.id} disabled={!["data", "guide"].includes(s.id) && !run} onClick={() => go(s.id)} />
+              <NavItem key={s.id} compact step={s} index={i} active={activeTab === s.id} disabled={!["data", "guide", "evidence"].includes(s.id) && !run} onClick={() => go(s.id)} />
             ))}
           </nav>
         </header>

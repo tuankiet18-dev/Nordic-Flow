@@ -17,6 +17,8 @@ export function AppProvider({ children }) {
   const [toasts, setToasts] = useState([]);
   const [whatif, setWhatif] = useState({ changes: [], result: null });
   const [mapping, setMapping] = useState(null);
+  const [evidence, setEvidence] = useState(null);
+  const [codeMap, setCodeMap] = useState(null);
   const busyRef = useRef(false);
 
   const toast = useCallback((msg, err) => {
@@ -130,6 +132,17 @@ export function AppProvider({ children }) {
       await api("/mapping/confirm", { method: "POST", json: { scenario_id: scenario.id, external: m.external, sku_id: m.candidates[0].sku_id } });
       setMapping((arr) => arr.map((x, j) => (j === i ? { ...x, confirmed: true } : x))); toast("Match confirmed and logged");
     }),
+    loadEvidenceSample: () => act(async () => {
+      setEvidence(await api("/evidence/sample", { method: "POST" })); setCodeMap(null); toast("Sample weeks replayed");
+    }),
+    uploadEvidence: (files) => act(async () => {
+      const fd = new FormData(); for (const f of files) fd.append("files", f);
+      setEvidence(await api("/evidence", { method: "POST", form: fd })); setCodeMap(null); toast("Weeks replayed");
+    }),
+    checkCodeMap: (file, zones) => act(async () => {
+      const fd = new FormData(); fd.append("file", file); fd.append("zones", JSON.stringify(zones));
+      setCodeMap(await api("/evidence/code-map", { method: "POST", form: fd }));
+    }),
     setWhatifChanges: (fn) => setWhatif((w) => ({ ...w, changes: fn(w.changes) })),
     runWhatIf: () => act(async () => {
       const result = await api(`/scenarios/${scenario.id}/whatif`, { method: "POST", json: { changes: whatif.changes, mode: "milp", time_limit: 30 } });
@@ -137,6 +150,6 @@ export function AppProvider({ children }) {
     }),
   };
 
-  const value = { config, scenario, run, runs, explanation, audit, chain, tab, busy, toasts, whatif, mapping, ent, go, toast, ...actions };
+  const value = { config, scenario, run, runs, explanation, audit, chain, tab, busy, toasts, whatif, mapping, evidence, codeMap, ent, go, toast, ...actions };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

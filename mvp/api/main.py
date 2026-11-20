@@ -191,6 +191,28 @@ def create_app(db_path: str | Path | None = None, llm_factory=None) -> FastAPI:
         return Response(content=data, media_type="application/zip",
                         headers={"Content-Disposition": f'attachment; filename="nordic-flow-run-{rid}.zip"'})
 
+    # ----- pilot evidence -----
+    @app.post("/api/evidence/sample")
+    def evidence_sample():
+        return service.evidence_sample(db)
+
+    @app.post("/api/evidence")
+    async def evidence_upload(files: list[UploadFile] = File(...)):
+        return service.evidence_upload(db, [(f.filename or "week.zip", await f.read()) for f in files])
+
+    @app.post("/api/evidence/code-map")
+    async def code_map(file: UploadFile = File(...), zones: str = Form("[]")):
+        import json
+        try:
+            used = [str(z) for z in json.loads(zones)]
+        except (ValueError, TypeError):
+            raise ApiError(422, "bad_zones", "zones must be a JSON list of zone codes")
+        try:
+            text = (await file.read()).decode("utf-8-sig")
+        except UnicodeDecodeError:
+            raise ApiError(422, "bad_encoding", f"{file.filename} is not UTF-8 text")
+        return service.code_map_check(db, text, used)
+
     # ----- audit and mapping -----
     @app.get("/api/audit")
     def audit_log(run_id: int | None = None, scenario_id: int | None = None):

@@ -156,6 +156,8 @@ Và không có gì được gửi vào hệ thống nào của Company A. Đây 
 
 ## Slide 10. Kết quả bốn tuần (10:20–11:00)
 
+(Có thể làm thay cho slide, nếu demo đang chạy tốt và còn thời gian) [Bách: menu Pilot evidence, bấm Use the 4 sample weeks. Màn hình hiện GO, 3,16%, bảng 4 tuần.] "Trang Pilot evidence cộng các tuần lại và so với ngưỡng 2%: ở đây là GO. Hệ thống chỉ cộng số; người quyết định vẫn là Company A."
+
 "Chúng em chạy cùng cách đó cho bốn tuần synthetic data. **Verified plan rẻ hơn từ 2,2 đến 4,2%, tổng cộng 3,16%.**
 
 Một lần nữa, đây không phải dự báo. Nó cho thấy cách đo hoạt động từ đầu đến cuối và lặp lại được. Con số thật sẽ đến từ các tuần dữ liệu thật của Company A trong giai đoạn discovery."

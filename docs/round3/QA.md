@@ -76,7 +76,13 @@ Nguyên tắc:
 "Thời gian làm việc của planner và tỷ lệ on-time delivery. Hai thứ đó cần live pilot, sau khi có quyết định go."
 
 **19. Tính năng này làm bao lâu, có được test không?**
-"Tính năng dùng lại toàn bộ optimiser và verifier sẵn có; phần mới chỉ là file actual plan, các bước kiểm tra file và phần so sánh. Có 15 bài test tự động cho phần mới, và toàn bộ 290 bài test đều chạy đạt."
+"Tính năng dùng lại toàn bộ optimiser và verifier sẵn có; phần mới chỉ là file actual plan, các bước kiểm tra file và phần so sánh. Có 15 bài test tự động cho replay và 12 bài cho trang Pilot evidence; toàn bộ 302 bài test cùng 8 kịch bản chạy trên trình duyệt đều đạt."
+
+**19b. Ai quyết định go/no-go, và quyết định đó nằm ở đâu trong MVP?**
+"Trang Pilot evidence chạy lại nhiều tuần một lúc và cộng lại: nếu verified plan rẻ hơn actual plan ít nhất 2% trên ít nhất 4 tuần so sánh được thì hệ thống ghi GO, dưới 2% là NO-GO, chưa đủ 4 tuần thì chưa quyết định. Tuần nào actual plan không kiểm chứng được thì bị loại ra và được ghi rõ, không bao giờ được tính vào tiết kiệm. Hệ thống chỉ cộng số; người quyết định vẫn là Company A. Kết quả được ghi vào audit trail và tải ra được thành báo cáo."
+
+**19c. Trang đó có gì liên quan đến CRM migration?**
+"Có phần kiểm tra code map từ Dynamics sang Salesforce. Mã delivery zone trong file hằng tuần đến từ CRM, nên mỗi mã đang dùng phải có đúng một mã mới. Hệ thống báo mã chưa map, mã bị map hai nơi và các dòng thiếu. Đây là đúng việc mapping ở tuần 2 trong roadmap, và Nordic Flow vẫn không kết nối trực tiếp với Salesforce."
 
 **20. Nordic Flow có kết nối với Salesforce không?**
 "Không. Nordic Flow nhận file vào và trả file ra. Dùng chung dữ liệu khách hàng và delivery zone là future option, chỉ cân nhắc sau pilot."
