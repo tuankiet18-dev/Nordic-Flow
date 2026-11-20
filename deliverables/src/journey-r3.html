@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>User Journey, Round 3</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .who { display: grid; grid-template-columns: 1.15fr 1.5fr 1.2fr; gap: 4mm; margin: 0 0 4mm }
+  .who .card { padding: 2.4mm 3.2mm; font-size: 8.5pt; line-height: 1.38 }
+  .who b { color: var(--ink) }
+  .ribbon { display: flex; align-items: center; gap: 1.6mm; margin: 0 0 4.2mm; flex-wrap: nowrap }
+  .chip { display: inline-flex; align-items: center; gap: 1.6mm; background: var(--blue-l); border: 1px solid var(--blue-m); color: var(--blue-d); border-radius: 99px; padding: .8mm 3mm .8mm 1.2mm; font-size: 8pt; font-weight: 600; white-space: nowrap }
+  .chip i { font-style: normal; width: 5mm; height: 5mm; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center; font-size: 7.5pt }
+  .chip.dim { background: var(--soft); border-color: var(--rule); color: var(--mute) }
+  .chip.dim i { background: var(--grey) }
+  .arrow { color: var(--grey); font-size: 9pt }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm }
+  .step { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 3mm; display: flex; flex-direction: column; gap: 2mm }
+  .step .hd { display: flex; align-items: center; gap: 2.2mm }
+  .step .num { width: 6.6mm; height: 6.6mm; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 700; font-size: 9pt; display: grid; place-items: center; flex: none }
+  .step h2 { margin: 0; font-size: 10.6pt }
+  .shot { height: 52mm; overflow: hidden; border: 1px solid var(--rule); border-radius: 6px; background: var(--soft); position: relative }
+  .shot img { position: absolute; top: var(--y, 0); left: var(--x, -29%); width: var(--z, 140%); display: block }
+  .page:not(.p2) .shot { height: 60mm }
+  .p2 .shot { height: 46mm }
+  .p2 .outcome { margin-top: 3.4mm } .p2 .more { margin-top: 3mm } .p2 .note { margin-top: 3mm }
+  .rows { display: grid; grid-template-columns: 15mm 1fr; gap: 1.1mm 2mm; font-size: 8.2pt; line-height: 1.32 }
+  .rows .l { font-size: 7pt; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--mute); padding-top: .5mm }
+  .rows .g { color: var(--green); font-weight: 600 }
+  .rows .p { color: var(--ink) }
+  .outcome { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 4.5mm }
+  .kpi { background: var(--soft); border: 1px solid var(--rule); border-radius: 8px; padding: 2.4mm 3mm }
+  .kpi .v { font-size: 17pt; font-weight: 700; color: var(--ink); letter-spacing: -.02em; line-height: 1.1 }
+  .kpi .v.g { color: var(--green) } .kpi .v.b { color: var(--blue-d) }
+  .kpi .s { font-size: 7.8pt; color: var(--mute); margin-top: .6mm }
+  .note { margin-top: 3.5mm; border-left: 3px solid var(--amber-m); background: var(--amber-l); border-radius: 0 6px 6px 0; padding: 2mm 3.2mm; font-size: 8.3pt; color: #78350f }
+  .more { margin-top: 3.5mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm }
+  .more .card { font-size: 8.3pt; padding: 2.2mm 3mm; line-height: 1.38 }
+  .more b { color: var(--ink) }
+  .wk td, .wk th { padding: .7mm 2mm }
+</style></head><body>
+<!-- ============================ PAGE 1 ============================ -->
+<div class="page">
+  <div class="eyebrow">NEW AURA · Nordic Flow · Round 3</div>
+  <h1>New journey: prove the saving on past weeks before any live pilot</h1>
+  <p class="lead">With 30% less budget, the pilot starts with a replay: what would a verified plan have cost on the same orders that were really shipped? Nothing changes in operations. Screens are from the running application; figures are synthetic cost units.</p>
+
+  <div class="who">
+    <div class="card"><div class="k">Who</div><b>A planner and the pilot sponsor</b> in the Swedish pilot region (simulated), during the discovery weeks.</div>
+    <div class="card"><div class="k">Goal</div>Know the <b>real cost gap</b> between how goods were actually allocated and a verified lowest-cost plan, and decide go or no-go for a live pilot.</div>
+    <div class="card"><div class="k">Scenario</div>4 past weeks, each with the usual 8 files plus <b>actual_plan.csv</b>, the plan that was really shipped.</div>
+  </div>
+
+  <div class="ribbon" aria-label="Journey overview">
+    <span class="chip"><i>1</i>Export past weeks</span><span class="arrow">→</span>
+    <span class="chip"><i>2</i>Upload and check</span><span class="arrow">→</span>
+    <span class="chip"><i>3</i>Compare with what was shipped</span><span class="arrow">→</span>
+    <span class="chip"><i>4</i>Decide go or no-go</span>
+    <span class="cap small" style="margin-left:auto;color:var(--mute);font-size:8pt">The daily planning journey from Round 2 is unchanged</span>
+  </div>
+
+  <div class="steps" style="grid-template-columns: 1fr 1.25fr 1.25fr">
+    <div class="step">
+      <div class="hd"><span class="num">1</span><h2>Export past weeks</h2></div>
+      <div class="shot" style="height:36mm;background:#fff;padding:2.2mm 3mm;font-size:8pt;line-height:1.4">
+        <div class="k" style="margin-bottom:1mm">actual_plan.csv</div>
+        <code style="display:block;font-size:7.6pt;color:var(--ink);background:var(--soft);border:1px solid var(--rule);border-radius:4px;padding:1.6mm 2mm;white-space:pre">supplier_id,warehouse_id,zone_id,sku_id,pallets
+SUP1,WA,Z1,SKU-01,8
+SUP1,WA,Z1,SKU-02,2
+SUP2,WB,Z4,SKU-01,6
+…</code>
+      </div>
+      <div class="rows">
+        <span class="l">Planner</span><span class="p">Exports 4 to 8 past weeks from ERP and WMS: orders, rates, supply, capacity, and the plan that was shipped.</span>
+        <span class="l">Result</span><span class="g">One folder or ZIP per week. No system change, no integration.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="hd"><span class="num">2</span><h2>Upload and check</h2></div>
+      <div class="shot" style="height:36mm"><img style="--y:-9mm;--x:-28%;--z:136%" src="img/replay-data.png" alt="Data page with the history replay week loaded"></div>
+      <div class="rows">
+        <span class="l">System</span><span>Checks every file, and checks that each actual route exists and can be priced. Errors block the run.</span>
+        <span class="l">Result</span><span class="g">Valid week: 606 pallets of demand, actual plan of 606 pallets on 87 routes.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="hd"><span class="num">3</span><h2>Compare with what was shipped</h2></div>
+      <div class="shot" style="height:36mm"><img style="--y:-14mm;--x:-28%;--z:136%" src="img/replay-results.png" alt="Results page comparing with the actual plan"></div>
+      <div class="rows">
+        <span class="l">System</span><span>Verifies the actual plan like any plan, then solves the same orders for the lowest cost.</span>
+        <span class="l">Result</span><span class="g">31,316 against 32,698 actually spent: 1,382 lower (4.2%). No saving is shown if the actual plan does not match the orders or limits.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="two" style="display:grid;grid-template-columns:1.35fr 1fr;gap:4mm;margin-top:3.5mm">
+    <div class="card" style="padding:2.4mm 3.2mm">
+      <div class="hd" style="display:flex;align-items:center;gap:2.2mm;margin-bottom:1.5mm"><span class="num" style="width:6.6mm;height:6.6mm;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:9pt;display:grid;place-items:center">4</span><h2 style="margin:0">Decide go or no-go on all weeks together</h2></div>
+      <table class="wk">
+        <thead><tr><th>Week</th><th style="text-align:right">Actual plan</th><th style="text-align:right">Verified plan</th><th style="text-align:right">Lower by</th></tr></thead>
+        <tbody>
+          <tr><td>Week 1</td><td style="text-align:right">32,698</td><td style="text-align:right">31,316</td><td style="text-align:right">4.23%</td></tr>
+          <tr><td>Week 2</td><td style="text-align:right">33,812</td><td style="text-align:right">33,066</td><td style="text-align:right">2.21%</td></tr>
+          <tr><td>Week 3</td><td style="text-align:right">29,072</td><td style="text-align:right">28,166</td><td style="text-align:right">3.12%</td></tr>
+          <tr><td>Week 4</td><td style="text-align:right">38,180</td><td style="text-align:right">36,988</td><td style="text-align:right">3.12%</td></tr>
+          <tr><td><b>All 4 weeks</b></td><td style="text-align:right"><b>133,762</b></td><td style="text-align:right"><b>129,536</b></td><td style="text-align:right;color:var(--green)"><b>3.16%</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card soft" style="font-size:8.4pt;line-height:1.45;padding:2.4mm 3.2mm">
+      <div class="k">The decision rule</div>
+      <p style="margin:1mm 0 0"><b style="color:var(--ink)">Go</b> to a live pilot if the verified plan is at least <b style="color:var(--ink)">2% lower</b> than the actual plan over the replayed weeks, with zero constraint violations. The 5% target from Round 1 stays the ambition, not the gate.</p>
+      <p style="margin:1.5mm 0 0"><b style="color:var(--ink)">Not measured by replay:</b> planner time and on-time delivery. They move to the live pilot.</p>
+      <p style="margin:1.5mm 0 0;color:#78350f">All four weeks are synthetic and the "actual" plan imitates a planner who follows habit: 3.16% shows the measurement works, it is not a forecast.</p>
+    </div>
+  </div>
+
+
+  <div class="foot"><span>NEW AURA · Nordic Flow MVP · User Journey, Round 3</span><span>Screens are from the running application, 20 Nov 2026</span></div>
+</div>
+</body></html>

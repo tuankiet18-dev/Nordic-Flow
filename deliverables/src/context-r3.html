@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>System Context Diagram</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 3.5mm }
+  .cards .card { font-size: 8.6pt; line-height: 1.38 }
+  .cards ul { margin: 1mm 0 0; padding-left: 4mm }
+  .cards li { margin-bottom: .6mm }
+  .two { display: grid; grid-template-columns: 2.35fr 1fr; gap: 5mm; align-items: start }
+  .gate { display: grid; grid-template-columns: 7mm 1fr; gap: 2.2mm; padding: 1.5mm 0; border-bottom: 1px solid var(--rule) }
+  .gate:last-child { border-bottom: 0 }
+  .gate .g { width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 700; font-size: 7.6pt; display: grid; place-items: center }
+  .gate b { color: var(--ink); font-size: 8.8pt }
+  .gate span { display: block; font-size: 8.3pt; color: var(--body); line-height: 1.35 }
+  .reg td { font-size: 7.9pt; padding: .95mm 2mm; line-height: 1.32 } .reg td:nth-child(2) { font-weight: 600; color: var(--ink) }
+  .small { font-size: 8pt; color: var(--mute) }
+</style></head><body>
+
+<!-- ============================ PAGE 1 ============================ -->
+<div class="page">
+  <div class="eyebrow">NEW AURA · Nordic Flow · Round 3</div>
+  <h1>System context after Round 3: the same boundary, plus history replay</h1>
+  <p class="lead">Nordic Flow is the circle; every external person, service and file set is a rectangle; each arrow is a labelled data flow. One change since Round 2: the planner can add <b>actual_plan.csv</b>, the plan really shipped in a past week, and compare it with the optimised plan. Nordic Flow is still not connected to any Company A system, including the new CRM (page 2).</p>
+
+  <svg viewBox="0 0 1100 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System context diagram">
+    <defs>
+      <marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1e3a8a"/></marker>
+      <marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker>
+      <marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+      <style>
+        .lbl { font-size: 11.5px; fill: #1e293b; paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round }
+        .lbl.a { fill: #92400e } .lbl.g { fill: #475569 }
+        .en { font-size: 14px; font-weight: 700; fill: #0f172a } .es { font-size: 10.5px; fill: #475569 }
+      </style>
+    </defs>
+
+    <!-- data flows (drawn first, entities on top) -->
+    <g fill="none" stroke-width="2">
+      <path d="M510 84C506 130 508 175 511 213" stroke="#1e3a8a" marker-end="url(#mb)"/>
+      <path d="M589 213C593 175 592 130 590 86" stroke="#1e3a8a" marker-end="url(#mb)"/>
+      <path d="M240 150C340 150 420 190 452 262" stroke="#1e3a8a" marker-end="url(#mb)"/>
+      <path d="M453 382C430 450 340 500 242 500" stroke="#1e3a8a" marker-end="url(#mb)"/>
+      <path d="M647 262C730 240 800 208 868 194" stroke="#b45309" marker-end="url(#ma)"/>
+      <path d="M868 132C790 138 700 170 632 240" stroke="#b45309" marker-end="url(#ma)"/>
+      <path d="M135 270V194" stroke="#64748b" stroke-dasharray="6 5" marker-end="url(#mg)"/>
+      <path d="M135 468V372" stroke="#64748b" stroke-dasharray="6 5" marker-end="url(#mg)"/>
+    </g>
+
+    <!-- the system -->
+    <circle cx="550" cy="322" r="112" fill="#2563eb" stroke="#1e3a8a" stroke-width="2.5"/>
+    <text x="550" y="314" text-anchor="middle" style="font-size:25px;font-weight:700;fill:#fff">Nordic Flow</text>
+    <text x="550" y="342" text-anchor="middle" style="font-size:25px;font-weight:700;fill:#fff">MVP</text>
+    <text x="550" y="372" text-anchor="middle" style="font-size:11px;fill:#dbeafe">web UI · API · optimiser</text>
+    <text x="550" y="388" text-anchor="middle" style="font-size:11px;fill:#dbeafe">SQLite store · audit trail</text>
+
+    <!-- external entities -->
+    <rect x="455" y="20" width="190" height="64" fill="#e0e7ff" stroke="#1e1b4b" stroke-width="2"/>
+    <text x="550" y="48" text-anchor="middle" class="en">Planner</text>
+    <text x="550" y="66" text-anchor="middle" class="es">single local user</text>
+
+    <rect x="30" y="120" width="210" height="72" fill="#fce7e7" stroke="#1e1b4b" stroke-width="2"/>
+    <text x="135" y="149" text-anchor="middle" class="en">Input data files</text>
+    <text x="135" y="168" text-anchor="middle" class="es">CSV files or one ZIP</text>
+
+    <rect x="30" y="270" width="210" height="100" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="135" y="304" text-anchor="middle" class="en" style="fill:#334155">Company A systems</text>
+    <text x="135" y="322" text-anchor="middle" class="es">ERP · WMS · TMS · CRM</text>
+    <rect x="65" y="336" width="140" height="20" rx="10" fill="#cbd5e1"/>
+    <text x="135" y="350" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#334155">NOT CONNECTED</text>
+
+    <rect x="30" y="468" width="210" height="72" fill="#fce7e7" stroke="#1e1b4b" stroke-width="2"/>
+    <text x="135" y="497" text-anchor="middle" class="en">Approved plan export</text>
+    <text x="135" y="516" text-anchor="middle" class="es">ZIP of CSV and JSON files</text>
+
+    <rect x="870" y="120" width="200" height="84" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+    <text x="970" y="150" text-anchor="middle" class="en">Groq API</text>
+    <text x="970" y="168" text-anchor="middle" class="es">external LLM service</text>
+    <text x="970" y="184" text-anchor="middle" class="es" style="font-weight:700;fill:#92400e">optional, opt-in per request</text>
+
+    <!-- Round 3 change -->
+    <rect x="30" y="86" width="300" height="24" rx="12" fill="#ecfdf5" stroke="#047857" stroke-width="1.4"/>
+    <text x="180" y="102" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#047857">NEW in Round 3: actual_plan.csv for replay</text>
+
+    <!-- data flow labels -->
+    <text x="498" y="126" text-anchor="end" class="lbl">load, calculate, adjust,</text>
+    <text x="498" y="141" text-anchor="end" class="lbl">approve or reject</text>
+    <text x="602" y="126" class="lbl">results, route ranking,</text>
+    <text x="602" y="141" class="lbl">explanation, audit trail</text>
+
+    <text x="262" y="196" class="lbl">8 required CSV files or one ZIP</text>
+    <text x="262" y="211" class="lbl" style="font-size:10.5px">(+ optional lane files and actual_plan.csv)</text>
+
+    <text x="296" y="462" class="lbl">approved plan ZIP</text>
+    <text x="296" y="477" class="lbl" style="font-size:10.5px">(only after approval)</text>
+
+    <text x="708" y="276" class="lbl a">fact pack: calculated</text>
+    <text x="708" y="291" class="lbl a">numbers and names only</text>
+    <text x="858" y="100" text-anchor="end" class="lbl a">draft explanation text</text>
+    <text x="858" y="115" text-anchor="end" class="lbl a" style="font-size:10.5px">(figures checked, stays a draft)</text>
+
+    <text x="150" y="226" class="lbl g">orders, rates, supply,</text>
+    <text x="150" y="241" class="lbl g">capacities, exported by hand</text>
+    <text x="150" y="412" class="lbl g">imported by hand;</text>
+    <text x="150" y="427" class="lbl g">nothing written back</text>
+
+    <!-- numbered badges, matching the register on page 2 -->
+    <g style="font-size:10.5px;font-weight:700;text-anchor:middle">
+      <circle cx="135" cy="232" r="9" fill="#64748b"/><text x="135" y="235.7" style="fill:#fff">1</text>
+      <circle cx="324" cy="161" r="9" fill="#1e3a8a"/><text x="324" y="164.7" style="fill:#fff">2</text>
+      <circle cx="507" cy="160" r="9" fill="#1e3a8a"/><text x="507" y="163.7" style="fill:#fff">3</text>
+      <circle cx="592" cy="160" r="9" fill="#1e3a8a"/><text x="592" y="163.7" style="fill:#fff">3</text>
+      <circle cx="782" cy="224" r="9" fill="#b45309"/><text x="782" y="227.7" style="fill:#fff">4</text>
+      <circle cx="722" cy="188" r="9" fill="#b45309"/><text x="722" y="191.7" style="fill:#fff">5</text>
+      <circle cx="402" cy="446" r="9" fill="#1e3a8a"/><text x="402" y="449.7" style="fill:#fff">6</text>
+      <circle cx="135" cy="420" r="9" fill="#64748b"/><text x="135" y="423.7" style="fill:#fff">7</text>
+    </g>
+
+    <!-- legend -->
+    <rect x="800" y="300" width="280" height="250" rx="8" fill="#fff" stroke="#e2e8f0"/>
+    <text x="816" y="324" style="font-size:9.5px;font-weight:700;letter-spacing:.08em;fill:#64748b">HOW TO READ THIS DIAGRAM</text>
+    <circle cx="830" cy="348" r="11" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.5"/><text x="852" y="352" style="font-size:11px">the system: Nordic Flow MVP</text>
+    <rect x="818" y="368" width="24" height="16" fill="#e0e7ff" stroke="#1e1b4b" stroke-width="1.5"/><text x="852" y="381" style="font-size:11px">external person or service</text>
+    <rect x="818" y="392" width="24" height="16" fill="#fce7e7" stroke="#1e1b4b" stroke-width="1.5"/><text x="852" y="405" style="font-size:11px">files that enter or leave the system</text>
+    <path d="M816 428h30" stroke="#1e3a8a" stroke-width="2" fill="none" marker-end="url(#mb)"/><text x="852" y="432" style="font-size:11px">data flow, implemented (labelled)</text>
+    <path d="M816 450h30" stroke="#b45309" stroke-width="2" fill="none" marker-end="url(#ma)"/><text x="852" y="454" style="font-size:11px">optional call to an external service</text>
+    <path d="M816 472h30" stroke="#64748b" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#mg)"/><text x="852" y="476" style="font-size:11px">manual step, not integrated</text>
+    <text x="816" y="500" style="font-size:10.5px;fill:#64748b">Flows 1 to 7 are the same as in Round 2.</text>
+    <text x="816" y="516" style="font-size:10.5px;fill:#64748b">All data is synthetic. Nordic Flow proposes plans;</text>
+    <text x="816" y="531" style="font-size:10.5px;fill:#64748b">nothing is executed or written back.</text>
+  </svg>
+
+  <div class="card soft" style="margin-top:2mm;font-size:8.6pt;display:flex;gap:6mm;flex-wrap:wrap"><span><b style="color:var(--ink)">Not in this MVP:</b> live integration with ERP, WMS, TMS or the CRM</span><span>automatic execution or write-back</span><span>login and user roles</span><span>Groq only on request, with a key</span></div>
+  <div class="foot"><span>NEW AURA · Nordic Flow MVP · System Context Diagram, Round 3 (1 of 2)</span><span>Reflects the running application, 20 Nov 2026</span></div>
+</div>
+
+<!-- ============================ PAGE 2 ============================ -->
+<div class="page">
+  <div class="eyebrow">NEW AURA · Programme view · Round 3</div>
+  <h1>Two tracks, one programme: CRM migration first, Nordic Flow proven by replay</h1>
+  <p class="lead">The CRM migration is a separate system change with its own boundary. The two tracks share governance and budget, not software. Figures are estimates based on stated assumptions, not quotes.</p>
+
+  <svg viewBox="0 0 1100 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Programme context with two tracks">
+    <defs>
+      <marker id="pb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1e3a8a"/></marker>
+      <marker id="pg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+      <marker id="pv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c3aed"/></marker>
+      <style>
+        .lbl { font-size: 11.5px; fill: #1e293b; paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round }
+        .lbl.g { fill: #475569 } .lbl.v { fill: #5b21b6 }
+        .en { font-size: 14px; font-weight: 700; fill: #0f172a } .es { font-size: 10.5px; fill: #475569 }
+        .band { font-size: 11px; font-weight: 700; letter-spacing: .08em; fill: #475569 }
+      </style>
+    </defs>
+
+    <!-- track frames -->
+    <rect x="8" y="8" width="530" height="360" rx="12" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <text x="26" y="32" class="band">TRACK 1 · CRM MIGRATION · MUST-HAVE · ONE COUNTRY</text>
+    <rect x="560" y="8" width="532" height="360" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="578" y="32" class="band">TRACK 2 · NORDIC FLOW REPLAY PILOT · SWEDEN, ONE REGION</text>
+
+    <!-- track 1 flows -->
+    <g fill="none" stroke-width="2">
+      <path d="M232 95H298" stroke="#7c3aed" marker-end="url(#pv)"/>
+      <path d="M405 135V194" stroke="#7c3aed" marker-end="url(#pv)"/>
+      <path d="M130 135V194" stroke="#64748b" stroke-dasharray="6 5" marker-end="url(#pg)"/>
+      <path d="M405 276V316" stroke="#7c3aed" marker-end="url(#pv)"/>
+      <path d="M300 226H236" stroke="#7c3aed" marker-end="url(#pv)"/>
+      <path d="M232 250H298" stroke="#7c3aed" marker-end="url(#pv)"/>
+    </g>
+    <rect x="28" y="55" width="204" height="80" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="130" y="83" text-anchor="middle" class="en" style="fill:#334155">Dynamics 365</text>
+    <text x="130" y="101" text-anchor="middle" class="es">current CRM, on-premises</text>
+    <text x="130" y="117" text-anchor="middle" class="es" style="font-weight:700">being decommissioned</text>
+
+    <rect x="300" y="55" width="210" height="80" rx="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+    <text x="405" y="85" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#fff">Migration (one-off)</text>
+    <text x="405" y="104" text-anchor="middle" style="font-size:10.5px;fill:#ede9fe">extract · cleanse · map · load</text>
+    <text x="405" y="119" text-anchor="middle" style="font-size:10.5px;fill:#ede9fe">validate · cut over</text>
+
+    <rect x="300" y="196" width="210" height="80" fill="#f5f3ff" stroke="#5b21b6" stroke-width="2"/>
+    <text x="405" y="224" text-anchor="middle" class="en">Salesforce</text>
+    <text x="405" y="242" text-anchor="middle" class="es">new CRM, like-for-like setup</text>
+    <text x="405" y="258" text-anchor="middle" class="es">EU data residency, multi-country ready</text>
+
+    <rect x="28" y="196" width="204" height="80" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+    <text x="130" y="224" text-anchor="middle" class="en" style="fill:#334155">ERP and archive</text>
+    <text x="130" y="242" text-anchor="middle" class="es">customers, credit, orders;</text>
+    <text x="130" y="258" text-anchor="middle" class="es">old CRM history, read-only</text>
+
+    <rect x="300" y="318" width="210" height="40" fill="#f5f3ff" stroke="#5b21b6" stroke-width="1.6"/>
+    <text x="405" y="343" text-anchor="middle" class="en" style="font-size:13px">Sales users, trained first</text>
+
+    <text x="265" y="86" text-anchor="middle" class="lbl v">records</text>
+    <text x="416" y="170" class="lbl v">clean, mapped data</text>
+    <text x="142" y="163" class="lbl g">history older than</text>
+    <text x="142" y="178" class="lbl g">24 months: archived</text>
+    <text x="266" y="218" text-anchor="middle" class="lbl v" style="font-size:10.5px">customers</text>
+    <text x="266" y="266" text-anchor="middle" class="lbl v" style="font-size:10.5px">≤ 2 links</text>
+    <text x="416" y="301" class="lbl v">daily use</text>
+
+    <!-- track 2 flows -->
+    <g fill="none" stroke-width="2">
+      <path d="M680 135V176" stroke="#64748b" stroke-dasharray="6 5" marker-end="url(#pg)"/>
+      <path d="M785 220H866" stroke="#1e3a8a" marker-end="url(#pb)"/>
+      <path d="M950 142V98" stroke="#1e3a8a" marker-end="url(#pb)"/>
+      <path d="M910 292C890 318 840 328 792 328" stroke="#1e3a8a" marker-end="url(#pb)"/>
+    </g>
+    <rect x="580" y="55" width="200" height="80" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="680" y="83" text-anchor="middle" class="en" style="fill:#334155">ERP · WMS exports</text>
+    <text x="680" y="101" text-anchor="middle" class="es">4–8 past weeks, one region</text>
+    <text x="680" y="117" text-anchor="middle" class="es">exported by hand</text>
+
+    <rect x="580" y="180" width="205" height="80" fill="#fce7e7" stroke="#1e1b4b" stroke-width="2"/>
+    <text x="682" y="208" text-anchor="middle" class="en">Weekly files</text>
+    <text x="682" y="226" text-anchor="middle" class="es">8 input CSVs + actual_plan.csv</text>
+    <text x="682" y="242" text-anchor="middle" class="es">(the plan really shipped)</text>
+
+    <circle cx="950" cy="222" r="80" fill="#2563eb" stroke="#1e3a8a" stroke-width="2.5"/>
+    <text x="950" y="214" text-anchor="middle" style="font-size:20px;font-weight:700;fill:#fff">Nordic Flow</text>
+    <text x="950" y="238" text-anchor="middle" style="font-size:11px;fill:#dbeafe">replay: optimise and verify</text>
+    <text x="950" y="253" text-anchor="middle" style="font-size:11px;fill:#dbeafe">on the same orders</text>
+
+    <rect x="850" y="46" width="200" height="50" fill="#e0e7ff" stroke="#1e1b4b" stroke-width="2"/>
+    <text x="950" y="68" text-anchor="middle" class="en" style="font-size:13px">Planner, pilot sponsor</text>
+    <text x="950" y="85" text-anchor="middle" class="es">review every week</text>
+
+    <rect x="580" y="300" width="210" height="58" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+    <text x="685" y="324" text-anchor="middle" class="en" style="fill:#047857">Go / no-go, week 8</text>
+    <text x="685" y="342" text-anchor="middle" class="es">gate: saving ≥ 2% vs actual plan</text>
+
+    <text x="692" y="160" class="lbl g">manual export</text>
+    <text x="826" y="210" text-anchor="middle" class="lbl">upload</text>
+    <text x="962" y="124" class="lbl">replay report</text>
+    <text x="912" y="338" class="lbl">evidence</text>
+
+
+    <!-- programme band -->
+    <rect x="8" y="382" width="1084" height="42" rx="10" fill="#0f172a"/>
+    <text x="550" y="408" text-anchor="middle" style="font-size:12.5px;fill:#fff"><tspan style="font-weight:700;fill:#fff">One programme:</tspan> one steering group · about €0.21M after the 30% cut (estimate) · rule: the CRM track wins any conflict for people or money</text>
+  </svg>
+
+  <div class="two" style="margin-top:3mm;grid-template-columns:1fr 1fr">
+    <div class="card soft" style="font-size:8.4pt;line-height:1.4"><div class="k">What changed in the diagrams since Round 2</div>
+      Page 1: one new optional input (actual_plan.csv), and the CRM listed among Company A systems, still not connected. Page 2 is new: the CRM migration is its own system change, drawn apart from Nordic Flow. The tracks share no software; a shared customer data contract is only a future option.</div>
+    <div class="card soft" style="font-size:8.4pt;line-height:1.4"><div class="k">Assumptions behind this view</div>
+      The CRM country is Sweden; if it is Denmark or Norway the tracks run fully apart. Salesforce licences are an operating cost of the business, outside the project budget. Data volumes and the decommission date are confirmed in week 1.</div>
+  </div>
+
+  <div class="foot"><span>NEW AURA · Nordic Flow · System Context Diagram, Round 3 (2 of 2)</span><span>Synthetic data; costs are estimates based on stated assumptions</span></div>
+</div>
+</body></html>

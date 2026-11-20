@@ -11,13 +11,15 @@ const chrome = process.env.CHROME_PATH
   const opts = chrome && fs.existsSync(chrome) ? { executablePath: chrome } : {};
   const b = await chromium.launch(opts);
   const p = await b.newPage({ viewport: { width: 1123, height: 794 } });
-  const jobs = [['journey.html', 'User Journey.pdf'], ['context.html', 'System Context Diagram.pdf']];
+  const jobs = [['journey.html', 'User Journey.pdf'], ['context.html', 'System Context Diagram.pdf'],
+  ['journey-r3.html', 'round3/User Journey (Round 3).pdf'], ['context-r3.html', 'round3/System Context Diagram (Round 3).pdf']];
   const only = process.env.ONLY;
   for (const [src, out] of jobs) {
     if (only && !src.startsWith(only)) continue;
     await p.goto('file://' + path.resolve(__dirname, src));
     await p.waitForLoadState('networkidle');
     await p.evaluate(() => document.fonts.ready);
+    fs.mkdirSync(path.dirname(path.resolve(__dirname, '..', out)), { recursive: true });
     await p.pdf({ path: path.resolve(__dirname, '..', out), format: 'A4', landscape: true, printBackground: true, preferCSSPageSize: true });
     const pages = await p.evaluate(() => document.querySelectorAll('.page').length);
     console.log('wrote', out, 'pages in html:', pages);

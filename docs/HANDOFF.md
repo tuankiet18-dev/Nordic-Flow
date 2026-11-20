@@ -10,7 +10,8 @@ Branch: **`main` only.** All other branches were merged and deleted. New teammat
 | History replay (new in Round 3) | Done: `actual_plan.csv` as baseline, `replay` / `history` commands, in-app sample. Guide: `docs/REPLAY-MODE.md` |
 | Round 3 decisions and plan | `docs/round3/KE-HOACH-ROUND3.md` (13 decisions, owners, 3-day schedule, 15-minute outline) |
 | Round 3 analysis and sources | `docs/round3/PHAN-TICH-ROUND3.md` (budget, CRM risks, options, Q&A) |
-| Slides, updated System Context and User Journey | **To do** (see the plan) |
+| Updated System Context and User Journey | Done: `deliverables/round3/` (sources `deliverables/src/*-r3.html`) |
+| Slide content, speaker notes, Q&A | Done: `docs/round3/SLIDES.md`, `docs/round3/QA.md`. **Slides still to be built** (Nhật Anh) |
 | Round 2 deliverables | `deliverables/` (submitted versions, do not edit for Round 3; make new files) |
 
 ## Round 3 in one paragraph

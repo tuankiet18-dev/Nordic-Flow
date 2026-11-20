@@ -28,11 +28,11 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 ## B. Việc cần làm và người phụ trách
 
 ### Claude (làm ngay hôm nay)
-- [ ] Chế độ chạy lại lịch sử trong MVP: đọc `actual_plan.csv`, dùng làm baseline, kiểm chứng độc lập, nhãn trên giao diện, giải thích theo đúng loại baseline.
-- [ ] Bộ dữ liệu mẫu 4 tuần lịch sử (giả lập, ghi rõ) và lệnh `python -m nordic_flow replay <thư mục>` tổng hợp kết quả từng tuần.
-- [ ] Test tự động cho phần mới; chạy lại toàn bộ test.
-- [ ] Sửa System Context Diagram và User Journey (bản PDF mới).
-- [ ] Bản nháp nội dung slide (tiếng Anh) và bộ câu hỏi đáp.
+- [x] Chế độ chạy lại lịch sử trong MVP: đọc `actual_plan.csv`, dùng làm baseline, kiểm chứng độc lập, nhãn trên giao diện, giải thích theo đúng loại baseline.
+- [x] Bộ dữ liệu mẫu 4 tuần lịch sử (giả lập, ghi rõ) và lệnh `python -m nordic_flow replay <thư mục>` tổng hợp kết quả từng tuần.
+- [x] Test tự động cho phần mới; chạy lại toàn bộ test.
+- [x] Sửa System Context Diagram và User Journey (bản PDF mới): `deliverables/round3/`.
+- [x] Bản nháp nội dung slide (tiếng Anh) và bộ câu hỏi đáp: `SLIDES.md`, `QA.md`.
 
 ### Bách (code)
 - [ ] Pull bản mới, chạy test trên máy mình, xem lại phần chạy lại lịch sử.
