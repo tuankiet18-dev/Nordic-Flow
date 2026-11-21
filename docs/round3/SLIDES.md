@@ -1,6 +1,6 @@
 # Round 3 slides: content and speaker notes (15 minutes)
 
-Nhật Anh dựng slide từ file này. Mỗi slide gồm: **tiêu đề** (một câu kết luận), **nội dung trên slide** (ít chữ), **lời nói** (tiếng Việt, lấy từ `SCRIPT-THUYET-TRINH.md`), **người nói** và **thời lượng**. Ba người cùng nói: Nhật Anh slide 1, 2, 11; Kiệt slide 3–8, 13, 14; Bách slide 9, 10, 12 (vừa nói vừa thao tác demo). Bài kết thúc ở khoảng 13:30–14:00. Chữ trên slide vẫn bằng tiếng Anh. Khi sửa lời nói, sửa trong script trước rồi chép sang đây và phần ghi chú của bộ slide.
+Nhật Anh dựng slide từ file này. Mỗi slide gồm: **tiêu đề** (một câu kết luận), **nội dung trên slide** (ít chữ), **lời nói** (tiếng Việt, lấy từ `SCRIPT-THUYET-TRINH.md`), **người nói** và **thời lượng**. Ba người nói theo ba đoạn liền: Kiệt slide 1–8, Bách slide 9–12, Nhật Anh slide 13–14. Bách vừa nói vừa thao tác demo. Bài kết thúc ở khoảng 13:30–14:00. Chữ trên slide vẫn bằng tiếng Anh. Khi sửa lời nói, sửa trong script trước rồi chép sang đây và phần ghi chú của bộ slide.
 
 Hình có sẵn để chèn:
 - `deliverables/round3/System Context Diagram (Round 3).pdf` (trang 1: Nordic Flow, trang 2: hai track)
@@ -12,18 +12,18 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 
 ---
 
-## 1. Title (0:00–0:30) · Nhật Anh
+## 1. Title (0:00–0:30) · Kiệt
 **Title:** Nordic Flow, Round 3: protect the business, prove the saving
 **On slide:** NEW AURA · Bách · Nhật Anh · Kiệt · 21 November 2026
-**Say (tiếng Việt):** "Chúng em chào các anh chị giám khảo. Chúng em là nhóm NEW AURA: em là Nhật Anh, cùng với Kiệt và Bách. Nordic Flow giúp planner của Company A phân bổ hàng qua các kho với tổng chi phí thấp nhất; mọi plan đều được kiểm tra độc lập và được planner duyệt. Hôm nay chúng em trình bày proposal đã thay đổi thế nào sau hai yêu cầu mới, và vì sao."
+**Say (tiếng Việt):** "Chúng em chào các anh chị giám khảo. Chúng em là nhóm NEW AURA: em là Kiệt, cùng với Bách và Nhật Anh. Nordic Flow giúp planner của Company A phân bổ hàng qua các kho với tổng chi phí thấp nhất; mọi plan đều được kiểm tra độc lập và được planner duyệt. Hôm nay chúng em trình bày proposal đã thay đổi thế nào sau hai yêu cầu mới, và vì sao."
 
-## 2. What changed (0:30–1:20) · Nhật Anh
+## 2. What changed (0:30–1:20) · Kiệt
 **Title:** Two new facts change the plan
 **On slide:**
 - Budget: −30% → about **€0.21M** (from our €0.3M year-one estimate)
 - Must-have: one country moves its CRM from **Dynamics 365 to Salesforce**, inside this project, same timeframe
 - Our original goal still stands: lower total logistics cost
-**Say (tiếng Việt):** "Thứ nhất, ngân sách bị cắt 30%: từ khoảng 0,3 triệu euro còn khoảng 0,21 triệu. Thứ hai, một nước phải chuyển CRM từ Dynamics 365 sang Salesforce vì hệ thống cũ sắp ngừng. Executive board quyết định việc này là một phần của dự án hiện tại: cùng ngân sách, cùng thời gian. CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có hạn chót cứng và dùng chung tiền. Còn mục tiêu ban đầu, giảm chi phí logistics, vẫn giữ nguyên. Vậy giữ gì, đổi gì, và hoãn gì? Kiệt sẽ trình bày cách chúng em trả lời câu hỏi này."
+**Say (tiếng Việt):** "Thứ nhất, ngân sách bị cắt 30%: từ khoảng 0,3 triệu euro còn khoảng 0,21 triệu. Thứ hai, một nước phải chuyển CRM từ Dynamics 365 sang Salesforce vì hệ thống cũ sắp ngừng. Executive board quyết định việc này là một phần của dự án hiện tại: cùng ngân sách, cùng thời gian. CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có hạn chót cứng và dùng chung tiền. Còn mục tiêu ban đầu, giảm chi phí logistics, vẫn giữ nguyên. Vậy giữ gì, đổi gì, và hoãn gì?"
 
 ## 3. Assumptions (1:20–2:30) · Kiệt
 **Title:** What we assumed, and why
@@ -81,7 +81,7 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 - Go to a live pilot if the verified plan is **≥ 2% lower than the actual plan** over the replayed weeks, with zero constraint violations
 - 5% stays the ambition, not the gate
 - Planner time and on-time delivery: measured in the live pilot (replay cannot)
-**Say (tiếng Việt):** "Vì vậy, ở tuần tám: chỉ chuyển sang live pilot nếu verified plan rẻ hơn actual plan ít nhất 2% trên các tuần replay, không vi phạm constraint nào. 5% vẫn là kỳ vọng, không phải điều kiện. Replay không đo được thời gian của planner hay on-time delivery; hai chỉ số đó để cho live pilot. Bây giờ Bách sẽ cho các anh chị xem MVP."
+**Say (tiếng Việt):** "Vì vậy, ở tuần tám: chỉ chuyển sang live pilot nếu verified plan rẻ hơn actual plan ít nhất 2% trên các tuần replay, không vi phạm constraint nào. 5% vẫn là kỳ vọng, không phải điều kiện. Replay không đo được thời gian của planner hay on-time delivery; hai chỉ số đó để cho live pilot. Bây giờ Bách sẽ cho các anh chị xem MVP đã thay đổi thế nào."
 
 ## 9. MVP change: history replay (7:00–9:20) · Bách
 **Title:** The MVP now compares with what was really shipped
@@ -96,13 +96,13 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 ## 10. Replay result (9:20–10:00) · Bách
 **Title:** Four synthetic weeks: 2.2% to 4.2%, 3.16% overall
 **On slide:** the week table from the Round 3 User Journey; a card "Pilot evidence page: GO, 3.16% over 4 comparable weeks, above the 2% gate. The app adds the weeks up; Company A decides."; "synthetic data, not a forecast" in large text.
-**Say (tiếng Việt):** "Một tuần chưa đủ để quyết định. Trang Pilot evidence chạy lại nhiều tuần một lúc: bốn tuần synthetic cho 2,2 đến 4,2%, tổng 3,16%, trên ngưỡng 2%, nên kết quả là GO. Trang này cũng kiểm tra code map từ Dynamics sang Salesforce. Hệ thống chỉ cộng số; người quyết định vẫn là Company A, trên dữ liệu thật của họ. Tiếp theo, Nhật Anh sẽ nói journey và sơ đồ hệ thống đã thay đổi thế nào."
+**Say (tiếng Việt):** "Một tuần chưa đủ để quyết định. Trang Pilot evidence chạy lại nhiều tuần một lúc: bốn tuần synthetic cho 2,2 đến 4,2%, tổng 3,16%, trên ngưỡng 2%, nên kết quả là GO. Trang này cũng kiểm tra code map từ Dynamics sang Salesforce. Hệ thống chỉ cộng số; người quyết định vẫn là Company A, trên dữ liệu thật của họ."
 **Optional live:** if the demo runs well, open Pilot evidence → Use the 4 sample weeks instead of the slide.
 
-## 11. Journey and diagrams (10:00–10:45) · Nhật Anh
+## 11. Journey and diagrams (10:00–10:45) · Bách
 **Title:** What changed in the user journey and the system context
 **On slide:** small images of the Round 3 User Journey and page 1 of the System Context; caption "One new input file; customer files later come from Salesforce."
-**Say (tiếng Việt):** "Journey hằng ngày của planner không đổi. Chúng em thêm một journey trước live pilot: xuất các tuần cũ, tải lên, so với kế hoạch đã chạy, rồi quyết định trên trang Pilot evidence. Boundary của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn: actual_plan.csv và CRM code map. CRM là hệ thống của Company A mà Nordic Flow không kết nối trực tiếp. Bách sẽ trình bày roadmap tám tuần."
+**Say (tiếng Việt):** "Journey hằng ngày của planner không đổi. Chúng em thêm một journey trước live pilot: xuất các tuần cũ, tải lên, so với kế hoạch đã chạy, rồi quyết định trên trang Pilot evidence. Boundary của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn: actual_plan.csv và CRM code map. CRM là hệ thống của Company A mà Nordic Flow không kết nối trực tiếp."
 
 ## 12. Eight-week roadmap (10:45–11:45) · Bách
 **Title:** Eight weeks, two tracks, one decision point
@@ -116,9 +116,9 @@ Quy tắc chung: mọi số tiền ghi "estimate"; mọi kết quả từ dữ l
 | 7 | Cut-over rehearsal, training | Economics review |
 | 8 | **Go live**, old CRM read-only | **Go / no-go** |
 Fallback: secondary integrations in weeks 9–12, paid from contingency.
-**Say (tiếng Việt):** "Hai track chạy song song tám tuần. Tuần một và hai: CRM kiểm kê dữ liệu, xác nhận ngày tắt hệ thống cũ, field mapping; Nordic Flow nạp file thật và mapping mã. Tuần ba đến bảy: CRM configure, cleansing, trial load, đào tạo; Nordic Flow replay các tuần cũ cùng planner. Tuần tám: CRM go live, hệ thống cũ read-only; Nordic Flow có quyết định go hoặc no-go. Nếu CRM lớn hơn dự kiến, integration phụ dời sang tuần chín đến mười hai: Nordic Flow chậm lại, CRM thì không. Kiệt sẽ nói về rủi ro và kết luận."
+**Say (tiếng Việt):** "Hai track chạy song song tám tuần. Tuần một và hai: CRM kiểm kê dữ liệu, xác nhận ngày tắt hệ thống cũ, field mapping; Nordic Flow nạp file thật và mapping mã. Tuần ba đến bảy: CRM configure, cleansing, trial load, đào tạo; Nordic Flow replay các tuần cũ cùng planner. Tuần tám: CRM go live, hệ thống cũ read-only; Nordic Flow có quyết định go hoặc no-go. Nếu CRM lớn hơn dự kiến, integration phụ dời sang tuần chín đến mười hai: Nordic Flow chậm lại, CRM thì không. Nhật Anh sẽ nói về rủi ro và những quyết định chúng em đề xuất."
 
-## 13. Risks and trade-offs (11:45–12:50) · Kiệt
+## 13. Risks and trade-offs (11:45–12:50) · Nhật Anh
 **Title:** What we give up, and what could go wrong
 **On slide:**
 | Risk or trade-off | Mitigation |
@@ -132,7 +132,7 @@ Fallback: secondary integrations in weeks 9–12, paid from contingency.
 | Personal data (GDPR) | EU hosting, data processing agreement, archive instead of copying old data |
 **Say (tiếng Việt):** "Trade-off lớn nhất là giá trị của Nordic Flow đến muộn hơn. Chúng em chấp nhận, vì giữ quan hệ khách hàng là ưu tiên số một; bù lại, replay cho con số thật từ sớm và rẻ. Ba rủi ro chính: chất lượng dữ liệu CRM, nên data cleansing trước khi load; ngày tắt hệ thống cũ đến sớm, nên xác nhận ngay tuần một và contingency dành cho CRM; user không quen Salesforce, nên giữ màn hình như cũ và đào tạo trước cut-over."
 
-## 14. Decisions we ask for (12:50–13:30) · Kiệt
+## 14. Decisions we ask for (12:50–13:30) · Nhật Anh
 **Title:** Three decisions for Company A
 **On slide:**
 1. Confirm Salesforce licences sit outside the project budget

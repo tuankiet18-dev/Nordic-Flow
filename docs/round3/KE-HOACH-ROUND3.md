@@ -72,12 +72,9 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 
 | Phút | Slide | Người nói |
 |---|---|---|
-| 0:00–1:20 | 1–2: mở đầu, hai thay đổi | Nhật Anh |
-| 1:20–7:00 | 3–8: assumption, ba option, hai track, giữ/đổi/hoãn, ngân sách, cổng go/no-go | Kiệt |
-| 7:00–10:00 | 9–10: demo history replay, Pilot evidence | Bách |
-| 10:00–10:45 | 11: User Journey và System Context | Nhật Anh |
-| 10:45–11:45 | 12: roadmap 8 tuần | Bách |
-| 11:45–13:30 | 13–14: rủi ro, trade-off, ba quyết định | Kiệt |
+| 0:00–7:00 | 1–8: mở đầu, hai thay đổi, assumption, ba option, hai track, giữ/đổi/hoãn, ngân sách, cổng go/no-go | Kiệt |
+| 7:00–11:45 | 9–12: demo history replay, Pilot evidence, User Journey và System Context, roadmap 8 tuần | Bách |
+| 11:45–13:30 | 13–14: rủi ro, trade-off, ba quyết định | Nhật Anh |
 
 Chi tiết lời nói: `SCRIPT-THUYET-TRINH.md`. Bài kết thúc khoảng 13:30–14:00, dư một phút.
 

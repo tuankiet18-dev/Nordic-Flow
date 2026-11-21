@@ -7,7 +7,7 @@ File này để **đọc cho hiểu**, không phải để học thuộc. Mỗi 
 - **Gợi ý cách nói:** một cách nói mẫu. Bạn nói theo lời của mình là được.
 - **Nếu bị hỏi:** câu hỏi dễ gặp ở slide đó, trả lời ngắn.
 
-Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba người cùng nói: Nhật Anh slide 1, 2, 11; Kiệt slide 3–8, 13, 14; Bách slide 9, 10, 12. Mỗi người đọc kỹ phần của mình, nhưng nên đọc cả bài để hiểu câu chuyện và đỡ lời cho nhau khi cần. Câu hỏi đáp đầy đủ ở `QA.md`.
+Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba người nói theo ba đoạn liền: Kiệt slide 1–8, Bách slide 9–12, Nhật Anh slide 13–14. Mỗi người đọc kỹ phần của mình, nhưng nên đọc cả bài để hiểu câu chuyện và đỡ lời cho nhau khi cần. Câu hỏi đáp đầy đủ ở `QA.md`.
 
 ---
 
@@ -26,7 +26,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 1. Mở đầu (0:00–0:30)
 
-**Người nói: Nhật Anh**
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** chào, giới thiệu nhóm, nhắc giám khảo Nordic Flow là gì, rồi báo trước bài sẽ nói gì.
 
@@ -41,7 +41,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 2. Hai thay đổi (0:30–1:20)
 
-**Người nói: Nhật Anh**
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** nói rõ đề bài mới, để giám khảo thấy nhóm hiểu đúng vấn đề.
 
@@ -256,7 +256,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 11. User Journey và System Context (10:00–10:45)
 
-**Người nói: Nhật Anh**
+**Người nói: Bách**
 
 **Slide này để làm gì:** trả lời phần còn lại của đề: *"user journey và system diagram đã điều chỉnh thế nào"*.
 
@@ -298,7 +298,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 13. Rủi ro và trade-off (11:45–12:50)
 
-**Người nói: Kiệt**
+**Người nói: Nhật Anh**
 
 **Slide này để làm gì:** đề yêu cầu nói rõ trade-off, giới hạn và rủi ro. Nói thẳng những gì phải hy sinh cho thấy nhóm trung thực và có suy nghĩ.
 
@@ -319,7 +319,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 14. Đề nghị và kết thúc (12:50–13:30)
 
-**Người nói: Kiệt**
+**Người nói: Nhật Anh**
 
 **Slide này để làm gì:** tư vấn luôn kết thúc bằng việc khách hàng cần làm gì tiếp theo. Ba quyết định này đều gắn với các assumption ở slide 3.
 
