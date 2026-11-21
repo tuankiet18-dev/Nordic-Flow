@@ -6,7 +6,7 @@ Trình bày **thứ Bảy 21/11/2026, 13:30**, Opal Tower. 15 phút + 10 phút h
 
 1. **`KE-HOACH-ROUND3.md`**: 13 quyết định đã chốt, ai làm gì, lịch 3 ngày, bố cục 15 phút, những câu không được nói. Đọc file này trước.
 2. **`PHAN-TICH-ROUND3.md`**: lý do đằng sau các quyết định: ngân sách, rủi ro CRM, ba option, câu hỏi giám khảo có thể hỏi, nguồn tham khảo.
-3. **`SLIDES.md`**: nội dung 14 slide, lời nói tiếng Anh, người nói và thời lượng. Nhật Anh dựng slide từ file này.
+3. **`SLIDES.md`**: nội dung 14 slide (chữ trên slide bằng tiếng Anh), lời nói tiếng Việt lấy từ script, người nói và thời lượng.
 4. **`SCRIPT-THUYET-TRINH.md`**: lời nói tiếng Việt cho cả 15 phút, theo từng slide, có mốc thời gian, hành động và cách xử lý sự cố. Kiệt nói chính, Bách điều khiển demo, Nhật Anh chuyển slide và mở backup video.
 5. **`QA.md`**: 26 câu hỏi giám khảo có thể hỏi, câu trả lời tiếng Việt (văn nói), ai trả lời.
 6. **`../REPLAY-MODE.md`** (cho người làm code): tính năng mới của MVP, file `actual_plan.csv`, diagram code, cách mở rộng.
