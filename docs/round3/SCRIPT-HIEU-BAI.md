@@ -7,7 +7,7 @@ File này để **đọc cho hiểu**, không phải để học thuộc. Mỗi 
 - **Gợi ý cách nói:** một cách nói mẫu. Bạn nói theo lời của mình là được.
 - **Nếu bị hỏi:** câu hỏi dễ gặp ở slide đó, trả lời ngắn.
 
-Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Câu hỏi đáp đầy đủ ở `QA.md`.
+Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba người cùng nói: Nhật Anh slide 1, 2, 11; Kiệt slide 3–8, 13, 14; Bách slide 9, 10, 12. Mỗi người đọc kỹ phần của mình, nhưng nên đọc cả bài để hiểu câu chuyện và đỡ lời cho nhau khi cần. Câu hỏi đáp đầy đủ ở `QA.md`.
 
 ---
 
@@ -26,6 +26,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 1. Mở đầu (0:00–0:30)
 
+**Người nói: Nhật Anh**
+
 **Slide này để làm gì:** chào, giới thiệu nhóm, nhắc giám khảo Nordic Flow là gì, rồi báo trước bài sẽ nói gì.
 
 **Giải thích:** Giám khảo đã xem rất nhiều nhóm, có thể không nhớ bài của mình. Vì vậy cần một câu nhắc lại Nordic Flow:
@@ -38,6 +40,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 2. Hai thay đổi (0:30–1:20)
+
+**Người nói: Nhật Anh**
 
 **Slide này để làm gì:** nói rõ đề bài mới, để giám khảo thấy nhóm hiểu đúng vấn đề.
 
@@ -56,6 +60,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 3. Assumption (1:20–2:30)
+
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** đề bài không cho đủ thông tin, nên nhóm phải tự đặt giả định. Đề yêu cầu mọi assumption phải được **nói rõ và có lý do**. Đây là chỗ giám khảo chấm "consulting mindset".
 
@@ -83,6 +89,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 4. Ba option (2:30–3:20)
 
+**Người nói: Kiệt**
+
 **Slide này để làm gì:** cho thấy nhóm đã cân nhắc các cách khác, rồi mới chọn. Đây là cách làm chuẩn của tư vấn.
 
 **Giải thích:**
@@ -100,6 +108,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 5. Recommendation: hai track (3:20–4:30)
+
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** giải thích cụ thể option C gồm những gì.
 
@@ -132,6 +142,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 6. Giữ, đổi, hoãn (4:30–5:10)
 
+**Người nói: Kiệt**
+
 **Slide này để làm gì:** trả lời thẳng câu hỏi ở slide 2 cho phần MVP.
 
 **Giải thích:**
@@ -145,6 +157,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 7. Ngân sách (5:10–6:20)
+
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** chứng minh phương án nằm trong €0,21M, và giải thích vì sao bỏ €40k cho Nordic Flow là đáng.
 
@@ -177,6 +191,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 8. Cổng go/no-go (6:20–7:00)
 
+**Người nói: Kiệt**
+
 **Slide này để làm gì:** nói rõ quy tắc quyết định ở tuần 8, để Company A biết khi nào đầu tư tiếp.
 
 **Giải thích:**
@@ -195,6 +211,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 9. Demo history replay (7:00–9:20)
 
+**Người nói: Bách**
+
 **Slide này để làm gì:** cho giám khảo **thấy tận mắt** MVP đã đổi. Đây là phần trả lời trực tiếp câu hỏi *"MVP đã điều chỉnh thế nào"*.
 
 **Giải thích:**
@@ -203,7 +221,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 - **Bảo vệ khỏi số sai:** actual plan cũng phải qua bộ kiểm tra độc lập. Nếu nó không đáp ứng đủ đơn hàng hoặc vượt giới hạn, hệ thống **không hiện con số tiết kiệm nào**. Nhóm không bao giờ so với một mốc không kiểm chứng được.
 - **Không gửi gì vào hệ thống thật:** chỉ là tính toán để có bằng chứng.
 
-**Các bước demo (Bách bấm, bạn nói):**
+**Các bước demo (Bách vừa nói vừa bấm):**
 1. Trang Data, bấm History replay: dữ liệu một tuần, actual plan có 606 pallet trên 87 tuyến, khớp với đơn hàng.
 2. Bấm Calculate plan: thực tế tốn **32.698**, verified plan **31.316**, chênh **1.382 (4,2%)**, Plan checks **Passed**.
 3. Nhấn mạnh: đây là dữ liệu giả lập (synthetic), **không phải dự báo**.
@@ -212,11 +230,13 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 **Gợi ý cách nói:** "Ở vòng trước, tiết kiệm được tính so với một quy tắc chúng em tự đặt ra, đó là điểm yếu nhất. Giờ planner tải thêm file kế hoạch đã thực sự chạy. Tuần này thực tế tốn 32.698, verified plan tốn 31.316, thấp hơn 4,2%. Đây là dữ liệu giả lập, không phải dự báo. Nếu actual plan không khớp đơn hàng thì hệ thống không hiện tiết kiệm."
 
-**Nếu demo lỗi:** Nhật Anh mở `deliverables/round3/demo/replay-demo.mp4`. Bạn nói "Chúng em chuyển sang bản ghi sẵn" rồi nói tiếp như bình thường.
+**Nếu demo lỗi:** Nhật Anh mở `deliverables/round3/demo/replay-demo.mp4`. Bách nói "Chúng em chuyển sang bản ghi sẵn" rồi nói tiếp như bình thường.
 
 ---
 
 ## Slide 10. Kết quả bốn tuần, Pilot evidence (9:20–10:00)
+
+**Người nói: Bách**
 
 **Slide này để làm gì:** cho thấy một tuần chưa đủ để quyết định, và MVP đã có công cụ cho quyết định ở tuần 8.
 
@@ -236,6 +256,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 11. User Journey và System Context (10:00–10:45)
 
+**Người nói: Nhật Anh**
+
 **Slide này để làm gì:** trả lời phần còn lại của đề: *"user journey và system diagram đã điều chỉnh thế nào"*.
 
 **Giải thích:**
@@ -251,6 +273,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 12. Roadmap 8 tuần (10:45–11:45)
+
+**Người nói: Bách**
 
 **Slide này để làm gì:** cho thấy kế hoạch làm được trong 8 tuần, và cả hai track cùng kết thúc bằng một quyết định ở tuần 8.
 
@@ -274,6 +298,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ## Slide 13. Rủi ro và trade-off (11:45–12:50)
 
+**Người nói: Kiệt**
+
 **Slide này để làm gì:** đề yêu cầu nói rõ trade-off, giới hạn và rủi ro. Nói thẳng những gì phải hy sinh cho thấy nhóm trung thực và có suy nghĩ.
 
 **Giải thích:**
@@ -292,6 +318,8 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 ---
 
 ## Slide 14. Đề nghị và kết thúc (12:50–13:30)
+
+**Người nói: Kiệt**
 
 **Slide này để làm gì:** tư vấn luôn kết thúc bằng việc khách hàng cần làm gì tiếp theo. Ba quyết định này đều gắn với các assumption ở slide 3.
 

@@ -72,15 +72,14 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 
 | Phút | Slide | Người nói |
 |---|---|---|
-| 0:00–1:00 | Nordic Flow trong 1 câu; điều Round 3 thay đổi | Nhật Anh |
-| 1:00–3:00 | Hai yêu cầu mới, các assumption chính (nói rõ) | Kiệt |
-| 3:00–5:00 | Ba option, vì sao chọn hai track | Kiệt |
-| 5:00–7:00 | Giữ, sửa, hoãn, bỏ; CRM like-for-like | Kiệt |
-| 7:00–9:00 | Ngân sách mới, break-even mới, cổng go/no-go | Kiệt |
-| 9:00–11:30 | MVP đã đổi: history replay (demo 2 phút) | Bách |
-| 11:30–12:30 | User Journey và System Context đã đổi | Nhật Anh |
-| 12:30–14:00 | Lộ trình 8 tuần hai track, quy tắc ưu tiên | Bách |
-| 14:00–15:00 | Rủi ro, trade-off, điều khách hàng cần quyết định | Kiệt |
+| 0:00–1:20 | 1–2: mở đầu, hai thay đổi | Nhật Anh |
+| 1:20–7:00 | 3–8: assumption, ba option, hai track, giữ/đổi/hoãn, ngân sách, cổng go/no-go | Kiệt |
+| 7:00–10:00 | 9–10: demo history replay, Pilot evidence | Bách |
+| 10:00–10:45 | 11: User Journey và System Context | Nhật Anh |
+| 10:45–11:45 | 12: roadmap 8 tuần | Bách |
+| 11:45–13:30 | 13–14: rủi ro, trade-off, ba quyết định | Kiệt |
+
+Chi tiết lời nói: `SCRIPT-THUYET-TRINH.md`. Bài kết thúc khoảng 13:30–14:00, dư một phút.
 
 ---
 

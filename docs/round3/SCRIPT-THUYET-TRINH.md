@@ -1,6 +1,17 @@
 # Script thuyết trình Round 3 (15 phút, tiếng Việt)
 
-**Người nói chính: Kiệt.** Bách điều khiển máy demo ở slide 9. Nhật Anh chuyển slide và mở backup video nếu demo lỗi. Cả ba người cùng trả lời câu hỏi theo phân công trong `QA.md`.
+**Ba người cùng nói.** Đề chỉ bắt buộc cả ba có mặt; chia người nói giúp mỗi người nói đúng phần mình hiểu nhất.
+
+| Người | Slide | Phần | Thời gian |
+|---|---|---|---|
+| **Nhật Anh** | 1, 2, 11 | Mở đầu, hai thay đổi, User Journey và System Context | khoảng 2 phút |
+| **Kiệt** | 3–8, 13, 14 | Assumption, option, đề xuất, ngân sách, cổng go/no-go, rủi ro, kết luận | khoảng 7 phút |
+| **Bách** | 9, 10, 12 | Demo MVP, Pilot evidence, roadmap 8 tuần | khoảng 4 phút |
+
+- **Chuyển slide:** người đang nói tự bấm (dùng chung một clicker, đưa tay cho người nói tiếp). Ở slide 9–10, Bách vừa nói vừa thao tác máy demo.
+- **Backup video:** nếu demo lỗi quá 15 giây, Nhật Anh mở video; Bách nói tiếp như bình thường.
+- **Chuyển người:** người nói trước giới thiệu người nói sau bằng một câu (đã viết sẵn ở cuối mỗi phần). Người nói sau bước lên trước khi câu đó kết thúc.
+- **Hỏi đáp:** cả ba trả lời theo phân công trong `QA.md`.
 
 Cách dùng file này:
 - Chữ trong ngoặc kép là lời nói. Đọc to vài lần cho quen, sau đó **nói bằng lời của mình**. Không cầm giấy đọc.
@@ -9,30 +20,32 @@ Cách dùng file này:
 - Lời nói khoảng 1.250 từ, tức khoảng 9 phút nói chậm. Phần còn lại là thời gian thao tác demo, chuyển slide và dừng sau các con số. Bản này cố ý kết thúc ở **14:00** để còn một phút dự phòng.
 - Cột thời gian là mốc **kết thúc** của mỗi slide. Tập với đồng hồ bấm giờ.
 
-| Slide | Nội dung | Kết thúc lúc |
-|---|---|---|
-| 1 | Mở đầu | 0:30 |
-| 2 | Hai thay đổi | 1:20 |
-| 3 | Assumption | 2:30 |
-| 4 | Ba option | 3:20 |
-| 5 | Recommendation: hai track | 4:30 |
-| 6 | Giữ, đổi, hoãn | 5:10 |
-| 7 | Ngân sách | 6:20 |
-| 8 | Cổng go/no-go | 7:00 |
-| 9 | Demo | 9:20 |
-| 10 | Kết quả bốn tuần, Pilot evidence | 10:00 |
-| 11 | User Journey và System Context | 10:45 |
-| 12 | Roadmap 8 tuần | 11:45 |
-| 13 | Rủi ro và trade-off | 12:50 |
-| 14 | Đề nghị và kết thúc | 13:30–14:00 |
+| Slide | Nội dung | Người nói | Kết thúc lúc |
+|---|---|---|---|
+| 1 | Mở đầu | Nhật Anh | 0:30 |
+| 2 | Hai thay đổi | Nhật Anh | 1:20 |
+| 3 | Assumption | Kiệt | 2:30 |
+| 4 | Ba option | Kiệt | 3:20 |
+| 5 | Recommendation: hai track | Kiệt | 4:30 |
+| 6 | Giữ, đổi, hoãn | Kiệt | 5:10 |
+| 7 | Ngân sách | Kiệt | 6:20 |
+| 8 | Cổng go/no-go | Kiệt | 7:00 |
+| 9 | Demo | Bách | 9:20 |
+| 10 | Kết quả bốn tuần, Pilot evidence | Bách | 10:00 |
+| 11 | User Journey và System Context | Nhật Anh | 10:45 |
+| 12 | Roadmap 8 tuần | Bách | 11:45 |
+| 13 | Rủi ro và trade-off | Kiệt | 12:50 |
+| 14 | Đề nghị và kết thúc | Kiệt | 13:30–14:00 |
 
 ---
 
 ## Slide 1. Mở đầu (0:00–0:30)
 
+**Người nói: Nhật Anh**
+
 [Đứng giữa, nhìn giám khảo, chờ một nhịp rồi mới nói.]
 
-"Chúng em chào các anh chị giám khảo. Chúng em là nhóm NEW AURA: em là Kiệt, đây là Bách và Nhật Anh.
+"Chúng em chào các anh chị giám khảo. Chúng em là nhóm NEW AURA: em là Nhật Anh, cùng với Kiệt và Bách.
 
 Nordic Flow giúp planner của Company A phân bổ hàng qua các kho với tổng chi phí thấp nhất; mọi plan đều được kiểm tra độc lập và được planner duyệt. **Hôm nay chúng em trình bày proposal đã thay đổi thế nào sau hai yêu cầu mới, và vì sao.**"
 
@@ -40,15 +53,19 @@ Nordic Flow giúp planner của Company A phân bổ hàng qua các kho với t�
 
 ## Slide 2. Hai thay đổi (0:30–1:20)
 
+**Người nói: Nhật Anh**
+
 "Thứ nhất, ngân sách bị cắt 30%: từ khoảng 0,3 triệu euro còn **khoảng 0,21 triệu**.
 
 Thứ hai, một nước phải chuyển CRM từ Dynamics 365 sang Salesforce vì hệ thống cũ sắp ngừng. Executive board quyết định việc này là **một phần của dự án hiện tại**: cùng ngân sách, cùng thời gian.
 
-CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có hạn chót cứng và dùng chung tiền. Còn mục tiêu ban đầu, giảm chi phí logistics, vẫn giữ nguyên. **Vậy giữ gì, đổi gì, và hoãn gì?**"
+CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có hạn chót cứng và dùng chung tiền. Còn mục tiêu ban đầu, giảm chi phí logistics, vẫn giữ nguyên. **Vậy giữ gì, đổi gì, và hoãn gì?** Kiệt sẽ trình bày cách chúng em trả lời câu hỏi này."
 
 [Chuyển slide.]
 
 ## Slide 3. Assumption (1:20–2:30)
+
+**Người nói: Kiệt**
 
 "Đề bài để trống một số điểm, nên chúng em nói rõ assumption.
 
@@ -62,6 +79,8 @@ CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có h
 
 ## Slide 4. Ba option (2:30–3:20)
 
+**Người nói: Kiệt**
+
 "[Chỉ cột A.] Option A, làm tất cả: vượt ngân sách.
 
 [Chỉ cột B.] Option B, làm CRM trước, Nordic Flow để sau: vừa ngân sách, nhưng đến tuần tám vẫn chưa có bằng chứng nào về khoản tiết kiệm. Một dự án chưa có bằng chứng thường bị cắt đầu tiên ở lần cắt ngân sách sau.
@@ -71,6 +90,8 @@ CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có h
 [Chuyển slide.]
 
 ## Slide 5. Recommendation: hai track (3:20–4:30)
+
+**Người nói: Kiệt**
 
 "[Chỉ thẻ Track 1.] Track một là like-for-like CRM migration: khách hàng, contact, cơ hội đang mở và hoạt động gần đây; lịch sử cũ để read-only.
 
@@ -84,6 +105,8 @@ CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có h
 
 ## Slide 6. Giữ, đổi, hoãn (4:30–5:10)
 
+**Người nói: Kiệt**
+
 "**Giữ** những gì đã xây: optimiser, independent verifier, bước duyệt, audit trail. **Đổi** live pilot thành history replay bằng file CSV. **Hoãn** Đan Mạch, Na Uy và các tính năng mở rộng. **Đóng băng** chuyển hàng giữa kho và tuyến giao thẳng.
 
 **Những gì bị hoãn sẽ quay lại khi khoản tiết kiệm đã được chứng minh.**"
@@ -91,6 +114,8 @@ CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có h
 [Chuyển slide.]
 
 ## Slide 7. Ngân sách (5:10–6:20)
+
+**Người nói: Kiệt**
 
 "[Chỉ bảng.] Đây là ước tính từ person-days nhân blended rate khoảng 60 euro một giờ. CRM khoảng 90 đến 100 nghìn, Nordic Flow 35 đến 40, quản lý 20, contingency 30 đến 40, dành cho CRM trước. **Tổng khoảng 175 đến 200 nghìn, nằm trong 210.**
 
@@ -100,6 +125,8 @@ CRM migration không liên quan đến bài toán phân bổ hàng, nhưng có h
 
 ## Slide 8. Cổng go/no-go (6:20–7:00)
 
+**Người nói: Kiệt**
+
 "Vì vậy, ở tuần tám: **chỉ chuyển sang live pilot nếu verified plan rẻ hơn actual plan ít nhất 2%** trên các tuần replay, không vi phạm constraint nào. 5% vẫn là kỳ vọng, không phải điều kiện.
 
 Replay không đo được thời gian của planner hay on-time delivery; hai chỉ số đó để cho live pilot. Bây giờ Bách sẽ cho các anh chị xem MVP."
@@ -108,45 +135,55 @@ Replay không đo được thời gian của planner hay on-time delivery; hai c
 
 ## Slide 9. Demo history replay (7:00–9:20)
 
-[Bách thao tác, Kiệt nói. Nếu ứng dụng lỗi quá 15 giây, Nhật Anh mở `deliverables/round3/demo/replay-demo.mp4`, Kiệt nói tiếp đúng lời dưới đây.]
+**Người nói: Bách**
+
+[Bách vừa nói vừa thao tác. Nếu ứng dụng lỗi quá 15 giây, Nhật Anh mở `deliverables/round3/demo/replay-demo.mp4`, Bách nói tiếp như bình thường.]
 
 "Ở vòng trước, tiết kiệm được tính **so với một quy tắc chúng em tự đặt ra**. Đó là điểm yếu nhất, và giờ chúng em sửa đúng điểm đó.
 
-[Bách: trang Data, bấm History replay.] Planner tải lên một tuần đã qua: tám file như cũ, cộng file mới `actual_plan.csv`, tức kế hoạch đã thực sự chạy. [Bách chỉ dòng Actual plan.] Hệ thống kiểm tra từng file: 606 pallet trên 87 tuyến, khớp đơn hàng.
+[trang Data, bấm History replay.] Planner tải lên một tuần đã qua: tám file như cũ, cộng file mới `actual_plan.csv`, tức kế hoạch đã thực sự chạy. [Chỉ dòng Actual plan.] Hệ thống kiểm tra từng file: 606 pallet trên 87 tuyến, khớp đơn hàng.
 
-[Bách: bấm Calculate plan, chỉ lần lượt từng ô.] Tuần đó thực tế tốn 32.698. Verified plan tốn 31.316. **Chênh 1.382, tức 4,2%.** [Dừng nửa giây.] Đây là synthetic data, **không phải dự báo**.
+[bấm Calculate plan, chỉ lần lượt từng ô.] Tuần đó thực tế tốn 32.698. Verified plan tốn 31.316. **Chênh 1.382, tức 4,2%.** [Dừng nửa giây.] Đây là synthetic data, **không phải dự báo**.
 
-[Bách chỉ ô Plan checks.] Cả hai plan đi qua independent verifier. Nếu actual plan không khớp đơn hàng, hệ thống **không hiện tiết kiệm**. Và không có gì được gửi vào hệ thống nào của Company A."
+[Chỉ ô Plan checks.] Cả hai plan đi qua independent verifier. Nếu actual plan không khớp đơn hàng, hệ thống **không hiện tiết kiệm**. Và không có gì được gửi vào hệ thống nào của Company A."
 
 [Chuyển slide.]
 
 ## Slide 10. Kết quả bốn tuần, Pilot evidence (9:20–10:00)
 
-[Nếu demo đang chạy tốt: Bách mở menu Pilot evidence, bấm Use the 4 sample weeks, màn hình hiện GO. Nếu không, dùng slide.]
+**Người nói: Bách**
 
-"Một tuần chưa đủ để quyết định. Trang **Pilot evidence** chạy lại nhiều tuần một lúc: bốn tuần synthetic cho **2,2 đến 4,2%, tổng 3,16%**, trên ngưỡng 2%, nên kết quả là **GO**. Trang này cũng kiểm tra code map từ Dynamics sang Salesforce. Hệ thống chỉ cộng số; người quyết định vẫn là Company A, trên dữ liệu thật của họ."
+[Nếu demo đang chạy tốt: mở menu Pilot evidence, bấm Use the 4 sample weeks, màn hình hiện GO. Nếu không, dùng slide.]
+
+"Một tuần chưa đủ để quyết định. Trang **Pilot evidence** chạy lại nhiều tuần một lúc: bốn tuần synthetic cho **2,2 đến 4,2%, tổng 3,16%**, trên ngưỡng 2%, nên kết quả là **GO**. Trang này cũng kiểm tra code map từ Dynamics sang Salesforce. Hệ thống chỉ cộng số; người quyết định vẫn là Company A, trên dữ liệu thật của họ. Tiếp theo, Nhật Anh sẽ nói journey và sơ đồ hệ thống đã thay đổi thế nào."
 
 [Chuyển slide.]
 
 ## Slide 11. User Journey và System Context (10:00–10:45)
 
+**Người nói: Nhật Anh**
+
 "[Chỉ hình bên trái.] Journey hằng ngày của planner không đổi. Chúng em thêm một journey **trước** live pilot: xuất các tuần cũ, tải lên, so với kế hoạch đã chạy, rồi quyết định trên trang Pilot evidence.
 
-[Chỉ hình bên phải.] Boundary của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn: `actual_plan.csv` và CRM code map. CRM là hệ thống của Company A mà Nordic Flow **không kết nối trực tiếp**."
+[Chỉ hình bên phải.] Boundary của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn: `actual_plan.csv` và CRM code map. CRM là hệ thống của Company A mà Nordic Flow **không kết nối trực tiếp**. Bách sẽ trình bày roadmap tám tuần."
 
 [Chuyển slide.]
 
 ## Slide 12. Roadmap 8 tuần (10:45–11:45)
 
+**Người nói: Bách**
+
 "Hai track chạy song song tám tuần.
 
 [Chỉ dòng tuần 1–2.] Tuần một và hai: CRM kiểm kê dữ liệu, xác nhận ngày tắt hệ thống cũ, field mapping; Nordic Flow nạp file thật và mapping mã. [Chỉ dòng 3–7.] Tuần ba đến bảy: CRM configure, cleansing, trial load, đào tạo; Nordic Flow replay các tuần cũ cùng planner.
 
-[Chỉ dòng 8.] Tuần tám: **CRM go live, hệ thống cũ read-only; Nordic Flow có quyết định go hoặc no-go.** Nếu CRM lớn hơn dự kiến, integration phụ dời sang tuần chín đến mười hai: **Nordic Flow chậm lại, CRM thì không.**"
+[Chỉ dòng 8.] Tuần tám: **CRM go live, hệ thống cũ read-only; Nordic Flow có quyết định go hoặc no-go.** Nếu CRM lớn hơn dự kiến, integration phụ dời sang tuần chín đến mười hai: **Nordic Flow chậm lại, CRM thì không.** Kiệt sẽ nói về rủi ro và kết luận."
 
 [Chuyển slide.]
 
 ## Slide 13. Rủi ro và trade-off (11:45–12:50)
+
+**Người nói: Kiệt**
 
 "**Trade-off lớn nhất là giá trị của Nordic Flow đến muộn hơn.** Chúng em chấp nhận, vì giữ quan hệ khách hàng là ưu tiên số một; bù lại, replay cho con số thật từ sớm và rẻ.
 
@@ -155,6 +192,8 @@ Replay không đo được thời gian của planner hay on-time delivery; hai c
 [Chuyển slide.]
 
 ## Slide 14. Đề nghị và kết thúc (12:50–13:30)
+
+**Người nói: Kiệt**
 
 "Chúng em đề nghị Company A ba quyết định: **một**, xác nhận license Salesforce nằm ngoài ngân sách dự án; **hai**, xác nhận nước làm CRM migration và ngày tắt hệ thống cũ; **ba**, phê duyệt hai track và hai decision gate ở tuần tám.
 
@@ -176,8 +215,8 @@ Replay không đo được thời gian của planner hay on-time delivery; hai c
 
 | Sự cố | Xử lý |
 |---|---|
-| Demo lỗi hoặc treo quá 15 giây | Nhật Anh mở backup video; Kiệt nói tiếp, không xin lỗi dài dòng: "Chúng em chuyển sang bản ghi sẵn." |
+| Demo lỗi hoặc treo quá 15 giây | Nhật Anh mở backup video; Bách nói tiếp, không xin lỗi dài dòng: "Chúng em chuyển sang bản ghi sẵn." |
 | Chậm hơn lịch 30 giây | Slide 10 dùng slide, không mở app; slide 12 chỉ nói tuần 8 |
 | Chậm hơn 1 phút | Slide 3 chỉ nói assumption license và blended team; slide 13 chỉ nói trade-off lớn nhất |
-| Quên lời | Nói câu in đậm của slide đó, rồi chuyển slide |
+| Quên lời | Nói câu in đậm của slide đó, rồi chuyển slide. Người nói tiếp theo có thể đỡ lời bằng câu chuyển của mình |
 | Giám khảo hỏi chen giữa bài | Trả lời một câu ngắn, nói "phần này chúng em sẽ nói rõ ở slide sau" nếu có, rồi tiếp tục |

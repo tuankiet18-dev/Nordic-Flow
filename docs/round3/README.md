@@ -8,7 +8,7 @@ Trình bày **thứ Bảy 21/11/2026, 13:30**, Opal Tower. 15 phút + 10 phút h
 2. **`PHAN-TICH-ROUND3.md`**: lý do đằng sau các quyết định: ngân sách, rủi ro CRM, ba option, câu hỏi giám khảo có thể hỏi, nguồn tham khảo.
 3. **`SLIDES.md`**: nội dung 14 slide (chữ trên slide bằng tiếng Anh), lời nói tiếng Việt lấy từ script, người nói và thời lượng.
 4. **`SCRIPT-HIEU-BAI.md`**: đọc trước để hiểu bài: từng slide để làm gì, giải thích ý chính và lý do, con số cần nhớ, gợi ý cách nói, câu dễ bị hỏi.
-   **`SCRIPT-THUYET-TRINH.md`**: lời nói tiếng Việt cho cả 15 phút, theo từng slide, có mốc thời gian, hành động và cách xử lý sự cố. Kiệt nói chính, Bách điều khiển demo, Nhật Anh chuyển slide và mở backup video.
+   **`SCRIPT-THUYET-TRINH.md`**: lời nói tiếng Việt cho cả 15 phút, theo từng slide, có mốc thời gian, hành động và cách xử lý sự cố. Ba người cùng nói: Nhật Anh slide 1, 2, 11; Kiệt slide 3–8, 13, 14; Bách slide 9, 10, 12.
 5. **`QA.md`**: 26 câu hỏi giám khảo có thể hỏi, câu trả lời tiếng Việt (văn nói), ai trả lời.
 6. **`../REPLAY-MODE.md`** (cho người làm code): tính năng mới của MVP, file `actual_plan.csv`, diagram code, cách mở rộng.
 
@@ -76,9 +76,9 @@ Phải ra tổng 3,16%, trung vị 3,12%. Đây là synthetic data, không phả
 
 | Người | Việc chính | Phần nói |
 |---|---|---|
-| Bách | Kiểm tra tính năng history replay trên máy mình, chuẩn bị máy demo chạy không cần mạng, xem lỗi `e2e_focused_workflow.js` | MVP đã đổi, demo, lộ trình 8 tuần |
-| Nhật Anh | Dựng slide, quay backup video 2 phút cho demo | Mở đầu, User Journey, System Context |
-| Kiệt | Duyệt nội dung, assumption, ngân sách; điều phối tập | Yêu cầu mới, ba option, ngân sách, rủi ro, kết luận |
+| Bách | Kiểm tra tính năng history replay trên máy mình, chuẩn bị máy demo chạy không cần mạng, xem lỗi `e2e_focused_workflow.js` | Slide 9, 10, 12: demo MVP, Pilot evidence, roadmap 8 tuần |
+| Nhật Anh | Dựng slide, quay backup video 2 phút cho demo | Slide 1, 2, 11: mở đầu, hai thay đổi, User Journey và System Context |
+| Kiệt | Duyệt nội dung, assumption, ngân sách; điều phối tập | Slide 3–8, 13, 14: assumption, option, đề xuất, ngân sách, cổng go/no-go, rủi ro, kết luận |
 
 ## Quy tắc khi sửa repo
 
