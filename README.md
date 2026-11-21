@@ -1,45 +1,82 @@
 # Nordic Flow
 
-Nordic Flow is the NEW AURA team's local MVP for IT Consultant Challenge 2026. It decides which supplier and which existing warehouse should serve each order at the lowest total cost, and a planner reviews and approves every plan. That is the Round 1 pilot: suppliers, existing warehouses and customer zones. Two optional extensions go beyond the pilot, transfers between existing warehouses and direct supplier-to-customer lanes. Pilot data uses neither. See `docs/round2/ROUND1-ALIGNMENT.md` for how the MVP maps to the Round 1 proposal.
+**Lowest-cost supplier and warehouse allocation for a Nordic distributor, with a person approving every plan.**
 
-Round 1 material is in `docs/round1/`. Round 2 was submitted on 9 November 2026 and passed. **Round 3** is a live pitch on Saturday 21 November 2026 (15 minutes + 10 minutes Q&A). The only working branch is `main`.
+Built by team **NEW AURA** for the IT Consultant Challenge 2026. We placed **top 4 out of 160 teams** after three rounds:
+- a written proposal;
+- a working MVP with documentation;
+- a live pitch that answered a new brief: 30% less budget and a mandatory CRM migration.
 
-**Round 3 change in the MVP:** history replay. Upload the plan that was actually shipped (`actual_plan.csv`) and the optimiser is compared with it instead of the synthetic rule. See `docs/REPLAY-MODE.md`. The team plan, decisions and analysis for Round 3 are in `docs/round3/` (Vietnamese).
+![History replay: the optimised plan compared with the plan that was actually shipped](deliverables/src/img/replay-results.png)
 
-## Start here
+> All data in this repository is **synthetic**, and costs are in cost units. Nothing here forecasts results for a real company.
 
-- `docs/HANDOFF.md`: where the project stands and what to do next.
-- `docs/round3/README.md`: Round 3 decisions, plan, who does what.
-- `docs/REPLAY-MODE.md`: developer guide for the history replay feature.
-- `mvp/README.md` covers installation, samples, data files and the API.
-- `docs/MVP-SPEC-v0.1.md` is the current specification, updated for multi-warehouse transfers.
-- `docs/round2/01_CONTRACTS_AND_ARCHITECTURE.md` is the canonical input, optimisation and API contract.
-- `docs/round2/AS_BUILT.md` describes the current implementation.
-- `docs/round2/ROUND1-ALIGNMENT.md` maps the Round 1 proposal to what the MVP does, what it adds and what it does not claim.
-- `deliverables/` contains the four submission files and their status in `deliverables/README.md`.
+## The problem
 
-The Markdown specification and contract describe the current implementation, including direct delivery, multi-warehouse routing and the in-app guide. Existing DOCX/PDF files and submission artifacts are draft snapshots awaiting a final refresh after the MVP is agreed.
+Company A is the fictional client in the case. It distributes building materials across Sweden, Denmark and Norway. Every week its planners must decide:
 
-## Repository layout
+> *For each customer zone and product, which supplier and which existing warehouse should serve it, so that total freight and handling cost is lowest?*
 
-```text
-mvp/
-  nordic_flow/     Python core, optimisation, verification and reporting
-  api/             FastAPI, use cases, SQLite and audit
-  frontend/        React and Vite source
-  web/             Production frontend build served by FastAPI
-  data/            Golden, synthetic demo, multi-warehouse and history replay examples
-  tests/           Python tests and browser walkthrough
-docs/
-  reference/       Organiser case, brief and AI Journal template
-  round1/          Submitted proposal and evidence
-  round2/          Current contracts, implementation notes and test evidence
-  round3/          Round 3 analysis, decisions and team plan (Vietnamese)
-  REPLAY-MODE.md   History replay: contract, code map, how to extend
-deliverables/      Submission PDFs, video and editable sources
-```
+Planners decided this by habit. Nordic Flow uses mathematical optimisation instead and keeps the planner in charge:
 
-## Quick start on Windows
+1. **Load** a week of data: eight CSV files or one ZIP.
+2. **Calculate** two plans: a baseline and an optimised plan. The optimised plan is a MILP solved with OR-Tools (SCIP) and is proven optimal.
+3. **Verify** both plans with an independent checker that tests demand, supply, capacity and lanes.
+4. **Show the saving** only when the baseline is valid as well.
+5. **Review**: the planner reads the explanation, overrides any decision with a reason, then approves or rejects the plan.
+6. **Export** only approved plans. Every step goes into a **hash-chained audit trail**, which is tamper-evident (not tamper-proof).
+
+The design rests on three principles:
+- **Code calculates; AI only words.** An optional LLM assistant rewrites computed numbers as text and never produces a number itself.
+- **A person approves everything.**
+- **Synthetic data is always labelled.**
+
+## What the project shows
+
+| Round | Task | What we delivered |
+|---|---|---|
+| 1 | Proposal | Business case, a pilot in one country, scope and risks |
+| 2 | MVP | A working local app, system context diagram, user journey, a demo video, AI usage journal |
+| 3 | Live pitch to a changed brief | A two-track plan: a like-for-like **Dynamics 365 → Salesforce** CRM migration plus a cheap validation of Nordic Flow, at about €0.18–0.20M instead of €0.3M |
+
+**The Round 3 idea.** A live pilot would need integrations the reduced budget could not pay for. We replaced it with **history replay**:
+- Re-run 4–8 past weeks on the same orders and prices.
+- Compare the optimised plan with the plan the planner *actually shipped*.
+- Apply a **go/no-go gate**: at least 2% saving over at least 4 comparable weeks.
+
+This turns about €40k into the "price of a decision", not a bet on an untested system.
+
+## Features
+
+- **Optimisation:** MILP for whole pallets or LP. Supports multi-warehouse transfer chains and direct supplier-to-customer lanes, with capacity counted at every warehouse visited.
+- **Independent verifier:** each plan is checked separately from the solver that produced it.
+- **Explain and override:**
+  - shows why each allocation was chosen;
+  - a full route cost ranking;
+  - manual routes, with the cost recalculated;
+  - what-if scenarios with pinned decisions.
+- **Review and approve:** planner decisions carry a reason; only approved plans can be exported as a ZIP.
+- **Audit trail:** a hash-chained event log that verifies itself in the app.
+- **History replay:** upload `actual_plan.csv` and the real shipped plan becomes the baseline. If that plan fails verification, no saving is shown.
+- **Pilot evidence page:**
+  - replays several weeks and reaches a GO / NO-GO / NOT_DECIDED decision;
+  - calculates the business case and break-even;
+  - checks the Dynamics → Salesforce customer code map;
+  - downloads a CSV report.
+- **User guide in the app**, with downloadable sample cases.
+
+| Review and audit | |
+|---|---|
+| ![Review and approve](deliverables/src/img/review.png) | ![Audit trail](deliverables/src/img/audit.png) |
+
+## Tech stack
+
+- **Core:** Python, OR-Tools (SCIP for MILP, GLOP for LP).
+- **API:** FastAPI, with SQLite for plans, decisions and the audit log.
+- **Frontend:** React, Vite and Tailwind CSS. The production build is served by FastAPI.
+- **Tests:** pytest (302 tests) and Playwright browser walkthroughs.
+
+## Run it locally (Windows)
 
 ```powershell
 cd mvp
@@ -49,18 +86,57 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m uvicorn api.main:app --port 8000
 ```
 
-Open `http://localhost:8000`. Choose **Multi-warehouse example** for factory → A/B/C → D/E/F → customer, **Warehouse transfer chain** for supplier → HUB → REG → LOCAL, or **Worked example** for the hand-worked 700 to 500 case.
+Open http://localhost:8000 and choose a sample:
+- **Synthetic demo:** 2 suppliers, 3 warehouses, 6 customer zones, 606 pallets.
+- **Worked example:** a small case that can be checked by hand.
+- **History replay:** a week compared with the plan that was actually shipped (saving 1,382 cost units, 4.2%).
 
-## Transfer input
+To replay four weeks from the command line:
 
-The original eight required CSV files remain required. Optional `transfer_rates.csv` adds directed warehouse-to-warehouse links using `from_warehouse_id,to_warehouse_id,cost_per_pallet` and optional `max_pallets`. Every warehouse is listed in `warehouses.csv`. The declared transfer graph must be acyclic.
+```powershell
+.\.venv\Scripts\python.exe -m nordic_flow replay data\history
+```
 
-Optional `direct_rates.csv` adds genuine supplier-to-customer routes using `supplier_id,zone_id,cost_per_pallet` and optional `max_pallets`. No warehouse handling is charged. Open **User guide** in the app for every input column and downloadable ZIP cases for0/3/4/5/8/12 warehouses, plus mixed direct/warehouse delivery.
+This reports a total saving of 3.16% on synthetic data. The figure is a demonstration, not a forecast.
 
-Capacity counts receipts at every visited warehouse. Costs include transfer freight and receiving/shipping handling. Detailed units, constraints, compatibility and examples are in the technical contract.
+The AI assistant is optional and off by default. To enable it, copy `mvp/.env.example` to `.env` and set your own key. Keys are read only from environment variables.
 
-## Repository rules
+## Repository layout
 
-- Keep passwords and API keys in environment variables. Use `mvp/.env.example` for variable names.
-- Keep organiser case material private.
-- Identify sample data as synthetic when presenting results.
+```text
+mvp/
+  nordic_flow/   Python core: optimiser, verifier, replay, pilot gate, reporting
+  api/           FastAPI app, use cases, SQLite, audit trail
+  frontend/      React + Vite source
+  web/           Production build served by FastAPI
+  data/          Synthetic samples, including data/history for replay
+  tests/         pytest suite and browser walkthroughs
+deliverables/    Submitted PDFs and videos, with their editable sources
+docs/
+  round1/        Proposal and evidence
+  round2/        Contracts, architecture, as-built notes, test evidence
+  round3/        Pitch analysis, script and Q&A (Vietnamese)
+  REPLAY-MODE.md History replay design and code map
+```
+
+## Deliverables
+
+- [System Context Diagram](deliverables/System%20Context%20Diagram.pdf) and [User Journey](deliverables/User%20Journey.pdf) (Round 2)
+- [System Context Diagram, Round 3](deliverables/round3/System%20Context%20Diagram%20(Round%203).pdf) and [User Journey, Round 3](deliverables/round3/User%20Journey%20(Round%203).pdf)
+- [MVP video](deliverables/MVP.mp4) and [history replay demo](deliverables/round3/demo/replay-demo.mp4)
+- [AI Journal](deliverables/AI%20Journal.pdf): how we used AI tools and what we checked by hand
+
+## Further reading
+
+- `mvp/README.md`: installation, input files and API.
+- `docs/round2/01_CONTRACTS_AND_ARCHITECTURE.md`: input, optimisation and API contract.
+- `docs/round2/AS_BUILT.md`: how the implementation is built.
+- `docs/REPLAY-MODE.md`: history replay and the pilot evidence gate.
+
+## Team NEW AURA
+
+| Member | Role |
+|---|---|
+| Lương Tuấn Kiệt | Documents, analysis, budget and coordination; presented the proposal changes |
+| Nguyễn Huy Bách | MVP development; presented the demo and diagrams |
+| Nguyễn Phạm Nhật Anh | Video and slides; presented the roadmap, trade-offs and risks |
