@@ -6,13 +6,13 @@ Trình bày **thứ Bảy 21/11/2026, 13:30**, Opal Tower. 15 phút + 10 phút h
 
 1. **`KE-HOACH-ROUND3.md`**: 13 quyết định đã chốt, ai làm gì, lịch 3 ngày, bố cục 15 phút, những câu không được nói. Đọc file này trước.
 2. **`PHAN-TICH-ROUND3.md`**: lý do đằng sau các quyết định: ngân sách, rủi ro CRM, ba option, câu hỏi giám khảo có thể hỏi, nguồn tham khảo.
-3. **`SLIDES.md`**: nội dung 14 slide (chữ trên slide bằng tiếng Anh), lời nói tiếng Việt lấy từ script, người nói và thời lượng.
+3. **`SLIDES.md`**: nội dung 12 slide (chữ trên slide bằng tiếng Anh), lời nói tiếng Việt lấy từ script, người nói và thời lượng.
 4. **`SCRIPT-HIEU-BAI.md`**: đọc trước để hiểu bài: từng slide để làm gì, giải thích ý chính và lý do, con số cần nhớ, gợi ý cách nói, câu dễ bị hỏi.
-   **`SCRIPT-THUYET-TRINH.md`**: lời nói tiếng Việt cho cả 15 phút, theo từng slide, có mốc thời gian, hành động và cách xử lý sự cố. Ba người nói theo ba đoạn liền: Kiệt slide 1–8, Bách slide 9–12, Nhật Anh slide 13–14.
+   **`SCRIPT-THUYET-TRINH.md`**: lời nói tiếng Việt cho cả 15 phút, theo từng slide, có mốc thời gian, hành động và cách xử lý sự cố. Ba người nói theo ba đoạn liền, mỗi người trả lời một câu hỏi của giám khảo: Kiệt slide 1–6, Bách slide 7–9, Nhật Anh slide 10–12.
 5. **`QA.md`**: 26 câu hỏi giám khảo có thể hỏi, câu trả lời tiếng Việt (văn nói), ai trả lời.
 6. **`../REPLAY-MODE.md`** (cho người làm code): tính năng mới của MVP, file `actual_plan.csv`, diagram code, cách mở rộng.
 
-**Bộ slide đã dựng (14 slide, có lời nói trong phần ghi chú):** https://claude.ai/artifact/VtB9k6AYhTiTJxWHsVm5GT (Kiệt chia sẻ link cho cả nhóm; xuất PowerPoint hoặc PDF để trình bày không cần mạng).
+**Bộ slide đã dựng (12 slide, có lời nói trong phần ghi chú):** https://claude.ai/artifact/VtB9k6AYhTiTJxWHsVm5GT (Kiệt chia sẻ link cho cả nhóm; xuất PowerPoint hoặc PDF để trình bày không cần mạng).
 
 ## Thuật ngữ
 
@@ -76,9 +76,9 @@ Phải ra tổng 3,16%, trung vị 3,12%. Đây là synthetic data, không phả
 
 | Người | Việc chính | Phần nói |
 |---|---|---|
-| Bách | Kiểm tra tính năng history replay trên máy mình, chuẩn bị máy demo chạy không cần mạng, xem lỗi `e2e_focused_workflow.js` | Slide 9–12: demo MVP, Pilot evidence, User Journey và System Context, roadmap 8 tuần |
-| Nhật Anh | Dựng slide, quay backup video 2 phút cho demo | Slide 13–14: rủi ro, trade-off, ba quyết định, lời cảm ơn |
-| Kiệt | Duyệt nội dung, assumption, ngân sách; điều phối tập | Slide 1–8: mở đầu, hai thay đổi, assumption, option, đề xuất, ngân sách, cổng go/no-go |
+| Bách | Kiểm tra tính năng history replay trên máy mình, chuẩn bị máy demo chạy không cần mạng, xem lỗi `e2e_focused_workflow.js` | Slide 7–9: demo MVP, Pilot evidence, User Journey và System Context (câu hỏi 2 của giám khảo) |
+| Nhật Anh | Dựng slide, quay backup video 2 phút cho demo | Slide 10–12: roadmap, trade-off, giới hạn, rủi ro, ba quyết định, lời cảm ơn (câu hỏi 3 của giám khảo) |
+| Kiệt | Duyệt nội dung, assumption, ngân sách; điều phối tập | Slide 1–6: mở đầu, hai thay đổi, assumption, option, đề xuất, ngân sách và cổng go/no-go (câu hỏi 1 của giám khảo) |
 
 ## Quy tắc khi sửa repo
 

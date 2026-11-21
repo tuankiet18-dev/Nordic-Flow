@@ -7,7 +7,7 @@ File này để **đọc cho hiểu**, không phải để học thuộc. Mỗi 
 - **Gợi ý cách nói:** một cách nói mẫu. Bạn nói theo lời của mình là được.
 - **Nếu bị hỏi:** câu hỏi dễ gặp ở slide đó, trả lời ngắn.
 
-Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba người nói theo ba đoạn liền: Kiệt slide 1–8, Bách slide 9–12, Nhật Anh slide 13–14. Mỗi người đọc kỹ phần của mình, nhưng nên đọc cả bài để hiểu câu chuyện và đỡ lời cho nhau khi cần. Câu hỏi đáp đầy đủ ở `QA.md`.
+Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba người nói theo ba đoạn liền, mỗi người trả lời một câu hỏi của giám khảo: Kiệt slide 1–6, Bách slide 7–9, Nhật Anh slide 10–12. Mỗi người đọc kỹ phần của mình, nhưng nên đọc cả bài để hiểu câu chuyện và đỡ lời cho nhau khi cần. Câu hỏi đáp đầy đủ ở `QA.md`.
 
 ---
 
@@ -15,10 +15,10 @@ Bản lời nói ngắn để cầm khi tập là `SCRIPT-THUYET-TRINH.md`. Ba n
 
 Hãy nhớ câu chuyện theo bốn bước. Mọi slide đều nằm trong một bước:
 
-1. **Chuyện gì đã xảy ra** (slide 1–3): Company A cắt 30% ngân sách và bắt buộc thêm việc chuyển CRM. Đề để trống nhiều chỗ, nên nhóm nói rõ assumption.
-2. **Nhóm chọn làm gì** (slide 4–8): so ba option, chọn chạy **hai track song song**. CRM được ưu tiên vì có hạn chót. Nordic Flow không bị bỏ mà được **chứng minh bằng cách rẻ nhất**: chạy lại các tuần đã qua. Kèm theo là ngân sách và một **cổng quyết định** ở tuần 8.
-3. **MVP và sơ đồ đã đổi ra sao** (slide 9–11): demo history replay, trang Pilot evidence, và User Journey, System Context mới.
-4. **Triển khai và rủi ro** (slide 12–14): roadmap 8 tuần, những gì phải đánh đổi, và ba quyết định Company A cần đưa ra.
+1. **Chuyện gì đã xảy ra** (slide 1–3, Kiệt): Company A cắt 30% ngân sách và bắt buộc thêm việc chuyển CRM. Đề để trống nhiều chỗ, nên nhóm nói rõ assumption.
+2. **Nhóm chọn làm gì** (slide 4–6, Kiệt): so ba option, chọn chạy **hai track song song**. CRM được ưu tiên vì có hạn chót. Nordic Flow không bị bỏ mà được **chứng minh bằng cách rẻ nhất**: chạy lại các tuần đã qua. Kèm theo là ngân sách và một **cổng quyết định** ở tuần 8.
+3. **MVP và sơ đồ đã đổi ra sao** (slide 7–9, Bách): demo history replay, trang Pilot evidence, và User Journey, System Context mới.
+4. **Triển khai và rủi ro** (slide 10–12, Nhật Anh): roadmap 8 tuần, những gì phải đánh đổi, và ba quyết định Company A cần đưa ra.
 
 Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM), và chứng minh khoản tiết kiệm của Nordic Flow với chi phí thấp nhất (replay), rồi mới đầu tư tiếp dựa trên bằng chứng."**
 
@@ -59,7 +59,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 3. Assumption (1:20–2:30)
+## Slide 3. Assumption (1:20–2:40)
 
 **Người nói: Kiệt**
 
@@ -72,7 +72,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
    - 100 người dùng Salesforce theo giá niêm yết tốn khoảng $210.000 mỗi năm, nhiều hơn cả ngân sách dự án.
    - Nếu phải trả khoản này từ ngân sách dự án thì không có phương án nào khả thi.
    - Hợp lý nhất là coi nó là **chi phí vận hành** (operating cost) của doanh nghiệp, thay cho chi phí của CRM cũ. Ngân sách dự án chỉ trả công chuyển đổi.
-   - Đây cũng là quyết định đầu tiên nhóm đề nghị Company A xác nhận ở slide 14.
+   - Đây cũng là quyết định đầu tiên nhóm đề nghị Company A xác nhận ở slide 12.
 4. **Chuyển nguyên trạng (like-for-like), lịch sử cũ hơn 24 tháng thì lưu trữ (archive).** Lý do: chỉ có 8 tuần. Chuyển nguyên trạng nghĩa là Salesforce làm đúng những gì Dynamics đang làm, không thiết kế lại quy trình. Dữ liệu quá cũ không chuyển sang mà để ở kho lưu trữ chỉ đọc.
 5. **Đội kết hợp (blended team): trưởng nhóm ở Bắc Âu, delivery team ở Việt Nam.** Đây là assumption **quan trọng thứ hai**:
    - Nếu cả đội tính theo rate Tây Âu (khoảng €1.200/ngày), riêng CRM khoảng 165 ngày công đã tốn khoảng €200k, tức hết toàn bộ ngân sách.
@@ -87,7 +87,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 4. Ba option (2:30–3:20)
+## Slide 4. Ba option (2:40–3:30)
 
 **Người nói: Kiệt**
 
@@ -107,7 +107,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 5. Recommendation: hai track (3:20–4:30)
+## Slide 5. Recommendation: hai track (3:30–4:50)
 
 **Người nói: Kiệt**
 
@@ -138,13 +138,9 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 **Nếu bị hỏi** *"Sao Nordic Flow không kết nối API thẳng với Salesforce?"*: đây là lựa chọn có chủ ý. Dùng file giúp hai hệ thống **không phụ thuộc nhau**: nếu CRM migration trục trặc thì Nordic Flow vẫn chạy, và ngược lại. Kết nối trực tiếp là hướng tương lai, chỉ làm sau pilot.
 
----
+### Phần trong slide 5: giữ, đổi, hoãn (dòng "MVP" dưới hình)
 
-## Slide 6. Giữ, đổi, hoãn (4:30–5:10)
-
-**Người nói: Kiệt**
-
-**Slide này để làm gì:** trả lời thẳng câu hỏi ở slide 2 cho phần MVP.
+**Phần này để làm gì:** trả lời thẳng câu hỏi "giữ gì, đổi gì, hoãn gì" cho phần MVP. Trên slide chỉ còn một dòng ngắn dưới hình, nên chỉ cần nói một câu.
 
 **Giải thích:**
 - **Giữ:** optimiser, independent verifier, bước planner duyệt, audit trail (nhật ký thao tác, mỗi bản ghi nối với bản trước nên sửa là phát hiện được), phần giải thích bằng AI (không bắt buộc). Các phần này **đã xây xong**, nên giữ gần như không tốn tiền.
@@ -156,7 +152,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 7. Ngân sách (5:10–6:20)
+## Slide 6. Ngân sách và cổng go/no-go (4:50–6:30)
 
 **Người nói: Kiệt**
 
@@ -187,11 +183,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 **Nếu bị hỏi** *"€5–10 triệu ở đâu ra?"*: đó là assumption từ Round 1. Nhóm sẽ thay bằng số thật của Company A ở tuần 1.
 
----
-
-## Slide 8. Cổng go/no-go (6:20–7:00)
-
-**Người nói: Kiệt**
+### Phần trong slide 6: cổng go/no-go (thẻ màu xanh dương dưới bảng)
 
 **Slide này để làm gì:** nói rõ quy tắc quyết định ở tuần 8, để Company A biết khi nào đầu tư tiếp.
 
@@ -209,7 +201,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 9. Demo history replay (7:00–9:20)
+## Slide 7. Demo history replay (6:30–8:40)
 
 **Người nói: Bách**
 
@@ -234,7 +226,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 10. Kết quả bốn tuần, Pilot evidence (9:20–10:00)
+## Slide 8. Kết quả bốn tuần, Pilot evidence (8:40–9:25)
 
 **Người nói: Bách**
 
@@ -254,7 +246,7 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 11. User Journey và System Context (10:00–10:45)
+## Slide 9. User Journey và System Context (9:25–10:10)
 
 **Người nói: Bách**
 
@@ -272,9 +264,9 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 12. Roadmap 8 tuần (10:45–11:45)
+## Slide 10. Roadmap 8 tuần (10:10–11:10)
 
-**Người nói: Bách**
+**Người nói: Nhật Anh**
 
 **Slide này để làm gì:** cho thấy kế hoạch làm được trong 8 tuần, và cả hai track cùng kết thúc bằng một quyết định ở tuần 8.
 
@@ -296,28 +288,32 @@ Một câu tóm cả bài: **"Bảo vệ hoạt động kinh doanh trước (CRM
 
 ---
 
-## Slide 13. Rủi ro và trade-off (11:45–12:50)
+## Slide 11. Trade-off, giới hạn, rủi ro (11:10–12:55)
 
 **Người nói: Nhật Anh**
 
-**Slide này để làm gì:** đề yêu cầu nói rõ trade-off, giới hạn và rủi ro. Nói thẳng những gì phải hy sinh cho thấy nhóm trung thực và có suy nghĩ.
+**Slide này để làm gì:** đây là câu hỏi thứ ba của giám khảo: *"Any trade-offs, limitations, risks"*. Slide chia thành **ba cột** đúng theo ba từ đó. Nói thẳng những gì phải hy sinh và những gì giải pháp chưa làm được cho thấy nhóm trung thực và có suy nghĩ.
 
 **Giải thích:**
-- **Trade-off lớn nhất:** giá trị của Nordic Flow đến **muộn hơn**. Nhóm chấp nhận vì giữ quan hệ khách hàng (CRM) quan trọng hơn. Bù lại, replay cho một con số thật từ sớm và rẻ.
-- **Ba rủi ro chính và cách xử lý:**
-  - **Dữ liệu CRM kém chất lượng** (trùng, thiếu): làm sạch trước khi nạp. AI gợi ý bản ghi trùng, nhưng con người quyết định.
-  - **Ngày tắt hệ thống cũ đến sớm hơn dự kiến:** xác nhận ngay tuần 1, và contingency dành cho CRM.
+- **Trade-off (những gì chọn hy sinh):**
+  - Giá trị của Nordic Flow đến **muộn hơn**, vì CRM được ưu tiên. Nhóm chấp nhận vì giữ quan hệ khách hàng quan trọng hơn. Bù lại, replay cho một con số thật từ sớm và rẻ.
+  - Chỉ làm một nước, một vùng; Đan Mạch và Na Uy phải chờ.
+  - Chuyển hàng giữa kho và giao thẳng bị đóng băng: đã có trong MVP nhưng không phát triển thêm.
+- **Giới hạn (những gì giải pháp chưa làm được):**
+  - **Replay hơi lạc quan:** nó biết trước cả tuần đơn hàng, còn planner lúc đó thì không. Vì vậy ngưỡng đặt ở 2%, cao gấp vài lần mức hòa vốn, và sau GO vẫn cần live pilot để đo khoảng chênh thật.
+  - **Con số hôm nay là synthetic:** 3,16% chỉ chứng minh cách đo hoạt động, không phải dự báo.
+  - **Chưa đo được** thời gian làm việc của planner và tỷ lệ giao hàng đúng hạn; hai chỉ số này chỉ đo được khi chạy thật.
+- **Rủi ro và cách xử lý:**
+  - **Dữ liệu CRM kém chất lượng** (trùng, thiếu): làm sạch trước khi nạp; AI gợi ý bản ghi trùng, con người quyết định.
+  - **Ngày tắt hệ thống cũ đến sớm hơn dự kiến:** xác nhận ngay tuần 1, contingency dành cho CRM.
   - **Người dùng không quen Salesforce:** giữ màn hình gần giống hệ thống cũ, đào tạo trước ngày chuyển.
-- **Các rủi ro khác trên slide** (nói nếu còn thời gian):
-  - Tạo thêm hệ thống rời rạc: thiết kế Salesforce cho nhiều nước ngay từ đầu.
-  - Mã khách hàng thay đổi: mapping ở tuần 2.
-  - Dữ liệu cá nhân (GDPR): lưu trong EU, ký thỏa thuận xử lý dữ liệu (DPA), lưu trữ dữ liệu cũ thay vì chép hết.
+  - Nếu bị hỏi thêm: tạo thêm hệ thống rời rạc (thiết kế Salesforce cho nhiều nước ngay từ đầu), mã khách hàng thay đổi (mapping ở tuần 2), dữ liệu cá nhân GDPR (lưu trong EU, ký DPA, lưu trữ dữ liệu cũ thay vì chép hết).
 
-**Gợi ý cách nói:** "Đánh đổi lớn nhất là Nordic Flow mang lại giá trị muộn hơn; chúng em chấp nhận vì khách hàng quan trọng hơn. Ba rủi ro chính là chất lượng dữ liệu CRM, ngày tắt hệ thống đến sớm, và người dùng không quen Salesforce; mỗi rủi ro đều có cách xử lý trên slide."
+**Gợi ý cách nói:** "Về đánh đổi: Nordic Flow mang lại giá trị muộn hơn, và chỉ làm một vùng. Về giới hạn: replay hơi lạc quan nên ngưỡng đặt ở 2%, con số hôm nay là giả lập, và thời gian planner chưa đo được. Về rủi ro: dữ liệu CRM, ngày tắt hệ thống, và người dùng; mỗi rủi ro đều có cách xử lý trên slide."
 
 ---
 
-## Slide 14. Đề nghị và kết thúc (12:50–13:30)
+## Slide 12. Đề nghị và kết thúc (12:55–13:40)
 
 **Người nói: Nhật Anh**
 

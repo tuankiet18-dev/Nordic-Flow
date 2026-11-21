@@ -4,13 +4,18 @@
 
 | Người | Slide | Phần | Thời gian |
 |---|---|---|---|
-| **Kiệt** | 1–8 | Mở đầu, hai thay đổi, assumption, option, đề xuất, ngân sách, cổng go/no-go | 0:00–7:10 |
-| **Bách** | 9–12 | Demo MVP, Pilot evidence, User Journey và System Context, roadmap 8 tuần | 7:10–11:50 |
-| **Nhật Anh** | 13–14 | Rủi ro, trade-off, ba quyết định, lời cảm ơn | 11:50–13:40 |
+| **Kiệt** | 1–6 | Mở đầu, hai thay đổi, assumption, option, đề xuất, ngân sách và cổng go/no-go | 0:00–6:30 |
+| **Bách** | 7–9 | Demo MVP, Pilot evidence, User Journey và System Context | 6:30–10:10 |
+| **Nhật Anh** | 10–12 | Roadmap 8 tuần, trade-off, giới hạn, rủi ro, ba quyết định, lời cảm ơn | 10:10–13:40 |
 
-Chỉ đổi người hai lần: Kiệt → Bách sau slide 8, Bách → Nhật Anh sau slide 12.
+**Mỗi người trả lời một câu hỏi của giám khảo:**
+- **Kiệt, câu 1 "Proposal đã thay đổi thế nào":** slide 2–6, khoảng 6 phút. Slide 1 là phần mở đầu.
+- **Bách, câu 2 "MVP, User Journey, sơ đồ hệ thống đã điều chỉnh ra sao":** slide 7–9, khoảng 3 phút 40.
+- **Nhật Anh, câu 3 "Trade-off, giới hạn, rủi ro":** slide 11, khoảng 1 phút 45. Trước đó là roadmap (slide 10, triển khai thế nào), sau đó là ba quyết định và lời kết (slide 12).
 
-- **Chuyển slide:** người đang nói tự bấm (dùng chung một clicker, đưa cho người nói tiếp). Ở slide 9–10, Bách vừa nói vừa thao tác máy demo.
+Chỉ đổi người hai lần: Kiệt → Bách sau slide 6, Bách → Nhật Anh sau slide 9.
+
+- **Chuyển slide:** người đang nói tự bấm (dùng chung một clicker, đưa cho người nói tiếp). Ở slide 7–8, Bách vừa nói vừa thao tác máy demo.
 - **Backup video:** nếu demo lỗi quá 15 giây, Nhật Anh mở video; Bách nói tiếp như bình thường.
 - **Chuyển người:** người nói trước giới thiệu người nói sau bằng một câu (đã viết sẵn ở cuối phần). Người nói sau bước lên trước khi câu đó kết thúc.
 - **Hỏi đáp:** cả ba trả lời theo phân công trong `QA.md`.
@@ -28,16 +33,14 @@ Cách dùng file này:
 | 2 | Hai thay đổi | Kiệt | 1:20 |
 | 3 | Assumption | Kiệt | 2:40 |
 | 4 | Ba option | Kiệt | 3:30 |
-| 5 | Recommendation: hai track | Kiệt | 4:40 |
-| 6 | Giữ, đổi, hoãn | Kiệt | 5:20 |
-| 7 | Ngân sách | Kiệt | 6:30 |
-| 8 | Cổng go/no-go | Kiệt | 7:10 |
-| 9 | Demo | Bách | 9:20 |
-| 10 | Kết quả bốn tuần, Pilot evidence | Bách | 10:05 |
-| 11 | User Journey và System Context | Bách | 10:50 |
-| 12 | Roadmap 8 tuần | Bách | 11:50 |
-| 13 | Rủi ro và trade-off | Nhật Anh | 12:55 |
-| 14 | Đề nghị và kết thúc | Nhật Anh | 13:40 |
+| 5 | Recommendation: hai track | Kiệt | 4:50 |
+| 6 | Ngân sách và cổng go/no-go | Kiệt | 6:30 |
+| 7 | Demo | Bách | 8:40 |
+| 8 | Kết quả bốn tuần, Pilot evidence | Bách | 9:25 |
+| 9 | User Journey và System Context | Bách | 10:10 |
+| 10 | Roadmap 8 tuần | Nhật Anh | 11:10 |
+| 11 | Trade-off, giới hạn, rủi ro | Nhật Anh | 12:55 |
+| 12 | Đề nghị và kết thúc | Nhật Anh | 13:40 |
 
 ---
 
@@ -51,7 +54,7 @@ Cách dùng file này:
 
 Ở vòng trước, chúng em giới thiệu Nordic Flow, một công cụ giúp planner của Company A quyết định hàng đi từ nhà cung cấp nào, qua kho nào, đến vùng giao nào, sao cho tổng chi phí thấp nhất. Mọi plan đều được kiểm tra độc lập, và planner duyệt rồi mới dùng.
 
-Sau vòng trước, Company A đưa ra hai yêu cầu mới. **Hôm nay chúng em trình bày proposal đã thay đổi thế nào, và vì sao.**"
+Sau vòng trước, Company A đưa ra hai yêu cầu mới. **Hôm nay chúng em trình bày proposal đã thay đổi thế nào, MVP và sơ đồ đã điều chỉnh ra sao, và những gì chúng em phải đánh đổi.**"
 
 [Chuyển slide.]
 
@@ -97,7 +100,7 @@ CRM migration không liên quan gì đến bài toán phân bổ hàng. Nhưng n
 
 [Chuyển slide.]
 
-## Slide 5. Recommendation: hai track (3:30–4:40)
+## Slide 5. Recommendation: hai track (3:30–4:50)
 
 **Người nói: Kiệt**
 
@@ -107,43 +110,27 @@ CRM migration không liên quan gì đến bài toán phân bổ hàng. Nhưng n
 
 [Chỉ thẻ Link.] Hai track liên quan với nhau qua dữ liệu: mã khách hàng và mã vùng giao hàng hôm nay nằm trong Dynamics, sau này sẽ nằm trong Salesforce. Nordic Flow đọc dữ liệu qua file, nên khi chuyển CRM chỉ cần đổi nơi xuất file, còn bộ tối ưu giữ nguyên. Ở tuần hai, chúng em mapping mã cũ sang mã mới để số liệu trước và sau khi chuyển vẫn so sánh được.
 
+[Chỉ dòng MVP dưới hình.] Với MVP, chúng em giữ những gì đã xây xong vì gần như không tốn thêm tiền, đổi live pilot thành replay, hoãn Đan Mạch và Na Uy, và đóng băng các tính năng mở rộng.
+
 [Chỉ nhãn Conflict rule, nói chậm.] Và một quy tắc: **khi hai track tranh người hoặc tranh tiền, CRM thắng**, vì CRM có hạn chót cứng."
 
 [Chuyển slide.]
 
-## Slide 6. Giữ, đổi, hoãn (4:40–5:20)
-
-**Người nói: Kiệt**
-
-"Cụ thể với MVP: chúng em **giữ** những gì đã xây xong, gồm optimiser, independent verifier, bước planner duyệt và audit trail, vì giữ lại gần như không tốn thêm tiền. Chúng em **đổi** live pilot thành history replay bằng file CSV. Chúng em **hoãn** Đan Mạch, Na Uy và các tính năng mở rộng. Và **đóng băng** chuyển hàng giữa các kho và tuyến giao thẳng: đã có trong MVP nhưng không phát triển thêm.
-
-**Những gì bị hoãn sẽ quay lại khi khoản tiết kiệm đã được chứng minh và đủ để trả chi phí.**"
-
-[Chuyển slide.]
-
-## Slide 7. Ngân sách (5:20–6:30)
+## Slide 6. Ngân sách và cổng go/no-go (4:50–6:30)
 
 **Người nói: Kiệt**
 
 "[Chỉ bảng.] Đây là ước tính, không phải báo giá. Chúng em tính bằng số person-days nhân với blended rate khoảng 60 euro một giờ. CRM migration khoảng 90 đến 100 nghìn euro, Nordic Flow 35 đến 40 nghìn, quản lý chương trình 20 nghìn, và contingency 30 đến 40 nghìn, dành cho CRM trước. **Tổng khoảng 175 đến 200 nghìn euro, nằm trong 210 nghìn.**
 
-[Chỉ thẻ màu xanh, nói chậm.] Điểm quan trọng ở đây là: 40 nghìn euro cho Nordic Flow không mua cả giải pháp. Số tiền đó mua **một quyết định dựa trên dữ liệu thật**: có nên đầu tư tiếp hay không. Chỉ cần chênh lệch dưới 1% chi phí logistics liên quan là đã bù được khoản này. Nếu đạt ngưỡng 2%, Company A tiết kiệm khoảng 100 đến 200 nghìn euro mỗi năm, và năm nào cũng vậy. Còn nếu không đạt, **Company A dừng lại sau 40 nghìn euro, thay vì 0,3 triệu.**"
+[Chỉ thẻ màu xanh lá, nói chậm.] Điểm quan trọng ở đây là: 40 nghìn euro cho Nordic Flow không mua cả giải pháp. Số tiền đó mua **một quyết định dựa trên dữ liệu thật**: có nên đầu tư tiếp hay không. Chỉ cần chênh lệch dưới 1% chi phí logistics liên quan là đã bù được khoản này. Nếu đạt ngưỡng 2%, Company A tiết kiệm khoảng 100 đến 200 nghìn euro mỗi năm, và năm nào cũng vậy. Còn nếu không đạt, Company A dừng lại sau 40 nghìn euro, thay vì 0,3 triệu.
 
-[Chuyển slide.]
-
-## Slide 8. Cổng go/no-go (6:30–7:10)
-
-**Người nói: Kiệt**
-
-"Vì vậy chúng em đặt một điểm quyết định ở tuần tám. **Chỉ chuyển sang live pilot nếu verified plan rẻ hơn actual plan ít nhất 2%** trên các tuần đã replay, và không vi phạm ràng buộc nào. 2% cao gấp vài lần mức hòa vốn, nên có biên an toàn. Mục tiêu 5% ở vòng trước vẫn là kỳ vọng, nhưng không còn là điều kiện.
-
-Chúng em cũng nói rõ giới hạn: replay không đo được thời gian làm việc của planner hay tỷ lệ giao hàng đúng hạn. Hai chỉ số đó sẽ được đo trong live pilot.
+[Chỉ thẻ màu xanh dương.] Vì vậy chúng em đặt một điểm quyết định ở tuần tám: **chỉ chuyển sang live pilot nếu verified plan rẻ hơn actual plan ít nhất 2%** trên các tuần đã replay, và không vi phạm ràng buộc nào. 2% cao gấp vài lần mức hòa vốn, nên có biên an toàn. Mục tiêu 5% ở vòng trước vẫn là kỳ vọng, nhưng không còn là điều kiện.
 
 Bây giờ Bách sẽ cho các anh chị xem MVP đã thay đổi thế nào."
 
 [Chuyển slide. Đưa clicker cho Bách.]
 
-## Slide 9. Demo history replay (7:10–9:20)
+## Slide 7. Demo history replay (6:30–8:40)
 
 **Người nói: Bách**
 
@@ -159,7 +146,7 @@ Bây giờ Bách sẽ cho các anh chị xem MVP đã thay đổi thế nào."
 
 [Chuyển slide.]
 
-## Slide 10. Kết quả bốn tuần, Pilot evidence (9:20–10:05)
+## Slide 8. Kết quả bốn tuần, Pilot evidence (8:40–9:25)
 
 **Người nói: Bách**
 
@@ -171,41 +158,45 @@ Trang này cũng kiểm tra việc mapping mã từ Dynamics sang Salesforce, đ
 
 [Chuyển slide.]
 
-## Slide 11. User Journey và System Context (10:05–10:50)
+## Slide 9. User Journey và System Context (9:25–10:10)
 
 **Người nói: Bách**
 
 "[Chỉ hình bên trái.] Về User Journey: công việc hằng ngày của planner không đổi. Chúng em thêm một hành trình mới, diễn ra **trước** live pilot, gồm bốn bước: xuất dữ liệu các tuần cũ, tải lên và kiểm tra, so với kế hoạch đã chạy, rồi quyết định go hoặc no-go trên trang Pilot evidence.
 
-[Chỉ hình bên phải.] Về System Context: ranh giới của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn là `actual_plan.csv` và file mapping mã của CRM. CRM được vẽ là một hệ thống của Company A mà Nordic Flow **không kết nối trực tiếp**."
+[Chỉ hình bên phải.] Về System Context: ranh giới của Nordic Flow giữ nguyên. Chỉ thêm hai file đầu vào tùy chọn là `actual_plan.csv` và file mapping mã của CRM. CRM được vẽ là một hệ thống của Company A mà Nordic Flow **không kết nối trực tiếp**.
 
-[Chuyển slide.]
+Nhật Anh sẽ trình bày kế hoạch triển khai, những gì chúng em phải đánh đổi, và đề xuất của nhóm."
 
-## Slide 12. Roadmap 8 tuần (10:50–11:50)
+[Chuyển slide. Đưa clicker cho Nhật Anh.]
 
-**Người nói: Bách**
+## Slide 10. Roadmap 8 tuần (10:10–11:10)
+
+**Người nói: Nhật Anh**
 
 "Hai track chạy song song trong tám tuần.
 
 [Chỉ dòng tuần 1–2.] Tuần một và hai: track CRM kiểm kê dữ liệu, xác nhận ngày tắt hệ thống cũ và làm field mapping; track Nordic Flow nạp file thật và mapping mã sản phẩm, mã khách hàng. [Chỉ dòng 3–7.] Tuần ba đến bảy: CRM cấu hình, làm sạch dữ liệu, nạp thử hai lần và đào tạo user; Nordic Flow replay các tuần cũ và xem kết quả cùng planner.
 
-[Chỉ dòng 8.] Tuần tám là điểm quyết định chung: **CRM chính thức hoạt động, hệ thống cũ chuyển sang read-only; còn Nordic Flow có quyết định go hoặc no-go.** Nếu CRM phức tạp hơn dự kiến, các tích hợp phụ được dời sang tuần chín đến mười hai và dùng contingency. Nói cách khác, **Nordic Flow có thể chậm lại, còn CRM thì không.**
-
-Nhật Anh sẽ nói về rủi ro và những quyết định chúng em đề xuất."
-
-[Chuyển slide. Đưa clicker cho Nhật Anh.]
-
-## Slide 13. Rủi ro và trade-off (11:50–12:55)
-
-**Người nói: Nhật Anh**
-
-"Chúng em nói thẳng về những gì phải đánh đổi. **Trade-off lớn nhất là giá trị của Nordic Flow đến muộn hơn.** Chúng em chấp nhận điều đó, vì giữ được quan hệ khách hàng là ưu tiên số một. Bù lại, replay cho một con số thật từ sớm và với chi phí thấp.
-
-[Chỉ bảng.] Về rủi ro, có ba rủi ro chính. Thứ nhất là chất lượng dữ liệu CRM: chúng em làm sạch dữ liệu trước khi nạp, AI gợi ý các bản ghi trùng nhưng con người quyết định. Thứ hai là ngày tắt hệ thống cũ đến sớm hơn dự kiến: chúng em xác nhận ngay tuần một, và contingency được dành cho CRM. Thứ ba là user không quen Salesforce: chúng em giữ màn hình gần giống hệ thống cũ và đào tạo trước ngày chuyển."
+[Chỉ dòng 8.] Tuần tám là điểm quyết định chung: **CRM chính thức hoạt động, hệ thống cũ chuyển sang read-only; còn Nordic Flow có quyết định go hoặc no-go.** Nếu CRM phức tạp hơn dự kiến, các tích hợp phụ được dời sang tuần chín đến mười hai và dùng contingency. Nói cách khác, **Nordic Flow có thể chậm lại, còn CRM thì không.**"
 
 [Chuyển slide.]
 
-## Slide 14. Đề nghị và kết thúc (12:55–13:40)
+## Slide 11. Trade-off, giới hạn, rủi ro (11:10–12:55)
+
+**Người nói: Nhật Anh**
+
+"Kế hoạch nào cũng có cái giá của nó. Chúng em nói thẳng về ba điều: những gì phải đánh đổi, giới hạn của giải pháp, và rủi ro.
+
+[Chỉ cột Trade-offs.] Về đánh đổi: **giá trị của Nordic Flow đến muộn hơn**, vì CRM được ưu tiên. Giai đoạn này chỉ làm một nước, một vùng; Đan Mạch và Na Uy phải chờ. Các tính năng chuyển hàng giữa kho và giao thẳng bị đóng băng. Chúng em chấp nhận, vì giữ được quan hệ khách hàng là ưu tiên số một.
+
+[Chỉ cột Limitations.] Về giới hạn: replay biết trước cả tuần đơn hàng, còn planner lúc đó thì không, nên kết quả hơi lạc quan. Đó là lý do ngưỡng đặt ở 2%, cao hơn nhiều so với mức hòa vốn. Con số hôm nay là dữ liệu giả lập, không phải dự báo. Và replay không đo được thời gian của planner hay tỷ lệ giao hàng đúng hạn; hai chỉ số này chờ live pilot.
+
+[Chỉ cột Risks.] Về rủi ro, có ba rủi ro chính. Dữ liệu CRM kém chất lượng: chúng em làm sạch trước khi nạp, và người xác nhận các bản ghi trùng. Ngày tắt hệ thống cũ đến sớm: xác nhận ngay tuần một, contingency dành cho CRM. User không quen Salesforce: giữ màn hình gần giống hệ thống cũ và đào tạo trước ngày chuyển."
+
+[Chuyển slide.]
+
+## Slide 12. Đề nghị và kết thúc (12:55–13:40)
 
 **Người nói: Nhật Anh**
 
@@ -230,7 +221,7 @@ Nhật Anh sẽ nói về rủi ro và những quyết định chúng em đề x
 | Sự cố | Xử lý |
 |---|---|
 | Demo lỗi hoặc treo quá 15 giây | Nhật Anh mở backup video; Bách nói tiếp, không xin lỗi dài dòng: "Chúng em chuyển sang bản ghi sẵn." |
-| Chậm hơn lịch 30 giây | Slide 10 dùng slide, không mở app; slide 12 chỉ nói tuần 8 |
-| Chậm hơn 1 phút | Slide 3 chỉ nói assumption license và blended team; slide 13 chỉ nói trade-off lớn nhất |
+| Chậm hơn lịch 30 giây | Slide 8 dùng slide, không mở app; slide 10 chỉ nói tuần 8 |
+| Chậm hơn 1 phút | Slide 3 chỉ nói assumption license và blended team; slide 5 bỏ câu về MVP; slide 11 mỗi cột chỉ nói ý đầu tiên |
 | Quên lời | Nói câu in đậm của slide đó, rồi chuyển slide |
 | Giám khảo hỏi chen giữa bài | Trả lời một câu ngắn, nói "phần này chúng em sẽ nói rõ ở slide sau" nếu có, rồi tiếp tục |

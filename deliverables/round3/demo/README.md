@@ -1,6 +1,6 @@
 # Backup video for the Round 3 demo
 
-`replay-demo.mp4`: 1 min 50 s, 1600×900, no sound, English captions burned in. Play it if the live demo on slide 9 fails (no network, laptop problem, app error).
+`replay-demo.mp4`: 1 min 50 s, 1600×900, no sound, English captions burned in. Play it if the live demo on slide 7 fails (no network, laptop problem, app error).
 
 What it shows, in order:
 1. Data page → **History replay** sample: 606 pallets of demand, actual plan of 606 pallets on 87 routes.

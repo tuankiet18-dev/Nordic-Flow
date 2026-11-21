@@ -41,7 +41,7 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 - [ ] Phần nói: kỹ thuật (MVP đã đổi gì, kiểm chứng, demo).
 
 ### Nhật Anh (video, hình)
-- [ ] Dựng slide theo bản nháp nội dung (khoảng 12–14 slide).
+- [ ] Dựng slide theo bản nháp nội dung (12 slide).
 - [ ] Quay backup video 2 phút cho demo history replay.
 - [ ] Phần nói: mở đầu và User Journey.
 
@@ -72,9 +72,9 @@ Phân tích chi tiết và nguồn số liệu: `PHAN-TICH-ROUND3.md`.
 
 | Phút | Slide | Người nói |
 |---|---|---|
-| 0:00–7:10 | 1–8: mở đầu, hai thay đổi, assumption, ba option, hai track, giữ/đổi/hoãn, ngân sách, cổng go/no-go | Kiệt |
-| 7:10–11:50 | 9–12: demo history replay, Pilot evidence, User Journey và System Context, roadmap 8 tuần | Bách |
-| 11:50–13:40 | 13–14: rủi ro, trade-off, ba quyết định | Nhật Anh |
+| 0:00–6:30 | 1–6: mở đầu, hai thay đổi, assumption, ba option, hai track (kèm giữ/đổi/hoãn), ngân sách và cổng go/no-go. Câu hỏi 1: proposal đã đổi thế nào | Kiệt |
+| 6:30–10:10 | 7–9: demo history replay, Pilot evidence, User Journey và System Context. Câu hỏi 2: MVP, journey, sơ đồ | Bách |
+| 10:10–13:40 | 10–12: roadmap 8 tuần, trade-off, giới hạn, rủi ro, ba quyết định. Câu hỏi 3: trade-off, giới hạn, rủi ro | Nhật Anh |
 
 Chi tiết lời nói: `SCRIPT-THUYET-TRINH.md`. Bài kết thúc khoảng 13:40, dư hơn một phút.
 
