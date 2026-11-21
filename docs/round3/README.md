@@ -2,6 +2,37 @@
 
 Trình bày **thứ Bảy 21/11/2026, 13:30**, Opal Tower. 15 phút + 10 phút hỏi đáp. Cả 3 người phải có mặt.
 
+## Cập nhật mới nhất (21/11): phân công và thay đổi, cả nhóm đọc trước
+
+**Phân công nói: mỗi người trả lời một câu hỏi của giám khảo.** Ba đoạn liền, chỉ đổi người hai lần.
+
+| Người | Slide | Câu hỏi của giám khảo | Thời gian |
+|---|---|---|---|
+| **Kiệt** | 1–6 | 1. Proposal đã thay đổi thế nào (hai thay đổi, assumption, ba option, hai track, ngân sách và cổng go/no-go) | 0:00–6:30 |
+| **Bách** | 7–9 | 2. MVP, User Journey, sơ đồ hệ thống đã điều chỉnh ra sao (demo replay, Pilot evidence, sơ đồ). Vừa nói vừa thao tác demo | 6:30–10:10 |
+| **Nhật Anh** | 10–12 | 3. Trade-off, giới hạn, rủi ro (kèm roadmap 8 tuần, ba quyết định, lời cảm ơn). Mở backup video nếu demo lỗi | 10:10–13:40 |
+
+Hai câu chuyển người: cuối slide 6 Kiệt nói *"Bây giờ Bách sẽ cho các anh chị xem MVP đã thay đổi thế nào"*; cuối slide 9 Bách nói *"Nhật Anh sẽ trình bày kế hoạch triển khai, những gì chúng em phải đánh đổi, và đề xuất của nhóm"*. Phần hỏi đáp vẫn chia theo `QA.md`.
+
+**Mỗi người cần đọc:**
+1. `SCRIPT-THUYET-TRINH.md`: lời nói của phần mình (tiêu đề mỗi slide có ghi "Người nói").
+2. `SCRIPT-HIEU-BAI.md`: giải thích vì sao nói như vậy, con số cần nhớ, câu dễ bị hỏi ở từng slide.
+3. `QA.md`: các câu thuộc phần mình.
+
+**Những gì đã thay đổi so với hôm qua:**
+- **Bộ slide còn 12 slide** (link bên dưới): gộp "giữ, đổi, hoãn" vào slide 5 và cổng go/no-go vào slide 6; slide 11 chia ba cột *Trade-offs / Limitations / Risks* đúng theo đề. Ghi chú lời nói trong slide là tiếng Việt, có tên người nói và mốc thời gian.
+- **Option B** giờ là "CRM trước, Nordic Flow sau" (không còn "chỉ làm CRM"); **assumption blended team** gắn với ngân sách (rate Tây Âu thì riêng CRM khoảng €200k).
+- **Ngân sách (slide 6):** €40k cho Nordic Flow là "price of a decision": dưới 1% là bù được, đạt 2% thì khoảng €100–200k/năm, không đạt thì dừng ở €40k.
+- **MVP có thêm trang Pilot evidence:** replay nhiều tuần, kết luận GO/NO-GO theo ngưỡng 2%, business case, kiểm tra mapping mã Dynamics → Salesforce, tải báo cáo CSV. 302 unit test và 8 test trình duyệt đều pass.
+- **Backup video** quay lại, dài 1:50, có cảnh Pilot evidence: `deliverables/round3/demo/replay-demo.mp4`.
+- **Sơ đồ Round 3** (`deliverables/round3/`) cập nhật theo trang Pilot evidence và file mapping mã CRM.
+- Tài liệu dùng **thuật ngữ tiếng Anh** (bảng tra ở mục "Thuật ngữ" bên dưới).
+
+**Trước giờ trình bày:**
+- Bách: `git pull`, chạy `pytest -q` (phải ra 302 passed), mở app với database mới và tắt wifi, chạy thử slide 7–8.
+- Cả nhóm: tập hai lần có bấm giờ, tập riêng hai lần chuyển người; xuất bộ slide ra PowerPoint hoặc PDF, chép cùng video vào USB.
+- Ai đã `git pull` trong khoảng 00:20–00:40 ngày 21/11 thì chạy `git fetch origin` rồi `git reset --hard origin/main` (lịch sử repo đã được dọn một lần).
+
 ## Đọc theo thứ tự
 
 1. **`KE-HOACH-ROUND3.md`**: 13 quyết định đã chốt, ai làm gì, lịch 3 ngày, bố cục 15 phút, những câu không được nói. Đọc file này trước.
